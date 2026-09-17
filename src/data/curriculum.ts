@@ -1,0 +1,347 @@
+import type { SubjectArea } from '@/types';
+
+export const curriculum: SubjectArea[] = [
+  {
+    id: 'clinica-medica',
+    name: 'Clínica Médica',
+    icon: 'Stethoscope',
+    modules: [
+      {
+        id: 'cardiologia',
+        name: 'Cardiologia',
+        icon: 'HeartPulse',
+        lessons: [
+          {
+            id: 'cardio-01',
+            number: 1,
+            title: 'Insuficiência Cardíaca: Diagnóstico e Classificação NYHA',
+            duration: 42,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' },
+          },
+          {
+            id: 'cardio-02',
+            number: 2,
+            title: 'Doença Coronariana Aguda: Síndromes Isquêmicas',
+            duration: 55,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4' },
+          },
+          {
+            id: 'cardio-03',
+            number: 3,
+            title: 'Arritmias Cardíacas: Identificação no ECG',
+            duration: 38,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4' },
+          },
+        ],
+      },
+      {
+        id: 'nefrologia',
+        name: 'Nefrologia',
+        icon: 'Droplet',
+        lessons: [
+          {
+            id: 'nefro-01',
+            number: 1,
+            title: 'Síndrome Nefrítica: Glomerulonefrites e Abordagem',
+            duration: 47,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4' },
+          },
+          {
+            id: 'nefro-02',
+            number: 2,
+            title: 'Síndrome Nefrótica: Proteinúria e Manejo Clínico',
+            duration: 51,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4' },
+          },
+          {
+            id: 'nefro-03',
+            number: 3,
+            title: 'Lesão Ren Aguda: Classificação RIFLE e Tratamento',
+            duration: 44,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4' },
+          },
+        ],
+      },
+      {
+        id: 'pneumologia',
+        name: 'Pneumologia',
+        icon: 'Wind',
+        lessons: [
+          {
+            id: 'pneumo-01',
+            number: 1,
+            title: 'DPOC: Exacerbações e Tratamento Farmacológico',
+            duration: 40,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4' },
+          },
+          {
+            id: 'pneumo-02',
+            number: 2,
+            title: 'Asma: Classificação de Gravidade e Escada Terapêutica',
+            duration: 36,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel-2010-512.mp4' },
+          },
+          {
+            id: 'pneumo-03',
+            number: 3,
+            title: 'Pneumonias Adquiridas na Comunidade: Estratificação',
+            duration: 49,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4' },
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'cirurgia-geral',
+    name: 'Cirurgia Geral',
+    icon: 'Scissors',
+    modules: [
+      {
+        id: 'trauma',
+        name: 'Trauma',
+        icon: 'ShieldAlert',
+        lessons: [
+          {
+            id: 'trauma-01',
+            number: 1,
+            title: 'ABCD do Trauma: Avaliação Primária passo a passo',
+            duration: 52,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4' },
+          },
+          {
+            id: 'trauma-02',
+            number: 2,
+            title: 'Trauma Torácico: Pneumotórax e Hemotórax',
+            duration: 45,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4' },
+          },
+          {
+            id: 'trauma-03',
+            number: 3,
+            title: 'Trauma Abdominal: Indicações de Laparotomia',
+            duration: 41,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4' },
+          },
+        ],
+      },
+      {
+        id: 'abdomen-cirurgico',
+        name: 'Abdome Cirúrgico',
+        icon: 'Activity',
+        lessons: [
+          {
+            id: 'abd-cir-01',
+            number: 1,
+            title: 'Abdome Agudo: Diferencial entre patologias cirúrgicas',
+            duration: 48,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4' },
+          },
+          {
+            id: 'abd-cir-02',
+            number: 2,
+            title: 'Hérnias: Classificação e Indicações Operatórias',
+            duration: 35,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' },
+          },
+          {
+            id: 'abd-cir-03',
+            number: 3,
+            title: 'Colecistite Aguda: Conduta e Complicações',
+            duration: 44,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4' },
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'ginecologia-obstetricia',
+    name: 'Ginecologia e Obstetrícia',
+    icon: 'Baby',
+    modules: [
+      {
+        id: 'gineco',
+        name: 'Ginecologia',
+        icon: 'Flower2',
+        lessons: [
+          {
+            id: 'gineco-01',
+            number: 1,
+            title: 'Sangramento Uterino Anormal: Investigação e Manejo',
+            duration: 43,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4' },
+          },
+          {
+            id: 'gineco-02',
+            number: 2,
+            title: 'Câncer de Colo Uterino: Rastreio e Conduta',
+            duration: 50,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4' },
+          },
+          {
+            id: 'gineco-03',
+            number: 3,
+            title: 'Endometriose: Diagnóstico e Tratamento',
+            duration: 39,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4' },
+          },
+        ],
+      },
+      {
+        id: 'obstetricia',
+        name: 'Obstetrícia',
+        icon: 'HeartHandshake',
+        lessons: [
+          {
+            id: 'obst-01',
+            number: 1,
+            title: 'Hipertensão Gestacional: Pré-eclâmpsia e Eclâmpsia',
+            duration: 46,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4' },
+          },
+          {
+            id: 'obst-02',
+            number: 2,
+            title: 'Hemorragia Pós-parto: Causas e Conduta de Emergência',
+            duration: 42,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4' },
+          },
+          {
+            id: 'obst-03',
+            number: 3,
+            title: 'Parto Prematuro: Diagnóstico e Tocolíticos',
+            duration: 37,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel-2010-512.mp4' },
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'pediatria',
+    name: 'Pediatria',
+    icon: 'Baby',
+    modules: [
+      {
+        id: 'pneumo-ped',
+        name: 'Pneumologia Pediátrica',
+        icon: 'Wind',
+        lessons: [
+          {
+            id: 'pneumo-ped-01',
+            number: 1,
+            title: 'Bronquiolite: Diagnóstico e Critérios de Internação',
+            duration: 38,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4' },
+          },
+          {
+            id: 'pneumo-ped-02',
+            number: 2,
+            title: 'Pneumonia na Infância: Classificação e Antibioticoterapia',
+            duration: 44,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4' },
+          },
+          {
+            id: 'pneumo-ped-03',
+            number: 3,
+            title: 'Asma na Criança: Manejo e Educação aos Pais',
+            duration: 36,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4' },
+          },
+        ],
+      },
+      {
+        id: 'gastro-ped',
+        name: 'Gastroenterologia Pediátrica',
+        icon: 'Pill',
+        lessons: [
+          {
+            id: 'gastro-ped-01',
+            number: 1,
+            title: 'Desidratação Aguda: Classificação e Reposição Hídrica',
+            duration: 41,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4' },
+          },
+          {
+            id: 'gastro-ped-02',
+            number: 2,
+            title: 'Diarreia Aguda: Etiologias e Conduta',
+            duration: 34,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4' },
+          },
+          {
+            id: 'gastro-ped-03',
+            number: 3,
+            title: 'Dor Abdominal Recorrente: Abordagem Diferencial',
+            duration: 40,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' },
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'medicina-preventiva',
+    name: 'Medicina Preventiva e Social',
+    icon: 'ShieldPlus',
+    modules: [
+      {
+        id: 'rastreio',
+        name: 'Rastreio e Prevenção',
+        icon: 'SearchCheck',
+        lessons: [
+          {
+            id: 'rastreio-01',
+            number: 1,
+            title: 'Rastreio de Câncer: Mama, Colo e Colorretal',
+            duration: 45,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4' },
+          },
+          {
+            id: 'rastreio-02',
+            number: 2,
+            title: 'Vacinação no Adulto: Calendário e Indicações',
+            duration: 33,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4' },
+          },
+          {
+            id: 'rastreio-03',
+            number: 3,
+            title: 'Fatores de Risco Cardiovascular: Estratificação SCORE',
+            duration: 42,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4' },
+          },
+        ],
+      },
+      {
+        id: 'epidemiologia',
+        name: 'Epidemiologia',
+        icon: 'BarChart3',
+        lessons: [
+          {
+            id: 'epi-01',
+            number: 1,
+            title: 'Medidas de Associação: Risco Relativo e Odds Ratio',
+            duration: 39,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4' },
+          },
+          {
+            id: 'epi-02',
+            number: 2,
+            title: 'Tipos de Estudos: Caso-controle, Coorte e Ensaios',
+            duration: 47,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4' },
+          },
+          {
+            id: 'epi-03',
+            number: 3,
+            title: 'Validade de Testes Diagnósticos: Sensibilidade e Especificidade',
+            duration: 44,
+            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4' },
+          },
+        ],
+      },
+    ],
+  },
+];
