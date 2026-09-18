@@ -14,24 +14,20 @@
   <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
   <rect x="16" y="16" width="480" height="480" rx="100" fill="none" stroke="#27272a" stroke-width="1.5"/>
 
-  <!-- Abstract medical + video symbol: stylized Rod of Asclepius merged with a play triangle -->
-  <g transform="translate(256, 150)">
-    <!-- Play triangle (video reference) -->
-    <path d="M -22 -28 L 34 0 L -22 28 Z" fill="url(#redGrad)"/>
-    <!-- Snake/rod: vertical line with two curves wrapping it -->
-    <line x1="0" y1="-45" x2="0" y2="55" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
-    <path d="M 0 -30 Q 18 -20 0 -10 Q -18 0 0 10" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
-    <path d="M 0 5 Q 16 15 0 25 Q -16 35 0 45" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
-    <!-- Wings at top of rod -->
-    <path d="M 0 -45 Q -14 -52 -22 -46" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
-    <path d="M 0 -45 Q 14 -52 22 -46" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <!-- Minimalist Rod of Asclepius -->
+  <g transform="translate(256, 256)">
+    <!-- Vertical rod -->
+    <line x1="0" y1="-120" x2="0" y2="120" stroke="#dc2626" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Snake body: two elegant curves wrapping the rod -->
+    <path d="M 0 -90 C 40 -70 -40 -30 0 -10 C 40 10 -40 50 0 70"
+          fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Snake head -->
+    <circle cx="0" cy="-95" r="7" fill="#ffffff"/>
+
+    <!-- Wings at top -->
+    <path d="M 0 -120 C -20 -130 -35 -125 -40 -115" fill="none" stroke="#dc2626" stroke-width="5" stroke-linecap="round"/>
+    <path d="M 0 -120 C 20 -130 35 -125 40 -115" fill="none" stroke="#dc2626" stroke-width="5" stroke-linecap="round"/>
   </g>
-
-  <!-- SantiSOFT text -->
-  <text x="256" y="340" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="52" font-weight="800" letter-spacing="-1">
-    <tspan fill="#ffffff">Santi</tspan><tspan fill="#dc2626">SOFT</tspan>
-  </text>
-
-  <!-- Small tagline -->
-  <text x="256" y="375" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#52525b" letter-spacing="3">VIDEOAULAS MÉDICAS</text>
 </svg>

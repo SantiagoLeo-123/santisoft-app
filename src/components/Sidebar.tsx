@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronDown, ChevronRight, Check, Play, PanelLeftClose, PanelLeft } from 'lucide-react';
+import { ChevronDown, ChevronRight, Check, Play, PanelLeftClose, PanelLeft, Calendar } from 'lucide-react';
 import type { SubjectArea, Module, ProgressMap } from '@/types';
 import { getIcon } from '@/lib/icons';
 
@@ -8,6 +8,8 @@ interface SidebarProps {
   selectedLessonId: string | null;
   progress: ProgressMap;
   onSelectLesson: (areaId: string, moduleId: string, lessonId: string) => void;
+  onSelectCronograma: () => void;
+  isCronogramaActive: boolean;
   collapsed: boolean;
   onToggleCollapse: () => void;
 }
@@ -17,6 +19,8 @@ export function Sidebar({
   selectedLessonId,
   progress,
   onSelectLesson,
+  onSelectCronograma,
+  isCronogramaActive,
   collapsed,
   onToggleCollapse,
 }: SidebarProps) {
@@ -66,6 +70,17 @@ export function Sidebar({
         >
           <PanelLeft className="w-5 h-5" />
         </button>
+        <button
+          onClick={onSelectCronograma}
+          className={`p-2 rounded-lg transition-colors ${
+            isCronogramaActive
+              ? 'bg-red-600/15 text-red-500'
+              : 'text-zinc-400 hover:text-red-500 hover:bg-ink-850'
+          }`}
+          title="Cronograma MEDCURSO"
+        >
+          <Calendar className="w-5 h-5" />
+        </button>
         <div className="w-8 border-t border-ink-875" />
         {curriculum.map((area) => {
           const Icon = getIcon(area.icon);
@@ -106,6 +121,25 @@ export function Sidebar({
       </div>
 
       <div className="flex-1 overflow-y-auto scrollbar-thin px-2 py-2">
+        {/* Cronograma tab — fixed at top */}
+        <button
+          onClick={onSelectCronograma}
+          className={`w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg transition-all mb-2 ${
+            isCronogramaActive
+              ? 'bg-red-600/10 border border-red-600/30'
+              : 'border border-transparent hover:bg-ink-850'
+          }`}
+        >
+          <Calendar className={`shrink-0 ${isCronogramaActive ? 'text-red-500' : 'text-red-600/70'}`} style={{ width: 18, height: 18 }} />
+          <span className={`text-sm font-semibold flex-1 text-left ${isCronogramaActive ? 'text-white' : 'text-zinc-200'}`}>
+            Cronograma MEDCURSO
+          </span>
+        </button>
+
+        {/* Divider */}
+        <div className="mx-3 mb-2 border-t border-ink-875" />
+
+        {/* Curriculum areas */}
         {curriculum.map((area, areaIdx) => {
           const AreaIcon = getIcon(area.icon);
           const isExpanded = expandedAreas.has(area.id);
@@ -160,7 +194,7 @@ export function Sidebar({
                         {isModExpanded && (
                           <div className="ml-4 pl-3 border-l border-ink-875 animate-fade-in">
                             {mod.lessons.map((lesson) => {
-                              const isSelected = lesson.id === selectedLessonId;
+                              const isSelected = lesson.id === selectedLessonId && !isCronogramaActive;
                               const isDone = progress[lesson.id]?.completed;
                               return (
                                 <button

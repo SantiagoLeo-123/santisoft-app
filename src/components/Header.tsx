@@ -1,5 +1,6 @@
-import { Menu, Activity, Home } from 'lucide-react';
-import type { SubjectArea, Lesson } from '@/types';
+import { Menu, Activity, Home, User, Calendar } from 'lucide-react';
+import type { SubjectArea, Lesson, UserProfile } from '@/types';
+import { getAvatarSrc, getPresetColor } from '@/lib/avatars';
 
 interface HeaderProps {
   areaName: string | null;
@@ -9,10 +10,27 @@ interface HeaderProps {
   totalCount: number;
   onToggleSidebar: () => void;
   onBackToHome: () => void;
+  onSwitchProfile: () => void;
+  profile: UserProfile | null;
+  isCronograma: boolean;
 }
 
-export function Header({ areaName, lesson, area, completedCount, totalCount, onToggleSidebar, onBackToHome }: HeaderProps) {
+export function Header({
+  areaName,
+  lesson,
+  area,
+  completedCount,
+  totalCount,
+  onToggleSidebar,
+  onBackToHome,
+  onSwitchProfile,
+  profile,
+  isCronograma,
+}: HeaderProps) {
   const pct = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
+
+  const avatar = profile ? getAvatarSrc(profile.avatar) : null;
+  const avatarColor = avatar && avatar.type === 'preset' ? getPresetColor(avatar.value) : '#dc2626';
 
   return (
     <header className="bg-ink-900/80 backdrop-blur-md border-b border-ink-875 px-4 sm:px-6 py-3 flex items-center gap-4 shrink-0 safe-top">
@@ -33,20 +51,33 @@ export function Header({ areaName, lesson, area, completedCount, totalCount, onT
 
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 text-xs text-zinc-500 mb-0.5">
-          {areaName && <span className="truncate">{areaName}</span>}
-          {lesson && (
+          {isCronograma ? (
+            <span className="flex items-center gap-1.5">
+              <Calendar className="w-3.5 h-3.5 text-red-500" />
+              <span>Cronograma MEDCURSO</span>
+            </span>
+          ) : (
             <>
-              <span className="text-ink-800">/</span>
-              <span className="text-zinc-400">Aula {lesson.number}</span>
+              {areaName && <span className="truncate">{areaName}</span>}
+              {lesson && (
+                <>
+                  <span className="text-ink-800">/</span>
+                  <span className="text-zinc-400">Aula {lesson.number}</span>
+                </>
+              )}
             </>
           )}
         </div>
         <h1 className="text-sm sm:text-base font-semibold text-white truncate leading-tight">
-          {lesson ? lesson.title : 'Selecione uma aula para começar'}
+          {isCronograma
+            ? 'Cronograma de Estudos — MEDCURSO 2026'
+            : lesson
+              ? lesson.title
+              : 'Selecione uma aula para começar'}
         </h1>
       </div>
 
-      {area && totalCount > 0 && (
+      {!isCronograma && area && totalCount > 0 && (
         <div className="flex items-center gap-3 shrink-0 w-32 sm:w-44">
           <div className="flex-1">
             <div className="flex items-center justify-between text-[10px] text-zinc-500 mb-1">
@@ -75,6 +106,29 @@ export function Header({ areaName, lesson, area, completedCount, totalCount, onT
         <Home className="w-4 h-4" />
         <span className="hidden md:inline">Cursos</span>
       </button>
+
+      {/* Profile badge */}
+      {profile && (
+        <button
+          onClick={onSwitchProfile}
+          className="flex items-center gap-2 pl-1.5 pr-3 py-1.5 rounded-full hover:bg-ink-850 transition-colors shrink-0"
+          title="Trocar perfil"
+        >
+          {avatar?.type === 'image' ? (
+            <img src={avatar.value} alt={profile.name} className="w-7 h-7 rounded-full object-cover" />
+          ) : (
+            <div
+              className="w-7 h-7 rounded-full flex items-center justify-center"
+              style={{ background: `linear-gradient(135deg, ${avatarColor}cc, ${avatarColor}66)` }}
+            >
+              <User className="w-4 h-4 text-white/80" />
+            </div>
+          )}
+          <span className="text-xs text-zinc-300 font-medium hidden sm:block max-w-[80px] truncate">
+            {profile.name}
+          </span>
+        </button>
+      )}
     </header>
   );
 }
