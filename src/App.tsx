@@ -150,6 +150,13 @@ export default function App() {
 
   const isCompleted = selection ? progress[selection.lessonId]?.completed ?? false : false;
 
+  const handleToggleCronograma = useCallback((entryId: string) => {
+    setProgress((prev) => ({
+      ...prev,
+      [entryId]: { completed: !prev[entryId]?.completed },
+    }));
+  }, [setProgress]);
+
   // --- Render ---
 
   if (view === 'splash') {
@@ -231,7 +238,7 @@ export default function App() {
         {showCronograma ? (
           <CronogramaScreen
             progress={progress}
-            onSelectLesson={handleSelectLesson}
+            onToggleComplete={handleToggleCronograma}
           />
         ) : (
           <VideoPlayer

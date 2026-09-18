@@ -24,18 +24,8 @@ export function Sidebar({
   collapsed,
   onToggleCollapse,
 }: SidebarProps) {
-  const [expandedAreas, setExpandedAreas] = useState<Set<string>>(() => {
-    const initial = new Set<string>();
-    if (curriculum.length > 0) initial.add(curriculum[0].id);
-    return initial;
-  });
-  const [expandedModules, setExpandedModules] = useState<Set<string>>(() => {
-    const initial = new Set<string>();
-    if (curriculum.length > 0 && curriculum[0].modules.length > 0) {
-      initial.add(curriculum[0].modules[0].id);
-    }
-    return initial;
-  });
+  const [expandedAreas, setExpandedAreas] = useState<Set<string>>(() => new Set());
+  const [expandedModules, setExpandedModules] = useState<Set<string>>(() => new Set());
 
   const toggleArea = (areaId: string) => {
     setExpandedAreas((prev) => {

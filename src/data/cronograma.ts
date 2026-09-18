@@ -1,323 +1,117 @@
-import type { SubjectArea } from '@/types';
+export type AreaShort = 'Clínica' | 'GO' | 'Cirurgia' | 'Pediatria' | 'Preventiva';
 
-export interface StudyWeek {
-  week: number;
-  title: string;
-  topics: string[];
-  areaId: string;
-  moduleId?: string;
-  lessonIds?: string[];
+export interface CronogramaEntry {
+  id: string;
+  semana: string;
+  area: AreaShort;
+  aula: string;
+  bonus: string;
 }
 
-export interface CronogramaArea {
-  areaId: string;
-  areaName: string;
-  weeks: StudyWeek[];
-}
+export const AREA_COLORS: Record<AreaShort, { bg: string; text: string; border: string; dot: string }> = {
+  'Clínica':    { bg: 'bg-red-600/15',   text: 'text-red-400',   border: 'border-red-600/30',   dot: 'bg-red-500' },
+  'GO':         { bg: 'bg-pink-600/15',  text: 'text-pink-400',  border: 'border-pink-600/30',  dot: 'bg-pink-500' },
+  'Cirurgia':   { bg: 'bg-orange-600/15',text: 'text-orange-400',border: 'border-orange-600/30',dot: 'bg-orange-500' },
+  'Pediatria':  { bg: 'bg-cyan-600/15',  text: 'text-cyan-400',  border: 'border-cyan-600/30',  dot: 'bg-cyan-500' },
+  'Preventiva': { bg: 'bg-emerald-600/15',text:'text-emerald-400',border:'border-emerald-600/30',dot:'bg-emerald-500' },
+};
 
-export const cronograma: CronogramaArea[] = [
-  {
-    areaId: 'clinica-medica',
-    areaName: 'Clínica Médica',
-    weeks: [
-      {
-        week: 1,
-        title: 'Sistematização e Abordagem Geral',
-        topics: [
-          'Semiologia e propedêutica clínica',
-          'Sinais vitais e exame físico dirigido',
-          'Interpretação de exames laboratoriais',
-        ],
-        areaId: 'clinica-medica',
-      },
-      {
-        week: 2,
-        title: 'Cardiologia — Insuficiência e Coronariopatias',
-        topics: [
-          'Insuficiência Cardíaca: Diagnóstico e Classificação NYHA',
-          'Doença Coronariana Aguda: Síndromes Isquêmicas',
-          'Revisão de fluxogramas e fluxos de conduta',
-        ],
-        areaId: 'clinica-medica',
-        moduleId: 'cardiologia',
-        lessonIds: ['cardio-01', 'cardio-02'],
-      },
-      {
-        week: 3,
-        title: 'Cardiologia — Arritmias e Revisão',
-        topics: [
-          'Arritmias Cardíacas: Identificação no ECG',
-          'Bradiarritmias e taquiarritmias',
-          'Simulado de revisão cardiológica',
-        ],
-        areaId: 'clinica-medica',
-        moduleId: 'cardiologia',
-        lessonIds: ['cardio-03'],
-      },
-      {
-        week: 4,
-        title: 'Nefrologia — Síndromes Renais',
-        topics: [
-          'Síndrome Nefrítica: Glomerulonefrites e Abordagem',
-          'Síndrome Nefrótica: Proteinúria e Manejo Clínico',
-          'Interpretação de exame de urina e função renal',
-        ],
-        areaId: 'clinica-medica',
-        moduleId: 'nefrologia',
-        lessonIds: ['nefro-01', 'nefro-02'],
-      },
-      {
-        week: 5,
-        title: 'Nefrologia — Lesão Renal e Diálise',
-        topics: [
-          'Lesão Renal Aguda: Classificação RIFLE e Tratamento',
-          'Indicações de diálise e manejo de complicações',
-          'Simulado de revisão nefrológica',
-        ],
-        areaId: 'clinica-medica',
-        moduleId: 'nefrologia',
-        lessonIds: ['nefro-03'],
-      },
-      {
-        week: 6,
-        title: 'Pneumologia — DPOC e Asma',
-        topics: [
-          'DPOC: Exacerbações e Tratamento Farmacológico',
-          'Asma: Classificação de Gravidade e Escada Terapêutica',
-          'Gasometria arterial e interpretação',
-        ],
-        areaId: 'clinica-medica',
-        moduleId: 'pneumologia',
-        lessonIds: ['pneumo-01', 'pneumo-02'],
-      },
-      {
-        week: 7,
-        title: 'Pneumologia — Pneumonias e Revisão Geral',
-        topics: [
-          'Pneumonias Adquiridas na Comunidade: Estratificação',
-          'Derrame pleural e empiema',
-          'Simulado integrado de Clínica Médica',
-        ],
-        areaId: 'clinica-medica',
-        moduleId: 'pneumologia',
-        lessonIds: ['pneumo-03'],
-      },
-    ],
-  },
-  {
-    areaId: 'cirurgia-geral',
-    areaName: 'Cirurgia Geral',
-    weeks: [
-      {
-        week: 1,
-        title: 'Princípios de Cirurgia e Trauma',
-        topics: [
-          'ABCD do Trauma: Avaliação Primária passo a passo',
-          'Triagem e suporte avançado de vida',
-          'Indicações de cirurgia no trauma',
-        ],
-        areaId: 'cirurgia-geral',
-        moduleId: 'trauma',
-        lessonIds: ['trauma-01'],
-      },
-      {
-        week: 2,
-        title: 'Trauma Torácico e Abdominal',
-        topics: [
-          'Trauma Torácico: Pneumotórax e Hemotórax',
-          'Trauma Abdominal: Indicações de Laparotomia',
-          'Drenos e toracocentese de emergência',
-        ],
-        areaId: 'cirurgia-geral',
-        moduleId: 'trauma',
-        lessonIds: ['trauma-02', 'trauma-03'],
-      },
-      {
-        week: 3,
-        title: 'Abdome Agudo Cirúrgico',
-        topics: [
-          'Abdome Agudo: Diferencial entre patologias cirúrgicas',
-          'Apêndice, vesícula e perfurações',
-          'Exames de imagem no abdome agudo',
-        ],
-        areaId: 'cirurgia-geral',
-        moduleId: 'abdomen-cirurgico',
-        lessonIds: ['abd-cir-01'],
-      },
-      {
-        week: 4,
-        title: 'Hérnias e Colecistopatias',
-        topics: [
-          'Hérnias: Classificação e Indicações Operatórias',
-          'Colecistite Aguda: Conduta e Complicações',
-          'Simulado de revisão cirúrgica',
-        ],
-        areaId: 'cirurgia-geral',
-        moduleId: 'abdomen-cirurgico',
-        lessonIds: ['abd-cir-02', 'abd-cir-03'],
-      },
-    ],
-  },
-  {
-    areaId: 'ginecologia-obstetricia',
-    areaName: 'Ginecologia e Obstetrícia',
-    weeks: [
-      {
-        week: 1,
-        title: 'Ginecologia — Sangramentos e Neoplasias',
-        topics: [
-          'Sangramento Uterino Anormal: Investigação e Manejo',
-          'Câncer de Colo Uterino: Rastreio e Conduta',
-          'Exames de rastreio ginecológico',
-        ],
-        areaId: 'ginecologia-obstetricia',
-        moduleId: 'gineco',
-        lessonIds: ['gineco-01', 'gineco-02'],
-      },
-      {
-        week: 2,
-        title: 'Ginecologia — Endometriose e Revisão',
-        topics: [
-          'Endometriose: Diagnóstico e Tratamento',
-          'Miomas uterinos e pólipos',
-          'Simulado de revisão ginecológica',
-        ],
-        areaId: 'ginecologia-obstetricia',
-        moduleId: 'gineco',
-        lessonIds: ['gineco-03'],
-      },
-      {
-        week: 3,
-        title: 'Obstetrícia — Hipertensão na Gestação',
-        topics: [
-          'Hipertensão Gestacional: Pré-eclâmpsia e Eclâmpsia',
-          'Síndrome HELLP e manejo de emergência',
-          'Acompanhamento pré-natal de alto risco',
-        ],
-        areaId: 'ginecologia-obstetricia',
-        moduleId: 'obstetricia',
-        lessonIds: ['obst-01'],
-      },
-      {
-        week: 4,
-        title: 'Obstetrícia — Hemorragias e Prematuridade',
-        topics: [
-          'Hemorragia Pós-parto: Causas e Conduta de Emergência',
-          'Parto Prematuro: Diagnóstico e Tocolíticos',
-          'Simulado integrado de GO',
-        ],
-        areaId: 'ginecologia-obstetricia',
-        moduleId: 'obstetricia',
-        lessonIds: ['obst-02', 'obst-03'],
-      },
-    ],
-  },
-  {
-    areaId: 'pediatria',
-    areaName: 'Pediatria',
-    weeks: [
-      {
-        week: 1,
-        title: 'Pneumologia Pediátrica — Vias Aéreas Inferiores',
-        topics: [
-          'Bronquiolite: Diagnóstico e Critérios de Internação',
-          'Pneumonia na Infância: Classificação e Antibioticoterapia',
-          'Oxigenoterapia e suporte respiratório pediátrico',
-        ],
-        areaId: 'pediatria',
-        moduleId: 'pneumo-ped',
-        lessonIds: ['pneumo-ped-01', 'pneumo-ped-02'],
-      },
-      {
-        week: 2,
-        title: 'Pneumologia Pediátrica — Asma e Revisão',
-        topics: [
-          'Asma na Criança: Manejo e Educação aos Pais',
-          'Broncodilatadores e corticoides na infância',
-          'Simulado de revisão pneumológica pediátrica',
-        ],
-        areaId: 'pediatria',
-        moduleId: 'pneumo-ped',
-        lessonIds: ['pneumo-ped-03'],
-      },
-      {
-        week: 3,
-        title: 'Gastroenterologia Pediátrica — Desidratação',
-        topics: [
-          'Desidratação Aguda: Classificação e Reposição Hídrica',
-          'Diarreia Aguda: Etiologias e Conduta',
-          'Soro de reidratação oral vs. venosa',
-        ],
-        areaId: 'pediatria',
-        moduleId: 'gastro-ped',
-        lessonIds: ['gastro-ped-01', 'gastro-ped-02'],
-      },
-      {
-        week: 4,
-        title: 'Gastroenterologia Pediátrica — Dor Abdominal',
-        topics: [
-          'Dor Abdominal Recorrente: Abordagem Diferencial',
-          'Constipação crônica e refluxo gastroesofágico',
-          'Simulado integrado de Pediatria',
-        ],
-        areaId: 'pediatria',
-        moduleId: 'gastro-ped',
-        lessonIds: ['gastro-ped-03'],
-      },
-    ],
-  },
-  {
-    areaId: 'medicina-preventiva',
-    areaName: 'Medicina Preventiva e Social',
-    weeks: [
-      {
-        week: 1,
-        title: 'Rastreio e Prevenção Oncológica',
-        topics: [
-          'Rastreio de Câncer: Mama, Colo e Colorretal',
-          'Indicações e intervalos de rastreio populacional',
-          'Níveis de prevenção primária e secundária',
-        ],
-        areaId: 'medicina-preventiva',
-        moduleId: 'rastreio',
-        lessonIds: ['rastreio-01'],
-      },
-      {
-        week: 2,
-        title: 'Imunização e Risco Cardiovascular',
-        topics: [
-          'Vacinação no Adulto: Calendário e Indicações',
-          'Fatores de Risco Cardiovascular: Estratificação SCORE',
-          'Aconselhamento e mudança de estilo de vida',
-        ],
-        areaId: 'medicina-preventiva',
-        moduleId: 'rastreio',
-        lessonIds: ['rastreio-02', 'rastreio-03'],
-      },
-      {
-        week: 3,
-        title: 'Epidemiologia — Medidas e Estudos',
-        topics: [
-          'Medidas de Associação: Risco Relativo e Odds Ratio',
-          'Tipos de Estudos: Caso-controle, Coorte e Ensaios',
-          'Interpretação de intervalos de confiança',
-        ],
-        areaId: 'medicina-preventiva',
-        moduleId: 'epidemiologia',
-        lessonIds: ['epi-01', 'epi-02'],
-      },
-      {
-        week: 4,
-        title: 'Epidemiologia — Testes Diagnósticos e Revisão',
-        topics: [
-          'Validade de Testes Diagnósticos: Sensibilidade e Especificidade',
-          'Valores preditivos e razão de verossimilhança',
-          'Simulado integrado de Medicina Preventiva',
-        ],
-        areaId: 'medicina-preventiva',
-        moduleId: 'epidemiologia',
-        lessonIds: ['epi-03'],
-      },
-    ],
-  },
+export const AREA_FILTERS: { label: string; value: AreaShort | 'Todas' }[] = [
+  { label: 'Todas', value: 'Todas' },
+  { label: 'Clínica', value: 'Clínica' },
+  { label: 'GO', value: 'GO' },
+  { label: 'Cirurgia', value: 'Cirurgia' },
+  { label: 'Pediatria', value: 'Pediatria' },
+  { label: 'Preventiva', value: 'Preventiva' },
 ];
+
+const raw: Omit<CronogramaEntry, 'id'>[] = [
+  { semana: 'Semana 01', area: 'Clínica', aula: 'Glomerulopatias I (Nefrítica, Alterações Assintomáticas, GNRP)', bonus: 'Alport' },
+  { semana: 'Semana 01', area: 'GO', aula: 'Ciclo Menstrual e Anticoncepção', bonus: 'Incongruência de Gênero, Síndrome Pré-Menstrual (SPM) e Síndrome Disfórica Pré-Menstrual (SDPM)' },
+  { semana: 'Semana 02', area: 'Clínica', aula: 'Glomerulopatias II (Síndrome Nefrótica, Glomerulopatias nas Desordens Sistêmicas)', bonus: '-' },
+  { semana: 'Semana 02', area: 'GO', aula: 'Amenorreia e Ovário Policístico', bonus: '-' },
+  { semana: 'Semana 03', area: 'Cirurgia', aula: 'Trauma I: Avaliação Inicial e Trauma de Tórax', bonus: 'Trauma Cervical, Trauma de Abdome - Lesões Específicas, Lesão de Extremidade, Atualização ATLS - 11ª Edição' },
+  { semana: 'Semana 03', area: 'Cirurgia', aula: 'Trauma II: Trauma de Abdome, Pelve e TCE', bonus: 'Aulas correspondentes ao tema de Trauma' },
+  { semana: 'Semana 04', area: 'Clínica', aula: 'Distúrbio Hidroeletrolítico', bonus: 'Hipernatremia' },
+  { semana: 'Semana 04', area: 'GO', aula: 'Diagnóstico de Gravidez, Modificações do Organismo Materno e Pré-Natal', bonus: 'Aconselhamento Genético Pré-Natal' },
+  { semana: 'Semana 05', area: 'Clínica', aula: 'Insuficiência Renal', bonus: 'Rabdomiólise, TSR (HD e DP), TSR Transplante, Nefrotoxicidade por contraste' },
+  { semana: 'Semana 05', area: 'Clínica', aula: 'Distúrbio Ácido-Básico', bonus: 'Acidose tubular renal, Ateroembolismo e infarto renal, Estenose de artéria renal' },
+  { semana: 'Semana 06', area: 'Pediatria', aula: 'Neonatologia I', bonus: 'Triagem Neonatal, Exame Físico Neonatal' },
+  { semana: 'Semana 06', area: 'Preventiva', aula: 'Medidas de Saúde Coletiva', bonus: 'Indicadores demográficos, Daly, Near Miss' },
+  { semana: 'Semana 08', area: 'Preventiva', aula: 'Estudos Epidemiológicos', bonus: 'Variáveis e Testes Estatísticos, Estudos Descritivos e Metanálise, Fases do Ensaio Clínico' },
+  { semana: 'Semana 08', area: 'Cirurgia', aula: 'Urologia', bonus: 'Câncer de Rim, Câncer de Bexiga, Câncer de Testículo, Hipogonadismo Masculino, Disfunção Erétil' },
+  { semana: 'Semana 09', area: 'Clínica', aula: 'Introdução à Reumatologia + Artrites (AR, Espondiloartropatias)', bonus: '-' },
+  { semana: 'Semana 09', area: 'Pediatria', aula: 'Neonatologia II', bonus: 'Enterocolite Necrosante, Miscelânea' },
+  { semana: 'Semana 10', area: 'Clínica', aula: 'Gota; Febre Reumática', bonus: 'Fibromialgia, Artrite Séptica' },
+  { semana: 'Semana 10', area: 'Preventiva', aula: 'Epidemiologia Clínica', bonus: 'Verossimilhança e Testes Múltiplos, Curva ROC, Medidas de Tendência Central' },
+  { semana: 'Semana 11', area: 'Cirurgia', aula: 'Queimadura e Cirurgia Plástica', bonus: 'REMIT, Nutrição perioperatória, Úlceras de pressão' },
+  { semana: 'Semana 11', area: 'GO', aula: 'Assistência Clínica ao Parto e Parto Prematuro', bonus: 'Estudo do Motor, Mecanismo de Parto, Cesariana' },
+  { semana: 'Semana 12', area: 'Preventiva', aula: 'Vigilância da Saúde', bonus: 'Glossário de Doenças Infecciosas, Processo Epidêmico' },
+  { semana: 'Semana 12', area: 'Clínica', aula: 'Colagenoses', bonus: 'Amiloidoses' },
+  { semana: 'Semana 13', area: 'Preventiva', aula: 'Saúde do Trabalhador + Ética Médica', bonus: 'Saturnismo, Hidrargirismo, Benzenismo e Cromo' },
+  { semana: 'Semana 13', area: 'Cirurgia', aula: 'Cirurgia Pediátrica', bonus: '-' },
+  { semana: 'Semana 14', area: 'Clínica', aula: 'Vasculites', bonus: '-' },
+  { semana: 'Semana 14', area: 'Pediatria', aula: 'Aleitamento Materno', bonus: 'Alimentação Complementar' },
+  { semana: 'Semana 15', area: 'Clínica', aula: 'Anemias I (Introdução, Ferropriva, Doença Crônica, Megaloblástica)', bonus: 'Mielodisplasia, Anemia Aplásica' },
+  { semana: 'Semana 15', area: 'Pediatria', aula: 'Crescimento e Desenvolvimento Normais; Puberdade Normal', bonus: 'Distúrbios Puberais' },
+  { semana: 'Semana 16', area: 'Clínica', aula: 'Anemia II (Anemias Hemolíticas / Falciforme e outras)', bonus: 'Porfiria, HPN, Talassemias' },
+  { semana: 'Semana 16', area: 'Clínica', aula: 'Leucemias Agudas e Crônicas', bonus: 'Esplenomegalia, Doenças mieloproliferativas' },
+  { semana: 'Semana 17', area: 'Clínica', aula: 'Linfomas e Mieloma Múltiplo', bonus: '-' },
+  { semana: 'Semana 17', area: 'Cirurgia', aula: 'Preparo Pré-Operatório, Risco Cirúrgico e Complicações', bonus: 'Anestesiologia, Fios de Sutura, Profilaxia de TEP e TVP' },
+  { semana: 'Semana 18', area: 'Clínica', aula: 'Distúrbios da Hemostasia', bonus: 'Hemofilias, Hemotransfusão, Trombofilias, Tromboelastograma' },
+  { semana: 'Semana 18', area: 'Cirurgia', aula: 'Hérnias da Parede Abdominal', bonus: 'Abordagem Laparoscópica, Hérnias na Infância, Tipos de tela, Hérnia incisional' },
+  { semana: 'Semana 19', area: 'Clínica', aula: 'Doenças do Esôfago', bonus: 'Perfuração Esofágica, Esofagites' },
+  { semana: 'Semana 19', area: 'GO', aula: 'Sangramento Uterino Anormal, Endometriose e Infertilidade', bonus: 'Infertilidade, Dismenorreia e Pólipos Endometriais' },
+  { semana: 'Semana 20', area: 'Clínica', aula: 'Doenças do Estômago', bonus: 'HDA, GIST, Linfoma Gástrico, Síndrome de Zollinger-Ellison' },
+  { semana: 'Semana 20', area: 'Clínica', aula: 'Doenças Clínicas do Intestino', bonus: 'Colite Pseudomembranosa, SII' },
+  { semana: 'Semana 21', area: 'Clínica', aula: 'Doenças Cirúrgicas do Intestino I (Vascular e Obstrução)', bonus: 'Ingestão de Corpo Estranho' },
+  { semana: 'Semana 21', area: 'GO', aula: 'Sangramentos na Gravidez - Parte I', bonus: '-' },
+  { semana: 'Semana 22', area: 'Clínica', aula: 'Doenças Cirúrgicas do Intestino II (Diverticulose, Polipose, Câncer, Apendicite)', bonus: 'HDB, Síndrome Carcinoide, Tumores do Apêndice' },
+  { semana: 'Semana 22', area: 'GO', aula: 'Sangramentos na Gravidez - Parte II e DHP', bonus: '-' },
+  { semana: 'Semana 23', area: 'Clínica', aula: 'Pancreatite Aguda e Crônica, Câncer de Pâncreas', bonus: 'Tumores Neuroendócrinos, Neoplasias Císticas, Colangite Esclerosante' },
+  { semana: 'Semana 23', area: 'Clínica', aula: 'Doença das Vias Biliares', bonus: 'Neoplasias e Cistos de Vias Biliares' },
+  { semana: 'Semana 24', area: 'Clínica', aula: 'Introdução à Hepatologia; Hepatites Virais', bonus: 'Insuficiência Hepática Aguda' },
+  { semana: 'Semana 24', area: 'Clínica', aula: 'Cirrose e suas Causas', bonus: 'Hepatite Medicamentosa' },
+  { semana: 'Semana 25', area: 'Clínica', aula: 'Cirrose e suas Complicações / Hipertensão Porta', bonus: 'Tumores Hepáticos Malignos, Transplante Hepático' },
+  { semana: 'Semana 25', area: 'GO', aula: 'Climatério, Distopia e Incontinência Urinária', bonus: 'Osteoporose, Fístulas, Anatomia Pélvica' },
+  { semana: 'Semana 26', area: 'Clínica', aula: 'Arritmias I (Taquiarritmias)', bonus: 'Bloqueios de Ramo' },
+  { semana: 'Semana 26', area: 'Pediatria', aula: 'Distúrbios do Crescimento: Desnutrição e Baixa Estatura', bonus: 'Carência de Micronutrientes, Síndromes Genéticas' },
+  { semana: 'Semana 27', area: 'Clínica', aula: 'Arritmias II (Bradiarritmias) + PCR', bonus: 'Marca-Passo, Síncope' },
+  { semana: 'Semana 27', area: 'Pediatria', aula: 'Imunização', bonus: 'Profilaxia Raiva e Tétano' },
+  { semana: 'Semana 28', area: 'Clínica', aula: 'Insuficiência Cardíaca', bonus: 'Cardiomiopatias, IC Aguda, Choque' },
+  { semana: 'Semana 28', area: 'GO', aula: 'Doença das Mamas e Ovários', bonus: 'Patologias Mamárias e Ovarianas' },
+  { semana: 'Semana 29', area: 'Clínica', aula: 'Hipertensão Arterial Sistêmica: Crise Hipertensiva', bonus: '-' },
+  { semana: 'Semana 29', area: 'Clínica', aula: 'Valvopatias', bonus: '-' },
+  { semana: 'Semana 30', area: 'Clínica', aula: 'Doença Arterial Coronariana: IAM e Angina', bonus: 'Complicações Pós-IAM, Pericardiopatias' },
+  { semana: 'Semana 30', area: 'Pediatria', aula: 'Diarreia Aguda e Desidratação na Infância', bonus: 'Constipação, Diarreia Crônica' },
+  { semana: 'Semana 31', area: 'Preventiva', aula: 'SUS I - Evolução Histórica e Legislação', bonus: 'Decreto 7.508' },
+  { semana: 'Semana 31', area: 'GO', aula: 'Lesões Precursoras, Câncer de Colo Uterino e Endométrio', bonus: 'Câncer de Vulva' },
+  { semana: 'Semana 32', area: 'Clínica', aula: 'Tireoide', bonus: 'Hipotireoidismo Congênito' },
+  { semana: 'Semana 32', area: 'Preventiva', aula: 'SUS II - Atenção Básica e Financiamento', bonus: 'Instrumentos de AB, SOAP, Financiamento APS' },
+  { semana: 'Semana 33', area: 'Pediatria', aula: 'Infecções Respiratórias Agudas - Parte I', bonus: 'Rinite Alérgica, Estridor Crônico, Epistaxe' },
+  { semana: 'Semana 33', area: 'Clínica', aula: 'Doenças da Suprarrenal', bonus: 'Hipotálamo e Hipófise, Hiperaldosteronismo Primário' },
+  { semana: 'Semana 34', area: 'Clínica', aula: 'Diabetes Mellitus', bonus: 'Hipoglicemia, Nefropatia, Neuropatia, Pé Diabético' },
+  { semana: 'Semana 34', area: 'Pediatria', aula: 'Infecções Respiratórias Agudas - Parte II', bonus: 'Fibrose Cística' },
+  { semana: 'Semana 35', area: 'Clínica', aula: 'Asma e DPOC', bonus: 'Ventilação Mecânica, Capnografia, Provas Ventilatórias' },
+  { semana: 'Semana 35', area: 'GO', aula: 'Distúrbios Hipertensivos da Gestação, Diabetes e Gemelaridade', bonus: 'Doenças Intercorrentes' },
+  { semana: 'Semana 36', area: 'Clínica', aula: 'Câncer de Pulmão, TEP', bonus: 'Nódulo Solitário, Pneumopatias Difusas, Sarcoidose' },
+  { semana: 'Semana 36', area: 'Pediatria', aula: 'Nefrologia Pediátrica', bonus: 'PCR na Infância, Cardiopatias Congênitas, HAS Infantil' },
+  { semana: 'Semana 37', area: 'Clínica', aula: 'Tuberculose', bonus: 'Micobacterioses, Fungos, Derrame Pleural' },
+  { semana: 'Semana 37', area: 'Clínica', aula: 'Pneumonia e Complicações', bonus: 'Aulas correspondentes ao tema' },
+  { semana: 'Semana 38', area: 'Clínica', aula: 'AIDS', bonus: 'HIV na Infância, HTLV, CMV' },
+  { semana: 'Semana 38', area: 'Clínica', aula: 'Parasitoses Intestinais', bonus: 'Esquistossomose, Toxoplasmose, Animais Peçonhentos' },
+  { semana: 'Semana 39', area: 'Clínica', aula: 'Endocardite Infecciosa / Infecção Relacionada a Cateter', bonus: 'Infecções Hospitalares' },
+  { semana: 'Semana 39', area: 'GO', aula: 'Sofrimento Fetal, Avaliação da Vitalidade Fetal, Fórcipe e Puerpério', bonus: 'Distúrbios do Humor e Tromboembolismo' },
+  { semana: 'Semana 40', area: 'Clínica', aula: 'Síndromes Febris', bonus: 'Febre Tifoide, Malária, Febre Maculosa, Dengue/Covid/Oropouche, Leishmaniose' },
+  { semana: 'Semana 40', area: 'GO', aula: 'IST', bonus: 'Síndrome das verrugas genitais' },
+  { semana: 'Semana 41', area: 'Clínica', aula: 'Neurologia I (Cefaleias, Epilepsias)', bonus: 'Tumores do SNC, HIC, Coma, TVC, Morte Encefálica' },
+  { semana: 'Semana 41', area: 'Clínica', aula: 'Neurologia II (Síndromes Neurológicas e AVE)', bonus: 'Aulas correspondentes ao tema' },
+  { semana: 'Semana 42', area: 'Clínica', aula: 'Neurologia III (Polineuropatias, Demência, Parkinson)', bonus: 'Cuidados Paliativos, Miopatias, Doenças da Placa Motora' },
+  { semana: 'Semana 42', area: 'Pediatria', aula: 'Doenças Exantemáticas na Infância', bonus: 'FSSL, Erros Inatos, Tumores Abdominais, Maus-Tratos' },
+  { semana: 'Semana 43', area: 'Clínica', aula: 'Psiquiatria I', bonus: 'Intoxicações Exógenas, Suicídio, Transtornos de Personalidade e Neurodesenvolvimento' },
+];
+
+export const cronogramaData: CronogramaEntry[] = raw.map((r, i) => ({
+  ...r,
+  id: `cron-${String(i).padStart(3, '0')}`,
+}));
