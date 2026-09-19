@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from 'react';
 import { Shield, UserPlus, UserMinus, Loader2, AlertCircle, X, Mail, Crown, Check } from 'lucide-react';
-import { authApi, type WhitelistEntry } from '@/lib/supabase';
+import { authApi, type WhitelistEntry } from '@/lib/auth';
 
 interface AdminPanelProps {
   adminEmail: string;

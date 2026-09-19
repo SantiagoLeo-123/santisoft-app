@@ -9,6 +9,7 @@ import { CronogramaScreen } from '@/components/CronogramaScreen';
 import { LoginScreen } from '@/components/LoginScreen';
 import { AdminPanel } from '@/components/AdminPanel';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
+import { authApi } from '@/lib/auth';
 import { curriculum } from '@/data/curriculum';
 import type { ProgressMap, ProfileList, UserProfile } from '@/types';
 
@@ -21,8 +22,11 @@ interface Selection {
 }
 
 export default function App() {
-  const [authedEmail, setAuthedEmail] = useState<string | null>(null);
-  const [isAdmin, setIsAdmin] = useState(false);
+  const [authedEmail, setAuthedEmail] = useState<string | null>(() => authApi.getSession());
+  const [isAdmin, setIsAdmin] = useState(() => {
+    const session = authApi.getSession();
+    return session === 'leodoscsgo2018@hotmail.com';
+  });
   const [showAdminPanel, setShowAdminPanel] = useState(false);
   const [view, setView] = useState<AppView>('splash');
   const [profiles, setProfiles] = useLocalStorage<ProfileList>('santisoft:profiles', []);
@@ -168,6 +172,7 @@ export default function App() {
     return (
       <LoginScreen
         onLogin={(email, admin) => {
+          authApi.saveSession(email);
           setAuthedEmail(email);
           setIsAdmin(admin);
         }}
@@ -216,7 +221,7 @@ export default function App() {
         isCronograma={showCronograma}
         isAdmin={isAdmin}
         onOpenAdmin={() => setShowAdminPanel(true)}
-        onLogout={() => { setAuthedEmail(null); setIsAdmin(false); setView('splash'); }}
+        onLogout={() => { authApi.clearSession(); setAuthedEmail(null); setIsAdmin(false); setView('splash'); }}
       />
 
       <div className="flex flex-1 min-h-0 overflow-hidden">

@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import { Activity, Mail, Lock, ArrowRight, AlertCircle, Loader2, KeyRound, ShieldCheck } from 'lucide-react';
-import { authApi } from '@/lib/supabase';
+import { authApi } from '@/lib/auth';
 
 interface LoginScreenProps {
   onLogin: (email: string, isAdmin: boolean) => void;
