@@ -1,6 +1,8 @@
-import { Menu, Activity, Home, User, Calendar } from 'lucide-react';
+import { Menu, Activity, Home, User, Calendar, Shield, LogOut, BookOpen } from 'lucide-react';
 import type { SubjectArea, Lesson, UserProfile } from '@/types';
 import { getAvatarSrc, getPresetColor } from '@/lib/avatars';
+
+const BANCO_QUESTOES_URL = 'https://drive.google.com/drive/folders/COLE_AQUI_O_LINK_DA_PASTA_DO_DRIVE';
 
 interface HeaderProps {
   areaName: string | null;
@@ -13,6 +15,9 @@ interface HeaderProps {
   onSwitchProfile: () => void;
   profile: UserProfile | null;
   isCronograma: boolean;
+  isAdmin: boolean;
+  onOpenAdmin: () => void;
+  onLogout: () => void;
 }
 
 export function Header({
@@ -26,6 +31,9 @@ export function Header({
   onSwitchProfile,
   profile,
   isCronograma,
+  isAdmin,
+  onOpenAdmin,
+  onLogout,
 }: HeaderProps) {
   const pct = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
 
@@ -97,6 +105,30 @@ export function Header({
         </div>
       )}
 
+      {/* Banco de Questões */}
+      <a
+        href={BANCO_QUESTOES_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium text-zinc-400 hover:text-white hover:bg-ink-850 transition-colors shrink-0"
+        title="Banco de Questões (abre em nova aba)"
+      >
+        <BookOpen className="w-4 h-4" />
+        <span className="hidden md:inline">Banco de Questões</span>
+      </a>
+
+      {/* Admin button */}
+      {isAdmin && (
+        <button
+          onClick={onOpenAdmin}
+          className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium text-red-400 hover:text-red-300 hover:bg-red-600/10 transition-colors shrink-0"
+          title="Painel do Administrador"
+        >
+          <Shield className="w-4 h-4" />
+          <span className="hidden md:inline">Admin</span>
+        </button>
+      )}
+
       <button
         onClick={onBackToHome}
         className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium text-zinc-400 hover:text-white hover:bg-ink-850 transition-colors shrink-0"
@@ -105,6 +137,16 @@ export function Header({
       >
         <Home className="w-4 h-4" />
         <span className="hidden md:inline">Cursos</span>
+      </button>
+
+      {/* Logout */}
+      <button
+        onClick={onLogout}
+        className="p-2 rounded-lg text-zinc-400 hover:text-red-500 hover:bg-ink-850 transition-colors shrink-0"
+        title="Sair"
+        aria-label="Sair"
+      >
+        <LogOut className="w-4 h-4" />
       </button>
 
       {/* Profile badge */}

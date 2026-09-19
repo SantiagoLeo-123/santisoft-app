@@ -6,6 +6,8 @@ import { SplashScreen } from '@/components/SplashScreen';
 import { HomeScreen } from '@/components/HomeScreen';
 import { ProfileScreen } from '@/components/ProfileScreen';
 import { CronogramaScreen } from '@/components/CronogramaScreen';
+import { LoginScreen } from '@/components/LoginScreen';
+import { AdminPanel } from '@/components/AdminPanel';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { curriculum } from '@/data/curriculum';
 import type { ProgressMap, ProfileList, UserProfile } from '@/types';
@@ -19,6 +21,9 @@ interface Selection {
 }
 
 export default function App() {
+  const [authedEmail, setAuthedEmail] = useState<string | null>(null);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [showAdminPanel, setShowAdminPanel] = useState(false);
   const [view, setView] = useState<AppView>('splash');
   const [profiles, setProfiles] = useLocalStorage<ProfileList>('santisoft:profiles', []);
   const [activeProfileId, setActiveProfileId] = useLocalStorage<string | null>('santisoft:activeProfile', null);
@@ -159,6 +164,17 @@ export default function App() {
 
   // --- Render ---
 
+  if (!authedEmail) {
+    return (
+      <LoginScreen
+        onLogin={(email, admin) => {
+          setAuthedEmail(email);
+          setIsAdmin(admin);
+        }}
+      />
+    );
+  }
+
   if (view === 'splash') {
     return <SplashScreen onFinish={() => setView('profiles')} />;
   }
@@ -198,6 +214,9 @@ export default function App() {
         onSwitchProfile={() => setView('profiles')}
         profile={activeProfile}
         isCronograma={showCronograma}
+        isAdmin={isAdmin}
+        onOpenAdmin={() => setShowAdminPanel(true)}
+        onLogout={() => { setAuthedEmail(null); setIsAdmin(false); setView('splash'); }}
       />
 
       <div className="flex flex-1 min-h-0 overflow-hidden">
@@ -252,6 +271,13 @@ export default function App() {
           />
         )}
       </div>
+
+      {showAdminPanel && isAdmin && authedEmail && (
+        <AdminPanel
+          adminEmail={authedEmail}
+          onClose={() => setShowAdminPanel(false)}
+        />
+      )}
     </div>
   );
 }

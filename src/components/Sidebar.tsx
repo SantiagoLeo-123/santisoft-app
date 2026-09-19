@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import { ChevronDown, ChevronRight, Check, Play, PanelLeftClose, PanelLeft, Calendar } from 'lucide-react';
+import { ChevronDown, ChevronRight, Check, Play, PanelLeftClose, PanelLeft, Calendar, BookOpen } from 'lucide-react';
 import type { SubjectArea, Module, ProgressMap } from '@/types';
 import { getIcon } from '@/lib/icons';
+
+const BANCO_QUESTOES_URL = 'https://drive.google.com/drive/folders/COLE_AQUI_O_LINK_DA_PASTA_DO_DRIVE';
 
 interface SidebarProps {
   curriculum: SubjectArea[];
@@ -71,6 +73,15 @@ export function Sidebar({
         >
           <Calendar className="w-5 h-5" />
         </button>
+        <a
+          href={BANCO_QUESTOES_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-2 rounded-lg text-zinc-400 hover:text-red-500 hover:bg-ink-850 transition-colors"
+          title="Banco de Questões (nova aba)"
+        >
+          <BookOpen className="w-5 h-5" />
+        </a>
         <div className="w-8 border-t border-ink-875" />
         {curriculum.map((area) => {
           const Icon = getIcon(area.icon);
@@ -125,6 +136,19 @@ export function Sidebar({
             Cronograma MEDCURSO
           </span>
         </button>
+
+        {/* Banco de Questões */}
+        <a
+          href={BANCO_QUESTOES_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg border border-transparent hover:bg-ink-850 transition-all mb-2"
+        >
+          <BookOpen className="shrink-0 text-red-600/70" style={{ width: 18, height: 18 }} />
+          <span className="text-sm font-semibold text-zinc-200 flex-1 text-left">
+            Banco de Questões
+          </span>
+        </a>
 
         {/* Divider */}
         <div className="mx-3 mb-2 border-t border-ink-875" />
