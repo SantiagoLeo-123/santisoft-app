@@ -3,7 +3,7 @@ import { ChevronDown, ChevronRight, Check, Play, PanelLeftClose, PanelLeft, Cale
 import type { SubjectArea, Module, ProgressMap } from '@/types';
 import { getIcon } from '@/lib/icons';
 
-const BANCO_QUESTOES_URL = 'https://drive.google.com/drive/folders/COLE_AQUI_O_LINK_DA_PASTA_DO_DRIVE';
+const BANCO_QUESTOES_URL = 'https://drive.google.com/drive/folders/1lPgsWzctV6GUMvwTp-yzcjbfr_DOEBc8?usp=drive_link';
 
 interface SidebarProps {
   curriculum: SubjectArea[];

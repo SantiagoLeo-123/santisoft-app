@@ -109,6 +109,14 @@ const raw: Omit<CronogramaEntry, 'id'>[] = [
   { semana: 'Semana 42', area: 'Clínica', aula: 'Neurologia III (Polineuropatias, Demência, Parkinson)', bonus: 'Cuidados Paliativos, Miopatias, Doenças da Placa Motora' },
   { semana: 'Semana 42', area: 'Pediatria', aula: 'Doenças Exantemáticas na Infância', bonus: 'FSSL, Erros Inatos, Tumores Abdominais, Maus-Tratos' },
   { semana: 'Semana 43', area: 'Clínica', aula: 'Psiquiatria I', bonus: 'Intoxicações Exógenas, Suicídio, Transtornos de Personalidade e Neurodesenvolvimento' },
+  { semana: 'Semana 43', area: 'Clínica', aula: 'Psiquiatria II', bonus: '-' },
+  { semana: 'Semana 43', area: 'Cirurgia', aula: 'Oftalmologia', bonus: '-' },
+  { semana: 'Semana 44', area: 'Cirurgia', aula: 'Especialidade Cirúrgica - Parte I', bonus: '-' },
+  { semana: 'Semana 44', area: 'Cirurgia', aula: 'Especialidade Cirúrgica - Parte II', bonus: '-' },
+  { semana: 'Semana 45', area: 'Clínica', aula: 'Dermatologia I', bonus: '-' },
+  { semana: 'Semana 45', area: 'Clínica', aula: 'Dermatologia II', bonus: '-' },
+  { semana: 'Semana 46', area: 'Cirurgia', aula: 'Ortopedia I', bonus: '-' },
+  { semana: 'Semana 46', area: 'Cirurgia', aula: 'Ortopedia II', bonus: '-' },
 ];
 
 export const cronogramaData: CronogramaEntry[] = raw.map((r, i) => ({

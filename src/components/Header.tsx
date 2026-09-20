@@ -2,7 +2,7 @@ import { Menu, Activity, Home, User, Calendar, Shield, LogOut, BookOpen } from '
 import type { SubjectArea, Lesson, UserProfile } from '@/types';
 import { getAvatarSrc, getPresetColor } from '@/lib/avatars';
 
-const BANCO_QUESTOES_URL = 'https://drive.google.com/drive/folders/COLE_AQUI_O_LINK_DA_PASTA_DO_DRIVE';
+const BANCO_QUESTOES_URL = 'https://drive.google.com/drive/folders/1lPgsWzctV6GUMvwTp-yzcjbfr_DOEBc8?usp=drive_link';
 
 interface HeaderProps {
   areaName: string | null;

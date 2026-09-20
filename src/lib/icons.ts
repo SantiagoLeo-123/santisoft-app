@@ -13,6 +13,7 @@ import {
   Pill,
   SearchCheck,
   BarChart3,
+  BookOpen,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -31,6 +32,7 @@ const iconMap: Record<string, LucideIcon> = {
   Pill,
   SearchCheck,
   BarChart3,
+  BookOpen,
 };
 
 export function getIcon(name: string): LucideIcon {
