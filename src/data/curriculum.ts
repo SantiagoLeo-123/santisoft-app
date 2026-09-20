@@ -224,62 +224,6 @@ export const curriculum: SubjectArea[] = [
     icon: 'Baby',
     modules: [
       {
-        id: 'pneumo-ped',
-        name: 'Pneumologia Pediátrica',
-        icon: 'Wind',
-        lessons: [
-          {
-            id: 'pneumo-ped-01',
-            number: 1,
-            title: 'Bronquiolite: Diagnóstico e Critérios de Internação',
-            duration: 38,
-            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4' },
-          },
-          {
-            id: 'pneumo-ped-02',
-            number: 2,
-            title: 'Pneumonia na Infância: Classificação e Antibioticoterapia',
-            duration: 44,
-            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4' },
-          },
-          {
-            id: 'pneumo-ped-03',
-            number: 3,
-            title: 'Asma na Criança: Manejo e Educação aos Pais',
-            duration: 36,
-            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4' },
-          },
-        ],
-      },
-      {
-        id: 'gastro-ped',
-        name: 'Gastroenterologia Pediátrica',
-        icon: 'Pill',
-        lessons: [
-          {
-            id: 'gastro-ped-01',
-            number: 1,
-            title: 'Desidratação Aguda: Classificação e Reposição Hídrica',
-            duration: 41,
-            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4' },
-          },
-          {
-            id: 'gastro-ped-02',
-            number: 2,
-            title: 'Diarreia Aguda: Etiologias e Conduta',
-            duration: 34,
-            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4' },
-          },
-          {
-            id: 'gastro-ped-03',
-            number: 3,
-            title: 'Dor Abdominal Recorrente: Abordagem Diferencial',
-            duration: 40,
-            source: { kind: 'mp4', url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' },
-          },
-        ],
-      },
-      {
         id: 'aulas-ped',
         name: 'Aulas de Pediatria',
         icon: 'BookOpen',
