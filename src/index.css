@@ -5,10 +5,12 @@
 @layer base {
   html {
     -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
   body {
-    @apply bg-ink-950 text-white font-sans antialiased;
-    overscroll-behavior: none;
+    @apply bg-ink-950 text-white font-sans antialiased overflow-x-hidden;
+    overscroll-behavior-y: none;
+    -webkit-overflow-scrolling: touch;
   }
   * {
     -webkit-overflow-scrolling: touch;
@@ -21,8 +23,8 @@
     scrollbar-color: #27272a transparent;
   }
   .scrollbar-thin::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
   }
   .scrollbar-thin::-webkit-scrollbar-track {
     background: transparent;
@@ -41,9 +43,24 @@
     text-wrap: balance;
   }
   .safe-top {
-    padding-top: env(safe-area-inset-top);
+    padding-top: max(env(safe-area-inset-top, 0px), 0px);
   }
   .safe-bottom {
-    padding-bottom: env(safe-area-inset-bottom);
+    padding-bottom: max(env(safe-area-inset-bottom, 0px), 0px);
+  }
+  .safe-pt {
+    padding-top: max(env(safe-area-inset-top, 0px), 12px);
+  }
+  .safe-pb {
+    padding-bottom: max(env(safe-area-inset-bottom, 0px), 16px);
+  }
+  .scrollbar-none::-webkit-scrollbar,
+  .no-scrollbar::-webkit-scrollbar {
+    display: none !important;
+  }
+  .scrollbar-none,
+  .no-scrollbar {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
   }
 }

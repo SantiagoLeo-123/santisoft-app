@@ -137,27 +137,47 @@ export function CronogramaScreen({
     });
   };
 
+  const currentVideoIndex = useMemo(() => {
+    if (!activeVideoEntry) return -1;
+    return filtered.findIndex((e) => e.id === activeVideoEntry.id);
+  }, [filtered, activeVideoEntry]);
+
+  const hasPrevVideo = currentVideoIndex > 0;
+  const hasNextVideo = currentVideoIndex >= 0 && currentVideoIndex < filtered.length - 1;
+
+  const handlePrevVideo = () => {
+    if (hasPrevVideo) {
+      setActiveVideoEntry(filtered[currentVideoIndex - 1]);
+    }
+  };
+
+  const handleNextVideo = () => {
+    if (hasNextVideo) {
+      setActiveVideoEntry(filtered[currentVideoIndex + 1]);
+    }
+  };
+
   return (
-    <div className="flex-1 flex flex-col min-h-0 overflow-y-auto scrollbar-thin animate-fade-in bg-ink-950">
-      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 space-y-5">
+    <div className="flex-1 flex flex-col min-h-0 overflow-y-auto scrollbar-thin animate-fade-in bg-ink-950 overflow-x-hidden w-full">
+      <div className="w-full max-w-6xl mx-auto px-3.5 sm:px-6 py-4 sm:py-6 space-y-4 sm:space-y-6 overflow-x-hidden">
         
         {/* Header Title & Status */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
           <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-red-600/15 border border-red-600/30 text-red-500">
+            <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-red-600/15 border border-red-600/30 text-red-500 shrink-0">
               <Calendar className="w-5 h-5" />
             </div>
             <div>
-              <h1 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+              <h1 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
                 Cronograma de Estudos
               </h1>
               <p className="text-xs text-zinc-400 mt-0.5">
-                Acompanhamento de Aulas
+                Acompanhamento completo de videoaulas e revisões
               </p>
             </div>
           </div>
 
-          <div className="flex items-center gap-2.5 bg-ink-900 border border-ink-875 px-3 py-1.5 rounded-xl self-start sm:self-auto">
+          <div className="flex items-center gap-2 bg-ink-900 border border-ink-875 px-3 py-1.5 rounded-xl self-start sm:self-auto shadow-sm">
             <div
               className={`w-2 h-2 rounded-full ${
                 stats.completedCount > 0 ? 'bg-emerald-500 animate-pulse' : 'bg-zinc-600'
@@ -171,18 +191,18 @@ export function CronogramaScreen({
         </div>
 
         {/* Card Superior Único: AULAS & Progresso Geral */}
-        <div className="rounded-2xl bg-ink-900 border border-ink-875 p-5 shadow-lg">
+        <div className="rounded-2xl bg-ink-900 border border-ink-875 p-4 sm:p-5 shadow-lg">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div className="flex items-center gap-3.5">
-              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-red-600/15 text-red-500 border border-red-600/30">
-                <Video className="w-6 h-6" />
+              <div className="flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-red-600/15 text-red-500 border border-red-600/30 shrink-0">
+                <Video className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <div>
                 <span className="text-xs font-semibold text-zinc-400 uppercase tracking-wider block">
-                  Aulas
+                  Aulas Assistidas
                 </span>
                 <div className="flex items-baseline gap-2 mt-0.5">
-                  <span className="text-2xl font-extrabold text-white tabular-nums">
+                  <span className="text-2xl font-black text-white tabular-nums">
                     {stats.completedCount}
                     <span className="text-sm font-semibold text-zinc-500 ml-1">
                       /{totalEntries}
@@ -198,12 +218,12 @@ export function CronogramaScreen({
             {/* Barra de Progresso Geral */}
             <div className="w-full sm:w-72 space-y-1.5">
               <div className="flex justify-between text-xs text-zinc-400 font-medium">
-                <span>Progresso das Aulas</span>
+                <span>Meta do Ciclo</span>
                 <span className="text-white font-bold">{stats.pct}%</span>
               </div>
               <div className="h-2.5 bg-ink-950 rounded-full overflow-hidden border border-ink-850">
                 <div
-                  className="h-full bg-gradient-to-r from-red-600 to-emerald-500 rounded-full transition-all duration-500"
+                  className="h-full bg-gradient-to-r from-red-600 via-amber-500 to-emerald-500 rounded-full transition-all duration-500"
                   style={{ width: `${stats.pct}%` }}
                 />
               </div>
@@ -211,34 +231,35 @@ export function CronogramaScreen({
           </div>
         </div>
 
-        {/* Search & Dynamic Specialty Filters */}
-        <div className="flex flex-col md:flex-row gap-3">
+        {/* Search & Status Filters */}
+        <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3">
           <div className="relative flex-1">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-600" />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500" />
             <input
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="Buscar por semana, aula principal ou bônus..."
-              className="w-full pl-9 pr-9 py-2.5 rounded-xl bg-ink-900 border border-ink-875 text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-red-600 transition-colors"
+              placeholder="Buscar por tema, aula, semana ou bônus..."
+              className="w-full pl-10 pr-9 py-2.5 rounded-xl bg-ink-900 border border-ink-875 text-sm text-white placeholder:text-zinc-500 focus:outline-none focus:border-red-600 transition-colors"
             />
             {search && (
               <button
                 onClick={() => setSearch('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-600 hover:text-zinc-400"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-zinc-300 p-1"
+                aria-label="Limpar busca"
               >
                 <X className="w-4 h-4" />
               </button>
             )}
           </div>
 
-          {/* Status Filter */}
-          <div className="flex gap-1 bg-ink-900 border border-ink-875 p-1 rounded-xl shrink-0 self-start md:self-auto">
+          {/* Status Filter (Todas, Pendentes, Concluídas) */}
+          <div className="flex gap-1 bg-ink-900 border border-ink-875 p-1 rounded-xl shrink-0 self-stretch sm:self-auto overflow-x-auto no-scrollbar">
             <button
               onClick={() => setStatusFilter('todos')}
-              className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
+              className={`flex-1 sm:flex-initial px-3 py-1.5 min-h-[36px] rounded-lg text-xs font-semibold transition-colors flex items-center justify-center ${
                 statusFilter === 'todos'
-                  ? 'bg-ink-800 text-white font-semibold'
+                  ? 'bg-ink-800 text-white shadow-sm'
                   : 'text-zinc-400 hover:text-zinc-200'
               }`}
             >
@@ -246,9 +267,9 @@ export function CronogramaScreen({
             </button>
             <button
               onClick={() => setStatusFilter('pendentes')}
-              className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
+              className={`flex-1 sm:flex-initial px-3 py-1.5 min-h-[36px] rounded-lg text-xs font-semibold transition-colors flex items-center justify-center ${
                 statusFilter === 'pendentes'
-                  ? 'bg-ink-800 text-white font-semibold'
+                  ? 'bg-ink-800 text-white shadow-sm'
                   : 'text-zinc-400 hover:text-zinc-200'
               }`}
             >
@@ -256,9 +277,9 @@ export function CronogramaScreen({
             </button>
             <button
               onClick={() => setStatusFilter('concluidas')}
-              className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
+              className={`flex-1 sm:flex-initial px-3 py-1.5 min-h-[36px] rounded-lg text-xs font-semibold transition-colors flex items-center justify-center ${
                 statusFilter === 'concluidas'
-                  ? 'bg-emerald-600/30 text-emerald-300 font-semibold'
+                  ? 'bg-emerald-600/30 text-emerald-300 shadow-sm'
                   : 'text-zinc-400 hover:text-zinc-200'
               }`}
             >
@@ -267,35 +288,144 @@ export function CronogramaScreen({
           </div>
         </div>
 
-        {/* 2. Interactive Specialty Filter Tabs with Dynamic Reactive Counts */}
-        <div className="flex gap-1.5 overflow-x-auto scrollbar-thin pb-1">
+        {/* 2. Filtros de Especialidades (Mobile-First: Linha única com rolagem horizontal suave) */}
+        <div className="flex overflow-x-auto whitespace-nowrap scrollbar-none gap-2 px-1 py-2 scroll-smooth items-center w-full touch-pan-x">
           {filterCounts.map((f) => {
             const isActive = areaFilter === f.value;
             return (
               <button
                 key={f.value}
                 onClick={() => setAreaFilter(f.value)}
-                className={`px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all flex items-center gap-1.5 ${
+                className={`shrink-0 whitespace-nowrap px-3.5 py-2 min-h-[40px] rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 active:scale-95 ${
                   isActive
-                    ? 'bg-red-600 text-white shadow-md shadow-red-600/20'
-                    : 'bg-ink-900 text-zinc-400 hover:bg-ink-850 hover:text-white border border-ink-875'
+                    ? 'bg-red-600 text-white shadow-md shadow-red-600/30'
+                    : 'bg-ink-900 text-zinc-300 hover:bg-ink-850 hover:text-white border border-ink-875'
                 }`}
               >
                 <span>{f.label}</span>
                 <span
-                  className={`text-[11px] font-normal tabular-nums ${
-                    isActive ? 'text-white/80' : 'text-zinc-500'
+                  className={`text-[11px] font-normal tabular-nums px-1.5 py-0.5 rounded-md ${
+                    isActive ? 'bg-white/20 text-white' : 'bg-ink-950 text-zinc-400'
                   }`}
                 >
-                  ({f.completed}/{f.total})
+                  {f.completed}/{f.total}
                 </span>
               </button>
             );
           })}
         </div>
 
-        {/* Desktop Table View */}
-        <div className="hidden lg:block overflow-hidden rounded-2xl border border-ink-875 bg-ink-900 shadow-xl">
+        {/* 3. Cards de Aula Mobile (Touch-friendly, min-height 48px nos botões, título nítido) */}
+        <div className="md:hidden space-y-3.5 overflow-x-hidden w-full">
+          {filtered.map((entry) => {
+            const colors = AREA_COLORS[entry.area as AreaShort] ?? {
+              bg: 'bg-ink-850',
+              text: 'text-zinc-400',
+              border: 'border-ink-800',
+              dot: 'bg-zinc-500',
+            };
+            const isDone = isLessonCompleted(progress, entry.id);
+
+            return (
+              <div
+                key={entry.id}
+                className={`w-full max-w-full rounded-2xl border p-4 sm:p-5 transition-all border-l-4 shadow-lg space-y-3 overflow-hidden ${
+                  isDone
+                    ? 'bg-emerald-950/20 border-ink-875 border-l-emerald-500'
+                    : 'bg-ink-900 border-ink-875 border-l-transparent'
+                }`}
+              >
+                {/* Top Row: Semana + Badge Área + Status */}
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="text-xs font-extrabold text-zinc-300 tabular-nums">
+                      {entry.semana}
+                    </span>
+                    <span
+                      className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md text-[10px] font-bold border ${colors.bg} ${colors.text} ${colors.border}`}
+                    >
+                      <span className={`w-1.5 h-1.5 rounded-full ${colors.dot}`} />
+                      {entry.area}
+                    </span>
+                  </div>
+
+                  {/* Status Pill */}
+                  <span
+                    className={`text-[11px] font-bold px-2 py-0.5 rounded-md ${
+                      isDone
+                        ? 'bg-emerald-600/20 text-emerald-300 border border-emerald-500/30'
+                        : 'bg-ink-950 text-zinc-500 border border-ink-850'
+                    }`}
+                  >
+                    {isDone ? 'Concluída' : 'Pendente'}
+                  </span>
+                </div>
+
+                {/* Título da Aula (Legível no topo, fácil de tocar) */}
+                <button
+                  type="button"
+                  onClick={() => setActiveVideoEntry(entry)}
+                  className="text-left w-full group/mobiletitle focus:outline-none"
+                >
+                  <p
+                    className={`text-base font-bold leading-snug transition-colors group-hover/mobiletitle:text-red-400 ${
+                      isDone ? 'text-emerald-200' : 'text-white'
+                    }`}
+                  >
+                    {entry.aula}
+                  </p>
+                </button>
+
+                {/* Bônus se houver */}
+                {entry.bonus !== '-' && (
+                  <div className="p-2.5 rounded-xl bg-ink-950/80 border border-ink-875/80 text-xs text-zinc-400 leading-relaxed">
+                    <span className="text-zinc-500 font-bold uppercase text-[10px] tracking-wider block mb-0.5">
+                      Temas Bônus
+                    </span>
+                    {entry.bonus}
+                  </div>
+                )}
+
+                {/* Mobile Action Buttons: Assistir Aula & Concluída (min-height 48px e touch target amplo) */}
+                <div className="pt-2 border-t border-ink-875/80 flex items-center gap-2.5">
+                  <button
+                    type="button"
+                    onClick={() => setActiveVideoEntry(entry)}
+                    className="min-h-[48px] h-12 flex-1 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 bg-red-600/15 text-red-400 hover:bg-red-600/25 border border-red-600/30 active:scale-[0.98] transition-all shadow-sm"
+                  >
+                    <Play className="w-4 h-4 fill-current shrink-0" />
+                    <span>Assistir Aula</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => onToggleComplete(entry.id)}
+                    className={`min-h-[48px] h-12 flex-1 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all active:scale-[0.98] shadow-sm ${
+                      isDone
+                        ? 'bg-emerald-600 text-white shadow-emerald-600/20'
+                        : 'bg-ink-950 border border-ink-800 text-zinc-300 hover:bg-ink-850 hover:text-white'
+                    }`}
+                  >
+                    {isDone ? (
+                      <>
+                        <CheckCircle2 className="w-4 h-4 text-emerald-200 shrink-0" />
+                        <span>Concluída</span>
+                      </>
+                    ) : (
+                      <>
+                        <Circle className="w-4 h-4 text-zinc-500 shrink-0" />
+                        <span>Marcar Concluída</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Desktop Table View (Aparece a partir de md:block / telas médias e grandes) */}
+        <div className="hidden md:block overflow-hidden rounded-2xl border border-ink-875 bg-ink-900 shadow-xl">
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="bg-ink-925 border-b border-ink-875 text-[11px] font-bold text-zinc-400 uppercase tracking-wider">
@@ -364,14 +494,14 @@ export function CronogramaScreen({
                       )}
                     </td>
 
-                    {/* Action Controls: Assistir (Player Embutido) + Status (Pendente/Concluída) */}
+                    {/* Action Controls */}
                     <td className="px-5 py-3.5 text-right whitespace-nowrap">
                       <div className="inline-flex items-center gap-2 justify-end">
                         {/* Assistir Video Player Modal Button */}
                         <button
                           type="button"
                           onClick={() => setActiveVideoEntry(entry)}
-                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-red-600/15 text-red-400 hover:bg-red-600/25 border border-red-600/30 transition-all shadow-sm group"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-red-600/15 text-red-400 hover:bg-red-600/25 border border-red-600/30 transition-all shadow-sm group active:scale-95"
                           title="Assistir aula no player integrado"
                         >
                           <Play className="w-3.5 h-3.5 fill-current transition-transform group-hover:scale-110" />
@@ -382,7 +512,7 @@ export function CronogramaScreen({
                         <button
                           type="button"
                           onClick={() => onToggleComplete(entry.id)}
-                          className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all shadow-sm ${
+                          className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all shadow-sm active:scale-95 ${
                             isDone
                               ? 'bg-emerald-600 text-white hover:bg-emerald-700 shadow-emerald-600/20'
                               : 'bg-ink-950 border border-ink-800 text-zinc-400 hover:text-white hover:border-zinc-600 hover:bg-ink-850'
@@ -410,112 +540,6 @@ export function CronogramaScreen({
           </table>
         </div>
 
-        {/* Mobile Card View */}
-        <div className="lg:hidden space-y-3">
-          {filtered.map((entry) => {
-            const colors = AREA_COLORS[entry.area as AreaShort] ?? {
-              bg: 'bg-ink-850',
-              text: 'text-zinc-400',
-              border: 'border-ink-800',
-              dot: 'bg-zinc-500',
-            };
-            const isDone = isLessonCompleted(progress, entry.id);
-
-            return (
-              <div
-                key={entry.id}
-                className={`rounded-2xl border p-4 transition-all border-l-4 ${
-                  isDone
-                    ? 'bg-emerald-950/20 border-ink-875 border-l-emerald-500'
-                    : 'bg-ink-900 border-ink-875 border-l-transparent'
-                }`}
-              >
-                <div className="flex items-center justify-between gap-2 mb-2">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs font-bold text-zinc-300 tabular-nums">
-                      {entry.semana}
-                    </span>
-                    <span
-                      className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold border ${colors.bg} ${colors.text} ${colors.border}`}
-                    >
-                      <span className={`w-1.5 h-1.5 rounded-full ${colors.dot}`} />
-                      {entry.area}
-                    </span>
-                  </div>
-
-                  {/* Status Indicator */}
-                  <span
-                    className={`text-[11px] font-bold px-2 py-0.5 rounded ${
-                      isDone
-                        ? 'bg-emerald-600/20 text-emerald-300 border border-emerald-500/30'
-                        : 'bg-ink-950 text-zinc-500'
-                    }`}
-                  >
-                    {isDone ? 'Assistida' : 'Pendente'}
-                  </span>
-                </div>
-
-                <button
-                  type="button"
-                  onClick={() => setActiveVideoEntry(entry)}
-                  className="text-left w-full group/mobiletitle"
-                >
-                  <p
-                    className={`text-sm font-semibold leading-snug mb-3 group-hover/mobiletitle:text-red-400 ${
-                      isDone ? 'text-emerald-200' : 'text-zinc-100'
-                    }`}
-                  >
-                    {entry.aula}
-                  </p>
-                </button>
-
-                {entry.bonus !== '-' && (
-                  <div className="mb-3 p-2 rounded-xl bg-ink-950/70 border border-ink-875 text-xs text-zinc-400">
-                    <span className="text-zinc-500 font-semibold uppercase text-[10px]">
-                      Bônus:{' '}
-                    </span>
-                    {entry.bonus}
-                  </div>
-                )}
-
-                {/* Mobile Action Buttons: Assistir & Marcar */}
-                <div className="pt-2 border-t border-ink-875 flex items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setActiveVideoEntry(entry)}
-                    className="flex-1 py-2 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 bg-red-600/15 text-red-400 hover:bg-red-600/25 border border-red-600/30 transition-all"
-                  >
-                    <Play className="w-3.5 h-3.5 fill-current" />
-                    <span>Assistir</span>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => onToggleComplete(entry.id)}
-                    className={`flex-1 py-2 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all ${
-                      isDone
-                        ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20'
-                        : 'bg-ink-950 border border-ink-850 text-zinc-300 hover:bg-ink-850 hover:text-white'
-                    }`}
-                  >
-                    {isDone ? (
-                      <>
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-200" />
-                        <span>Assistida</span>
-                      </>
-                    ) : (
-                      <>
-                        <Circle className="w-3 h-3 text-zinc-500" />
-                        <span>Concluir</span>
-                      </>
-                    )}
-                  </button>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
         {/* Empty State */}
         {filtered.length === 0 && (
           <div className="flex flex-col items-center justify-center py-16 text-center">
@@ -541,6 +565,10 @@ export function CronogramaScreen({
         isCompleted={activeVideoEntry ? isLessonCompleted(progress, activeVideoEntry.id) : false}
         onToggleComplete={() => activeVideoEntry && onToggleComplete(activeVideoEntry.id)}
         onClose={() => setActiveVideoEntry(null)}
+        onPrev={handlePrevVideo}
+        onNext={handleNextVideo}
+        hasPrev={hasPrevVideo}
+        hasNext={hasNextVideo}
         directDriveId={activeVideoEntry?.driveId}
         customDriveUrls={customDriveUrls}
         onSaveCustomDriveUrl={handleSaveCustomDriveUrl}

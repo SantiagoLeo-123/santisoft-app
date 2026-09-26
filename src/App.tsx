@@ -3,6 +3,7 @@ import { Sidebar } from '@/components/Sidebar';
 import { Header } from '@/components/Header';
 import { VideoPlayer } from '@/components/VideoPlayer';
 import { CronogramaScreen } from '@/components/CronogramaScreen';
+import { MobileBottomNav } from '@/components/MobileBottomNav';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { curriculum } from '@/data/curriculum';
 import type { ProgressMap } from '@/types';
@@ -118,7 +119,7 @@ export default function App() {
   }, [setProgress]);
 
   return (
-    <div className="h-screen flex flex-col bg-ink-950 overflow-hidden text-white font-sans antialiased">
+    <div className="h-screen flex flex-col bg-ink-950 overflow-hidden text-white font-sans antialiased overflow-x-hidden w-full">
       {/* Top Header */}
       <Header
         onToggleSidebar={() => setMobileSidebarOpen((v) => !v)}
@@ -128,9 +129,9 @@ export default function App() {
       />
 
       {/* Main Container */}
-      <div className="flex flex-1 min-h-0 overflow-hidden">
-        {/* Desktop Sidebar (6 Grandes Áreas) */}
-        <div className="hidden lg:flex">
+      <div className="flex flex-1 min-h-0 overflow-hidden relative overflow-x-hidden">
+        {/* Desktop Sidebar (Hidden below 768px as requested: 'hidden md:flex') */}
+        <div className="hidden md:flex">
           <Sidebar
             curriculum={curriculum}
             selectedLessonId={selection?.lessonId ?? null}
@@ -143,14 +144,17 @@ export default function App() {
           />
         </div>
 
-        {/* Mobile Drawer Sidebar */}
+        {/* Mobile Drawer (Smooth overlay drawer without squeezing content) */}
         {mobileSidebarOpen && (
-          <>
+          <div className="fixed inset-0 z-50 md:hidden flex">
+            {/* Backdrop */}
             <div
-              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden"
+              className="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity"
               onClick={() => setMobileSidebarOpen(false)}
             />
-            <div className="fixed left-0 top-0 bottom-0 z-50 lg:hidden max-w-[85vw] shadow-2xl">
+            
+            {/* Drawer Content */}
+            <div className="relative z-10 w-[85vw] max-w-sm h-full bg-ink-900 shadow-2xl animate-slide-in flex flex-col overflow-hidden">
               <Sidebar
                 curriculum={curriculum}
                 selectedLessonId={selection?.lessonId ?? null}
@@ -160,13 +164,15 @@ export default function App() {
                 isCronogramaActive={showCronograma}
                 collapsed={false}
                 onToggleCollapse={() => setMobileSidebarOpen(false)}
+                isMobileDrawer={true}
+                onCloseMobileDrawer={() => setMobileSidebarOpen(false)}
               />
             </div>
-          </>
+          </div>
         )}
 
         {/* Center Content: Either Cronograma or VideoPlayer */}
-        <main className="flex-1 flex flex-col min-h-0 min-w-0 overflow-hidden relative">
+        <main className="flex-1 flex flex-col min-h-0 min-w-0 overflow-y-auto relative overflow-x-hidden pb-14 md:pb-0">
           {showCronograma ? (
             <CronogramaScreen
               progress={progress}
@@ -186,9 +192,20 @@ export default function App() {
         </main>
       </div>
 
+      {/* Mobile Bottom Navigation Bar */}
+      <MobileBottomNav
+        isCronograma={showCronograma}
+        onSelectCronograma={handleSelectCronograma}
+        onSelectVideoPlayer={() => {
+          setShowCronograma(false);
+          setMobileSidebarOpen(false);
+        }}
+        onOpenDrawer={() => setMobileSidebarOpen(true)}
+      />
+
       {/* Confirmation Modal to Reset Local Progress */}
       {showResetConfirm && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm safe-top safe-bottom">
           <div className="w-full max-w-sm rounded-2xl bg-ink-900 border border-ink-850 p-6 shadow-2xl space-y-4 animate-scale-up">
             <h3 className="text-base font-bold text-white">
               Limpar aulas concluídas?
@@ -200,14 +217,14 @@ export default function App() {
               <button
                 type="button"
                 onClick={() => setShowResetConfirm(false)}
-                className="px-4 py-2 rounded-xl text-xs font-semibold bg-ink-850 text-zinc-300 hover:text-white"
+                className="px-4 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-ink-850 text-zinc-300 hover:text-white"
               >
                 Cancelar
               </button>
               <button
                 type="button"
                 onClick={handleResetAllData}
-                className="px-4 py-2 rounded-xl text-xs font-semibold bg-red-600 text-white hover:bg-red-700 shadow-md shadow-red-600/30"
+                className="px-4 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-red-600 text-white hover:bg-red-700 shadow-md shadow-red-600/30"
               >
                 Limpar Tudo
               </button>

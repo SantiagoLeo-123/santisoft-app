@@ -22,10 +22,10 @@ export function PWAInstallButton() {
     <>
       <button
         onClick={handleClick}
-        className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-red-600/20 text-red-300 border border-red-500/40 hover:bg-red-600/30 hover:text-white transition-all shadow-sm"
+        className="flex items-center justify-center gap-1.5 w-10 h-10 sm:w-auto sm:px-3 sm:py-1.5 rounded-xl text-xs font-semibold bg-red-600/20 text-red-300 border border-red-500/40 hover:bg-red-600/30 hover:text-white active:scale-95 transition-all shadow-sm shrink-0"
         title="Instalar SantiSOFT como aplicativo"
       >
-        <Download className="w-3.5 h-3.5 text-red-400" />
+        <Download className="w-4 h-4 text-red-400" />
         <span className="hidden sm:inline">Instalar App</span>
       </button>
 
