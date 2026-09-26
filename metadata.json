@@ -1,0 +1,8 @@
+{
+  "name": "SantiSOFT — Videoaulas Médicas",
+  "description": "SantiSOFT — Plataforma de videoaulas médicas para residência",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ],
+  "permissions": []
+}
