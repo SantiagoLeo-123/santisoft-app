@@ -1,176 +1,93 @@
-import { Menu, Activity, Home, User, Calendar, Shield, LogOut, BookOpen } from 'lucide-react';
-import type { SubjectArea, Lesson, UserProfile } from '@/types';
-import { getAvatarSrc, getPresetColor } from '@/lib/avatars';
+import {
+  Menu,
+  Calendar,
+  BookOpen,
+  RotateCcw,
+} from 'lucide-react';
+import { PWAInstallButton } from '@/components/PWAInstallButton';
 
-const BANCO_QUESTOES_URL = 'https://drive.google.com/drive/folders/1lPgsWzctV6GUMvwTp-yzcjbfr_DOEBc8?usp=drive_link';
+const BANCO_QUESTOES_URL =
+  'https://drive.google.com/drive/folders/1lPgsWzctV6GUMvwTp-yzcjbfr_DOEBc8?usp=drive_link';
 
 interface HeaderProps {
-  areaName: string | null;
-  lesson: Lesson | null;
-  area: SubjectArea | null;
-  completedCount: number;
-  totalCount: number;
   onToggleSidebar: () => void;
-  onBackToHome: () => void;
-  onSwitchProfile: () => void;
-  profile: UserProfile | null;
+  onSelectCronograma: () => void;
   isCronograma: boolean;
-  isAdmin: boolean;
-  onOpenAdmin: () => void;
-  onLogout: () => void;
+  onResetProgress?: () => void;
 }
 
 export function Header({
-  areaName,
-  lesson,
-  area,
-  completedCount,
-  totalCount,
   onToggleSidebar,
-  onBackToHome,
-  onSwitchProfile,
-  profile,
+  onSelectCronograma,
   isCronograma,
-  isAdmin,
-  onOpenAdmin,
-  onLogout,
+  onResetProgress,
 }: HeaderProps) {
-  const pct = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
-
-  const avatar = profile ? getAvatarSrc(profile.avatar) : null;
-  const avatarColor = avatar && avatar.type === 'preset' ? getPresetColor(avatar.value) : '#dc2626';
-
   return (
-    <header className="bg-ink-900/80 backdrop-blur-md border-b border-ink-875 px-4 sm:px-6 py-3 flex items-center gap-4 shrink-0 safe-top">
-      <button
-        onClick={onToggleSidebar}
-        className="p-2 rounded-lg hover:bg-ink-850 text-zinc-400 hover:text-white transition-colors lg:hidden"
-        aria-label="Abrir menu"
-      >
-        <Menu className="w-5 h-5" />
-      </button>
-
-      <div className="flex items-center gap-2.5 shrink-0">
-        <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-red-600 text-white">
-          <Activity className="w-5 h-5" />
-        </div>
-        <span className="font-bold text-white text-lg tracking-tight hidden sm:block">SantiSOFT</span>
-      </div>
-
-      <div className="flex-1 min-w-0">
-        <div className="flex items-center gap-2 text-xs text-zinc-500 mb-0.5">
-          {isCronograma ? (
-            <span className="flex items-center gap-1.5">
-              <Calendar className="w-3.5 h-3.5 text-red-500" />
-              <span>Cronograma MEDCURSO</span>
-            </span>
-          ) : (
-            <>
-              {areaName && <span className="truncate">{areaName}</span>}
-              {lesson && (
-                <>
-                  <span className="text-ink-800">/</span>
-                  <span className="text-zinc-400">Aula {lesson.number}</span>
-                </>
-              )}
-            </>
-          )}
-        </div>
-        <h1 className="text-sm sm:text-base font-semibold text-white truncate leading-tight">
-          {isCronograma
-            ? 'Cronograma de Estudos — MEDCURSO 2026'
-            : lesson
-              ? lesson.title
-              : 'Selecione uma aula para começar'}
-        </h1>
-      </div>
-
-      {!isCronograma && area && totalCount > 0 && (
-        <div className="flex items-center gap-3 shrink-0 w-32 sm:w-44">
-          <div className="flex-1">
-            <div className="flex items-center justify-between text-[10px] text-zinc-500 mb-1">
-              <span>Área</span>
-              <span className="tabular-nums font-medium text-zinc-300">{pct}%</span>
-            </div>
-            <div className="h-1.5 bg-ink-850 rounded-full overflow-hidden">
-              <div
-                className="h-full bg-red-600 rounded-full transition-all duration-500 ease-out"
-                style={{ width: `${pct}%` }}
-              />
-            </div>
-          </div>
-          <div className="text-[10px] text-zinc-500 tabular-nums hidden sm:block">
-            {completedCount}/{totalCount}
-          </div>
-        </div>
-      )}
-
-      {/* Banco de Questões */}
-      <a
-        href={BANCO_QUESTOES_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium text-zinc-400 hover:text-white hover:bg-ink-850 transition-colors shrink-0"
-        title="Banco de Questões (abre em nova aba)"
-      >
-        <BookOpen className="w-4 h-4" />
-        <span className="hidden md:inline">Banco de Questões</span>
-      </a>
-
-      {/* Admin button */}
-      {isAdmin && (
+    <header className="bg-ink-900/90 backdrop-blur-md border-b border-ink-875 px-4 sm:px-6 h-14 flex items-center justify-between gap-4 shrink-0 safe-top">
+      {/* Left: Mobile Toggle & Brand */}
+      <div className="flex items-center gap-3">
         <button
-          onClick={onOpenAdmin}
-          className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium text-red-400 hover:text-red-300 hover:bg-red-600/10 transition-colors shrink-0"
-          title="Painel do Administrador"
+          onClick={onToggleSidebar}
+          className="p-1.5 rounded-lg hover:bg-ink-850 text-zinc-400 hover:text-white transition-colors lg:hidden"
+          aria-label="Abrir menu"
         >
-          <Shield className="w-4 h-4" />
-          <span className="hidden md:inline">Admin</span>
+          <Menu className="w-5 h-5" />
         </button>
-      )}
 
-      <button
-        onClick={onBackToHome}
-        className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium text-zinc-400 hover:text-white hover:bg-ink-850 transition-colors shrink-0"
-        aria-label="Voltar aos cursos"
-        title="Voltar aos cursos"
-      >
-        <Home className="w-4 h-4" />
-        <span className="hidden md:inline">Cursos</span>
-      </button>
-
-      {/* Logout */}
-      <button
-        onClick={onLogout}
-        className="p-2 rounded-lg text-zinc-400 hover:text-red-500 hover:bg-ink-850 transition-colors shrink-0"
-        title="Sair"
-        aria-label="Sair"
-      >
-        <LogOut className="w-4 h-4" />
-      </button>
-
-      {/* Profile badge */}
-      {profile && (
-        <button
-          onClick={onSwitchProfile}
-          className="flex items-center gap-2 pl-1.5 pr-3 py-1.5 rounded-full hover:bg-ink-850 transition-colors shrink-0"
-          title="Trocar perfil"
-        >
-          {avatar?.type === 'image' ? (
-            <img src={avatar.value} alt={profile.name} className="w-7 h-7 rounded-full object-cover" />
-          ) : (
-            <div
-              className="w-7 h-7 rounded-full flex items-center justify-center"
-              style={{ background: `linear-gradient(135deg, ${avatarColor}cc, ${avatarColor}66)` }}
-            >
-              <User className="w-4 h-4 text-white/80" />
-            </div>
-          )}
-          <span className="text-xs text-zinc-300 font-medium hidden sm:block max-w-[80px] truncate">
-            {profile.name}
+        <div className="flex items-center gap-2.5">
+          <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-red-600 text-white font-bold text-sm shadow-md shadow-red-600/20">
+            S
+          </div>
+          <span className="font-bold text-white text-base tracking-tight leading-none">
+            SantiSOFT
           </span>
-        </button>
-      )}
+        </div>
+      </div>
+
+      {/* Center: Clean Spacer (No cluttered text) */}
+      <div className="flex-1" />
+
+      {/* Right: Essential Action Controls */}
+      <div className="flex items-center gap-2">
+        {/* Toggle to Cronograma if in video view */}
+        {!isCronograma && (
+          <button
+            onClick={onSelectCronograma}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium text-zinc-300 hover:text-white bg-ink-850 border border-ink-800 hover:border-ink-700 transition-all"
+            title="Ir para o Cronograma"
+          >
+            <Calendar className="w-3.5 h-3.5 text-red-500" />
+            <span className="hidden sm:inline">Cronograma</span>
+          </button>
+        )}
+
+        {/* Questões */}
+        <a
+          href={BANCO_QUESTOES_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium text-zinc-300 hover:text-white bg-ink-850 border border-ink-800 hover:border-ink-700 transition-all"
+          title="Acessar Banco de Questões no Google Drive"
+        >
+          <BookOpen className="w-3.5 h-3.5 text-red-500" />
+          <span className="hidden sm:inline">Questões</span>
+        </a>
+
+        {/* Install PWA Button */}
+        <PWAInstallButton />
+
+        {/* Reset Local Progress */}
+        {onResetProgress && (
+          <button
+            onClick={onResetProgress}
+            className="p-2 rounded-xl text-zinc-500 hover:text-zinc-300 hover:bg-ink-850 transition-colors"
+            title="Limpar Progresso Local (Resetar)"
+            aria-label="Limpar Progresso"
+          >
+            <RotateCcw className="w-4 h-4" />
+          </button>
+        )}
+      </div>
     </header>
   );
 }

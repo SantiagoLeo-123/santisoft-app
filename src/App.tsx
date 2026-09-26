@@ -2,18 +2,11 @@ import { useState, useMemo, useCallback } from 'react';
 import { Sidebar } from '@/components/Sidebar';
 import { Header } from '@/components/Header';
 import { VideoPlayer } from '@/components/VideoPlayer';
-import { SplashScreen } from '@/components/SplashScreen';
-import { HomeScreen } from '@/components/HomeScreen';
-import { ProfileScreen } from '@/components/ProfileScreen';
 import { CronogramaScreen } from '@/components/CronogramaScreen';
-import { LoginScreen } from '@/components/LoginScreen';
-import { AdminPanel } from '@/components/AdminPanel';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
-import { authApi } from '@/lib/auth';
 import { curriculum } from '@/data/curriculum';
-import type { ProgressMap, ProfileList, UserProfile } from '@/types';
-
-type AppView = 'splash' | 'profiles' | 'home' | 'lessons';
+import type { ProgressMap } from '@/types';
+import { isLessonCompleted } from '@/types';
 
 interface Selection {
   areaId: string;
@@ -22,51 +15,44 @@ interface Selection {
 }
 
 export default function App() {
-  const [authedEmail, setAuthedEmail] = useState<string | null>(() => authApi.getSession());
-  const [isAdmin, setIsAdmin] = useState(() => {
-    const session = authApi.getSession();
-    return session === 'leodoscsgo2018@hotmail.com';
-  });
-  const [showAdminPanel, setShowAdminPanel] = useState(false);
-  const [view, setView] = useState<AppView>('splash');
-  const [profiles, setProfiles] = useLocalStorage<ProfileList>('santisoft:profiles', []);
-  const [activeProfileId, setActiveProfileId] = useLocalStorage<string | null>('santisoft:activeProfile', null);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+  // Default directly to Cronograma
   const [showCronograma, setShowCronograma] = useState(true);
 
-  const [selection, setSelection] = useState<Selection | null>(() => {
-    const firstArea = curriculum[0];
-    const firstModule = firstArea.modules[0];
-    const firstLesson = firstModule.lessons[0];
-    return { areaId: firstArea.id, moduleId: firstModule.id, lessonId: firstLesson.id };
+  // Default selection
+  const [selection, setSelection] = useState<Selection>(() => {
+    const pedArea = curriculum.find((a) => a.id === 'pediatria') ?? curriculum[0];
+    const firstMod = pedArea.modules[0];
+    const firstLesson = firstMod.lessons[0];
+    return { areaId: pedArea.id, moduleId: firstMod.id, lessonId: firstLesson.id };
   });
 
-  const progressKey = activeProfileId ? `santisoft:progress:${activeProfileId}` : 'santisoft:progress:_none';
-  const [progress, setProgress] = useLocalStorage<ProgressMap>(progressKey, {});
-
-  const activeProfile = useMemo(
-    () => profiles.find((p) => p.id === activeProfileId) ?? null,
-    [profiles, activeProfileId],
+  // 100% persistent in LocalStorage: { [aulaId]: boolean }
+  const [progress, setProgress] = useLocalStorage<ProgressMap>(
+    'santisoft_completed_lessons',
+    {},
   );
+
+  const [showResetConfirm, setShowResetConfirm] = useState(false);
 
   const currentArea = useMemo(
     () => curriculum.find((a) => a.id === selection?.areaId) ?? null,
     [selection],
   );
+
   const currentLesson = useMemo(() => {
     if (!currentArea || !selection) return null;
     const mod = currentArea.modules.find((m) => m.id === selection.moduleId);
     return mod?.lessons.find((l) => l.id === selection.lessonId) ?? null;
   }, [currentArea, selection]);
 
-  const areaProgress = useMemo(() => {
-    if (!currentArea) return { completed: 0, total: 0 };
-    const allLessons = currentArea.modules.flatMap((m) => m.lessons);
-    const completed = allLessons.filter((l) => progress[l.id]?.completed).length;
-    return { completed, total: allLessons.length };
-  }, [currentArea, progress]);
+  const isCurrentCompleted = useMemo(() => {
+    if (!selection) return false;
+    return isLessonCompleted(progress, selection.lessonId);
+  }, [selection, progress]);
 
+  // Flat list of all lessons
   const flatLessonList = useMemo(() => {
     const list: { areaId: string; moduleId: string; lessonId: string }[] = [];
     for (const area of curriculum) {
@@ -87,43 +73,6 @@ export default function App() {
   const hasPrev = currentIndex > 0;
   const hasNext = currentIndex >= 0 && currentIndex < flatLessonList.length - 1;
 
-  // --- Profile handlers ---
-
-  const handleAddProfile = useCallback((name: string, avatar: string) => {
-    const newProfile: UserProfile = {
-      id: `profile-${Date.now()}`,
-      name,
-      avatar,
-      createdAt: Date.now(),
-    };
-    setProfiles((prev) => [...prev, newProfile]);
-  }, [setProfiles]);
-
-  const handleUpdateProfile = useCallback((profileId: string, name: string, avatar: string) => {
-    setProfiles((prev) =>
-      prev.map((p) => (p.id === profileId ? { ...p, name, avatar } : p)),
-    );
-  }, [setProfiles]);
-
-  const handleDeleteProfile = useCallback((profileId: string) => {
-    setProfiles((prev) => prev.filter((p) => p.id !== profileId));
-    if (activeProfileId === profileId) {
-      setActiveProfileId(null);
-    }
-    try {
-      window.localStorage.removeItem(`santisoft:progress:${profileId}`);
-    } catch {
-      /* ignore */
-    }
-  }, [setProfiles, activeProfileId, setActiveProfileId]);
-
-  const handleSelectProfile = useCallback((profileId: string) => {
-    setActiveProfileId(profileId);
-    setView('home');
-  }, [setActiveProfileId]);
-
-  // --- Lesson handlers ---
-
   const handleSelectLesson = useCallback((areaId: string, moduleId: string, lessonId: string) => {
     setSelection({ areaId, moduleId, lessonId });
     setShowCronograma(false);
@@ -135,13 +84,19 @@ export default function App() {
     setMobileSidebarOpen(false);
   }, []);
 
-  const handleToggleComplete = useCallback(() => {
-    if (!selection) return;
-    setProgress((prev) => ({
-      ...prev,
-      [selection.lessonId]: { completed: !prev[selection.lessonId]?.completed },
-    }));
-  }, [selection, setProgress]);
+  // Toggle single completion status in LocalStorage
+  const handleToggleComplete = useCallback(
+    (id: string) => {
+      setProgress((prev) => {
+        const isDone = isLessonCompleted(prev, id);
+        return {
+          ...prev,
+          [id]: !isDone,
+        };
+      });
+    },
+    [setProgress],
+  );
 
   const handlePrev = useCallback(() => {
     if (hasPrev) {
@@ -157,74 +112,24 @@ export default function App() {
     }
   }, [hasNext, flatLessonList, currentIndex]);
 
-  const isCompleted = selection ? progress[selection.lessonId]?.completed ?? false : false;
-
-  const handleToggleCronograma = useCallback((entryId: string) => {
-    setProgress((prev) => ({
-      ...prev,
-      [entryId]: { completed: !prev[entryId]?.completed },
-    }));
+  const handleResetAllData = useCallback(() => {
+    setProgress({});
+    setShowResetConfirm(false);
   }, [setProgress]);
 
-  // --- Render ---
-
-  if (!authedEmail) {
-    return (
-      <LoginScreen
-        onLogin={(email, admin) => {
-          authApi.saveSession(email);
-          setAuthedEmail(email);
-          setIsAdmin(admin);
-        }}
-      />
-    );
-  }
-
-  if (view === 'splash') {
-    return <SplashScreen onFinish={() => setView('profiles')} />;
-  }
-
-  if (view === 'profiles') {
-    return (
-      <div className="h-screen flex flex-col bg-ink-950 overflow-hidden">
-        <ProfileScreen
-          profiles={profiles}
-          onSelectProfile={handleSelectProfile}
-          onAddProfile={handleAddProfile}
-          onUpdateProfile={handleUpdateProfile}
-          onDeleteProfile={handleDeleteProfile}
-        />
-      </div>
-    );
-  }
-
-  if (view === 'home') {
-    return (
-      <div className="h-screen flex flex-col bg-ink-950 overflow-hidden">
-        <HomeScreen onSelectCourse={() => { setView('lessons'); setShowCronograma(true); }} />
-      </div>
-    );
-  }
-
   return (
-    <div className="h-screen flex flex-col bg-ink-950 overflow-hidden">
+    <div className="h-screen flex flex-col bg-ink-950 overflow-hidden text-white font-sans antialiased">
+      {/* Top Header */}
       <Header
-        areaName={currentArea?.name ?? null}
-        lesson={currentLesson}
-        area={currentArea}
-        completedCount={areaProgress.completed}
-        totalCount={areaProgress.total}
         onToggleSidebar={() => setMobileSidebarOpen((v) => !v)}
-        onBackToHome={() => setView('home')}
-        onSwitchProfile={() => setView('profiles')}
-        profile={activeProfile}
+        onSelectCronograma={handleSelectCronograma}
         isCronograma={showCronograma}
-        isAdmin={isAdmin}
-        onOpenAdmin={() => setShowAdminPanel(true)}
-        onLogout={() => { authApi.clearSession(); setAuthedEmail(null); setIsAdmin(false); setView('splash'); }}
+        onResetProgress={() => setShowResetConfirm(true)}
       />
 
+      {/* Main Container */}
       <div className="flex flex-1 min-h-0 overflow-hidden">
+        {/* Desktop Sidebar (6 Grandes Áreas) */}
         <div className="hidden lg:flex">
           <Sidebar
             curriculum={curriculum}
@@ -238,13 +143,14 @@ export default function App() {
           />
         </div>
 
+        {/* Mobile Drawer Sidebar */}
         {mobileSidebarOpen && (
           <>
             <div
-              className="fixed inset-0 bg-black/70 z-40 lg:hidden"
+              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden"
               onClick={() => setMobileSidebarOpen(false)}
             />
-            <div className="fixed left-0 top-0 bottom-0 z-50 lg:hidden">
+            <div className="fixed left-0 top-0 bottom-0 z-50 lg:hidden max-w-[85vw] shadow-2xl">
               <Sidebar
                 curriculum={curriculum}
                 selectedLessonId={selection?.lessonId ?? null}
@@ -259,29 +165,55 @@ export default function App() {
           </>
         )}
 
-        {showCronograma ? (
-          <CronogramaScreen
-            progress={progress}
-            onToggleComplete={handleToggleCronograma}
-          />
-        ) : (
-          <VideoPlayer
-            lesson={currentLesson}
-            isCompleted={isCompleted}
-            onToggleComplete={handleToggleComplete}
-            onPrev={handlePrev}
-            onNext={handleNext}
-            hasPrev={hasPrev}
-            hasNext={hasNext}
-          />
-        )}
+        {/* Center Content: Either Cronograma or VideoPlayer */}
+        <main className="flex-1 flex flex-col min-h-0 min-w-0 overflow-hidden relative">
+          {showCronograma ? (
+            <CronogramaScreen
+              progress={progress}
+              onToggleComplete={handleToggleComplete}
+            />
+          ) : (
+            <VideoPlayer
+              lesson={currentLesson}
+              isCompleted={isCurrentCompleted}
+              onToggleComplete={() => selection && handleToggleComplete(selection.lessonId)}
+              onPrev={handlePrev}
+              onNext={handleNext}
+              hasPrev={hasPrev}
+              hasNext={hasNext}
+            />
+          )}
+        </main>
       </div>
 
-      {showAdminPanel && isAdmin && authedEmail && (
-        <AdminPanel
-          adminEmail={authedEmail}
-          onClose={() => setShowAdminPanel(false)}
-        />
+      {/* Confirmation Modal to Reset Local Progress */}
+      {showResetConfirm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+          <div className="w-full max-w-sm rounded-2xl bg-ink-900 border border-ink-850 p-6 shadow-2xl space-y-4 animate-scale-up">
+            <h3 className="text-base font-bold text-white">
+              Limpar aulas concluídas?
+            </h3>
+            <p className="text-xs text-zinc-400 leading-relaxed">
+              Todas as marcações de aulas concluídas salvas no LocalStorage do seu navegador serão resetadas.
+            </p>
+            <div className="flex justify-end gap-2 pt-2">
+              <button
+                type="button"
+                onClick={() => setShowResetConfirm(false)}
+                className="px-4 py-2 rounded-xl text-xs font-semibold bg-ink-850 text-zinc-300 hover:text-white"
+              >
+                Cancelar
+              </button>
+              <button
+                type="button"
+                onClick={handleResetAllData}
+                className="px-4 py-2 rounded-xl text-xs font-semibold bg-red-600 text-white hover:bg-red-700 shadow-md shadow-red-600/30"
+              >
+                Limpar Tudo
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

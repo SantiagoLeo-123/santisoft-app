@@ -1,9 +1,20 @@
 import { useState } from 'react';
-import { ChevronDown, ChevronRight, Check, Play, PanelLeftClose, PanelLeft, Calendar, BookOpen } from 'lucide-react';
-import type { SubjectArea, Module, ProgressMap } from '@/types';
+import {
+  ChevronDown,
+  ChevronRight,
+  Check,
+  Play,
+  PanelLeftClose,
+  PanelLeft,
+  Calendar,
+  BookOpen,
+} from 'lucide-react';
+import type { SubjectArea, ProgressMap } from '@/types';
+import { isLessonCompleted } from '@/types';
 import { getIcon } from '@/lib/icons';
 
-const BANCO_QUESTOES_URL = 'https://drive.google.com/drive/folders/1lPgsWzctV6GUMvwTp-yzcjbfr_DOEBc8?usp=drive_link';
+const BANCO_QUESTOES_URL =
+  'https://drive.google.com/drive/folders/1lPgsWzctV6GUMvwTp-yzcjbfr_DOEBc8?usp=drive_link';
 
 interface SidebarProps {
   curriculum: SubjectArea[];
@@ -26,8 +37,12 @@ export function Sidebar({
   collapsed,
   onToggleCollapse,
 }: SidebarProps) {
-  const [expandedAreas, setExpandedAreas] = useState<Set<string>>(() => new Set());
-  const [expandedModules, setExpandedModules] = useState<Set<string>>(() => new Set());
+  const [expandedAreas, setExpandedAreas] = useState<Set<string>>(
+    () => new Set(['pediatria', 'clinica-medica']),
+  );
+  const [expandedModules, setExpandedModules] = useState<Set<string>>(
+    () => new Set(['aulas-ped']),
+  );
 
   const toggleArea = (areaId: string) => {
     setExpandedAreas((prev) => {
@@ -47,14 +62,9 @@ export function Sidebar({
     });
   };
 
-  const moduleProgress = (lessons: Module['lessons']) => {
-    const completed = lessons.filter((l) => progress[l.id]?.completed).length;
-    return { completed, total: lessons.length };
-  };
-
   if (collapsed) {
     return (
-      <aside className="flex flex-col items-center gap-3 bg-ink-900 border-r border-ink-875 py-4 px-2 w-14 shrink-0">
+      <aside className="flex flex-col items-center gap-3 bg-ink-900 border-r border-ink-875 py-4 px-2 w-14 shrink-0 h-full">
         <button
           onClick={onToggleCollapse}
           className="p-2 rounded-lg hover:bg-ink-850 text-zinc-400 hover:text-white transition-colors"
@@ -69,7 +79,7 @@ export function Sidebar({
               ? 'bg-red-600/15 text-red-500'
               : 'text-zinc-400 hover:text-red-500 hover:bg-ink-850'
           }`}
-          title="Cronograma MEDCURSO"
+          title="Cronograma"
         >
           <Calendar className="w-5 h-5" />
         </button>
@@ -78,169 +88,170 @@ export function Sidebar({
           target="_blank"
           rel="noopener noreferrer"
           className="p-2 rounded-lg text-zinc-400 hover:text-red-500 hover:bg-ink-850 transition-colors"
-          title="Banco de Questões (nova aba)"
+          title="Questões"
         >
           <BookOpen className="w-5 h-5" />
         </a>
-        <div className="w-8 border-t border-ink-875" />
-        {curriculum.map((area) => {
-          const Icon = getIcon(area.icon);
-          return (
-            <button
-              key={area.id}
-              onClick={() => {
-                setExpandedAreas(new Set([area.id]));
-                onToggleCollapse();
-              }}
-              className="p-2 rounded-lg hover:bg-ink-850 text-zinc-400 hover:text-red-500 transition-colors"
-              title={area.name}
-            >
-              <Icon className="w-5 h-5" />
-            </button>
-          );
-        })}
+        <div className="w-8 border-t border-ink-875 my-1" />
+        <div className="flex-1 overflow-y-auto scrollbar-thin space-y-2">
+          {curriculum.map((area) => {
+            const Icon = getIcon(area.icon);
+            return (
+              <button
+                key={area.id}
+                onClick={() => {
+                  setExpandedAreas(new Set([area.id]));
+                  onToggleCollapse();
+                }}
+                className="p-2 rounded-lg hover:bg-ink-850 text-zinc-400 hover:text-red-500 transition-colors block"
+                title={area.name}
+              >
+                <Icon className="w-5 h-5" />
+              </button>
+            );
+          })}
+        </div>
       </aside>
     );
   }
 
   return (
-    <aside className="flex flex-col bg-ink-900 border-r border-ink-875 w-72 shrink-0 h-full animate-slide-in">
-      <div className="flex items-center justify-between px-4 py-3.5 border-b border-ink-875">
+    <aside className="flex flex-col bg-ink-900 border-r border-ink-875 w-64 shrink-0 h-full animate-slide-in">
+      {/* Sidebar Brand Header */}
+      <div className="flex items-center justify-between px-4 h-14 border-b border-ink-875">
         <div className="flex items-center gap-2.5">
-          <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-red-600 text-white font-bold text-sm">
+          <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-red-600 text-white font-bold text-sm shadow-md shadow-red-600/20">
             S
           </div>
-          <span className="font-bold text-white text-lg tracking-tight">SantiSOFT</span>
+          <span className="font-bold text-white text-base tracking-tight leading-none">
+            SantiSOFT
+          </span>
         </div>
         <button
           onClick={onToggleCollapse}
           className="p-1.5 rounded-lg hover:bg-ink-850 text-zinc-400 hover:text-white transition-colors"
           aria-label="Recolher barra lateral"
         >
-          <PanelLeftClose className="w-5 h-5" />
+          <PanelLeftClose className="w-4 h-4" />
         </button>
       </div>
 
-      <div className="flex-1 overflow-y-auto scrollbar-thin px-2 py-2">
-        {/* Cronograma tab — fixed at top */}
+      <div className="flex-1 overflow-y-auto scrollbar-thin px-2.5 py-3 space-y-1">
+        {/* Navigation Buttons: Clean Icon + Direct Name */}
         <button
           onClick={onSelectCronograma}
-          className={`w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg transition-all mb-2 ${
+          className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold transition-all ${
             isCronogramaActive
-              ? 'bg-red-600/10 border border-red-600/30'
-              : 'border border-transparent hover:bg-ink-850'
+              ? 'bg-red-600 text-white shadow-md shadow-red-600/20'
+              : 'text-zinc-300 hover:bg-ink-850 hover:text-white'
           }`}
         >
-          <Calendar className={`shrink-0 ${isCronogramaActive ? 'text-red-500' : 'text-red-600/70'}`} style={{ width: 18, height: 18 }} />
-          <span className={`text-sm font-semibold flex-1 text-left ${isCronogramaActive ? 'text-white' : 'text-zinc-200'}`}>
-            Cronograma MEDCURSO
-          </span>
+          <Calendar
+            className={`w-4 h-4 shrink-0 ${
+              isCronogramaActive ? 'text-white' : 'text-red-500'
+            }`}
+          />
+          <span className="text-left flex-1">Cronograma</span>
         </button>
 
-        {/* Banco de Questões */}
         <a
           href={BANCO_QUESTOES_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg border border-transparent hover:bg-ink-850 transition-all mb-2"
+          className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-zinc-300 hover:text-white hover:bg-ink-850 transition-all"
         >
-          <BookOpen className="shrink-0 text-red-600/70" style={{ width: 18, height: 18 }} />
-          <span className="text-sm font-semibold text-zinc-200 flex-1 text-left">
-            Banco de Questões
-          </span>
+          <BookOpen className="w-4 h-4 shrink-0 text-red-500" />
+          <span className="text-left flex-1">Questões</span>
         </a>
 
-        {/* Divider */}
-        <div className="mx-3 mb-2 border-t border-ink-875" />
+        {/* Clean Section Divider: Áreas */}
+        <div className="pt-3 pb-1.5 px-3">
+          <span className="text-[11px] font-semibold text-zinc-500 uppercase tracking-wider">
+            Áreas
+          </span>
+        </div>
 
-        {/* Curriculum areas */}
-        {curriculum.map((area, areaIdx) => {
+        {/* 6 Grandes Áreas */}
+        {curriculum.map((area) => {
           const AreaIcon = getIcon(area.icon);
           const isExpanded = expandedAreas.has(area.id);
-          const areaLessons = area.modules.flatMap((m) => m.lessons);
-          const areaCompleted = areaLessons.filter((l) => progress[l.id]?.completed).length;
-          const areaPct = areaLessons.length ? Math.round((areaCompleted / areaLessons.length) * 100) : 0;
 
           return (
             <div key={area.id} className="mb-0.5">
               <button
                 onClick={() => toggleArea(area.id)}
-                className="w-full flex items-center gap-2.5 px-3 py-2.5 rounded-lg hover:bg-ink-850 transition-colors group"
+                className="w-full flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-semibold text-zinc-300 hover:text-white hover:bg-ink-850 transition-colors group"
               >
                 {isExpanded ? (
-                  <ChevronDown className="w-4 h-4 text-zinc-500 shrink-0" />
+                  <ChevronDown className="w-3.5 h-3.5 text-zinc-500 shrink-0" />
                 ) : (
-                  <ChevronRight className="w-4 h-4 text-zinc-500 shrink-0" />
+                  <ChevronRight className="w-3.5 h-3.5 text-zinc-500 shrink-0" />
                 )}
-                <AreaIcon className="text-red-500 shrink-0" style={{ width: 18, height: 18 }} />
-                <span className="text-sm font-semibold text-zinc-200 flex-1 text-left">
-                  <span className="text-zinc-600 mr-1.5 tabular-nums">{areaIdx + 1}.</span>
-                  {area.name}
-                </span>
-                <span className="text-xs text-zinc-500 tabular-nums">{areaPct}%</span>
+                <AreaIcon className="w-4 h-4 text-red-500 shrink-0" />
+                <span className="flex-1 text-left truncate">{area.name}</span>
               </button>
 
               {isExpanded && (
-                <div className="ml-3 pl-3 border-l border-ink-875 animate-fade-in">
+                <div className="ml-3 pl-2.5 border-l border-ink-875 animate-fade-in space-y-0.5 my-1">
                   {area.modules.map((mod) => {
                     const ModIcon = getIcon(mod.icon);
                     const isModExpanded = expandedModules.has(mod.id);
-                    const mp = moduleProgress(mod.lessons);
 
                     return (
-                      <div key={mod.id} className="mt-0.5">
+                      <div key={mod.id}>
                         <button
                           onClick={() => toggleModule(mod.id)}
-                          className="w-full flex items-center gap-2 px-2.5 py-2 rounded-lg hover:bg-ink-850 transition-colors"
+                          className="w-full flex items-center gap-2 px-2 py-1.5 rounded-lg text-xs font-medium text-zinc-400 hover:text-zinc-200 hover:bg-ink-850 transition-colors"
                         >
                           {isModExpanded ? (
-                            <ChevronDown className="w-3.5 h-3.5 text-zinc-600 shrink-0" />
+                            <ChevronDown className="w-3 h-3 text-zinc-600 shrink-0" />
                           ) : (
-                            <ChevronRight className="w-3.5 h-3.5 text-zinc-600 shrink-0" />
+                            <ChevronRight className="w-3 h-3 text-zinc-600 shrink-0" />
                           )}
-                          <ModIcon className="w-4 h-4 text-zinc-400 shrink-0" />
-                          <span className="text-sm text-zinc-300 flex-1 text-left">{mod.name}</span>
-                          <span className="text-[10px] tabular-nums text-zinc-500 bg-ink-850 px-1.5 py-0.5 rounded">
-                            {mp.completed}/{mp.total}
-                          </span>
+                          <ModIcon className="w-3.5 h-3.5 text-zinc-500 shrink-0" />
+                          <span className="flex-1 text-left truncate">{mod.name}</span>
                         </button>
 
                         {isModExpanded && (
-                          <div className="ml-4 pl-3 border-l border-ink-875 animate-fade-in">
+                          <div className="ml-3 pl-2 border-l border-ink-875 animate-fade-in space-y-0.5 my-1">
                             {mod.lessons.map((lesson) => {
-                              const isSelected = lesson.id === selectedLessonId && !isCronogramaActive;
-                              const isDone = progress[lesson.id]?.completed;
+                              const isSelected =
+                                lesson.id === selectedLessonId &&
+                                !isCronogramaActive;
+                              const isDone = isLessonCompleted(progress, lesson.id);
+
                               return (
                                 <button
                                   key={lesson.id}
-                                  onClick={() => onSelectLesson(area.id, mod.id, lesson.id)}
-                                  className={`w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg transition-all group ${
+                                  onClick={() =>
+                                    onSelectLesson(area.id, mod.id, lesson.id)
+                                  }
+                                  className={`w-full flex items-center gap-2 px-2 py-1.5 rounded-lg transition-all text-left ${
                                     isSelected
-                                      ? 'bg-red-600/10 border border-red-600/30'
-                                      : 'hover:bg-ink-850 border border-transparent'
+                                      ? 'bg-red-600/15 text-white font-medium'
+                                      : 'text-zinc-400 hover:text-zinc-200 hover:bg-ink-850'
                                   }`}
                                 >
-                                  <div className="shrink-0 w-5 h-5 flex items-center justify-center">
+                                  <div className="shrink-0 w-4 h-4 flex items-center justify-center">
                                     {isDone ? (
-                                      <div className="w-4 h-4 rounded-full bg-red-600 flex items-center justify-center">
-                                        <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                                      <div className="w-3.5 h-3.5 rounded-full bg-emerald-600 flex items-center justify-center">
+                                        <Check
+                                          className="w-2.5 h-2.5 text-white"
+                                          strokeWidth={3}
+                                        />
                                       </div>
                                     ) : isSelected ? (
-                                      <Play className="w-3.5 h-3.5 text-red-500 fill-red-500" />
+                                      <Play className="w-3 h-3 text-red-500 fill-red-500" />
                                     ) : (
-                                      <div className="w-4 h-4 rounded-full border border-ink-800 flex items-center justify-center">
-                                        <span className="text-[9px] text-zinc-500 font-medium">{lesson.number}</span>
-                                      </div>
+                                      <span className="text-[10px] text-zinc-600 font-semibold">
+                                        {lesson.number}
+                                      </span>
                                     )}
                                   </div>
-                                  <span
-                                    className={`text-xs leading-snug flex-1 text-left line-clamp-2 ${
-                                      isSelected ? 'text-white font-medium' : 'text-zinc-400 group-hover:text-zinc-200'
-                                    }`}
-                                  >
+
+                                  <span className="text-xs truncate flex-1">
                                     {lesson.title}
                                   </span>
-                                  <span className="text-[10px] text-zinc-600 tabular-nums shrink-0">{lesson.duration}min</span>
                                 </button>
                               );
                             })}
