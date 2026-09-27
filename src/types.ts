@@ -39,3 +39,27 @@ export function isLessonCompleted(progress: ProgressMap | undefined, id: string)
   }
   return false;
 }
+
+export interface OptionExplanation {
+  letter: 'A' | 'B' | 'C' | 'D' | 'E';
+  text: string;
+  isCorrect: boolean;
+  explanation: string;
+}
+
+export interface Question {
+  id: string;
+  specialty: 'Ginecologia e Obstetrícia' | 'Pediatria' | 'Clínica Médica' | 'Cirurgia' | 'Preventiva';
+  topic: string;
+  subtopic?: string;
+  institution?: string; // ex: "USP-SP", "UFRJ", "Autoral"
+  year?: number;
+  statement: string; // Enunciado com caso clínico
+  options: {
+    letter: 'A' | 'B' | 'C' | 'D' | 'E';
+    text: string;
+  }[];
+  correctOption: 'A' | 'B' | 'C' | 'D' | 'E';
+  generalComment: string; // Raciocínio clínico geral / síntese
+  optionsExplanations: OptionExplanation[]; // Análise de cada alternativa
+}

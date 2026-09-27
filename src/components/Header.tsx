@@ -7,20 +7,21 @@ import {
 import { SantiSoftLogo } from '@/components/Logo';
 import { PWAInstallButton } from '@/components/PWAInstallButton';
 
-const BANCO_QUESTOES_URL =
-  'https://drive.google.com/drive/folders/1lPgsWzctV6GUMvwTp-yzcjbfr_DOEBc8?usp=drive_link';
-
 interface HeaderProps {
   onToggleSidebar: () => void;
   onSelectCronograma: () => void;
+  onSelectQuestoes: () => void;
   isCronograma: boolean;
+  isQuestoes: boolean;
   onResetProgress?: () => void;
 }
 
 export function Header({
   onToggleSidebar,
   onSelectCronograma,
+  onSelectQuestoes,
   isCronograma,
+  isQuestoes,
   onResetProgress,
 }: HeaderProps) {
   return (
@@ -37,27 +38,31 @@ export function Header({
       <div className="flex items-center gap-2 sm:gap-2.5">
         {/* Desktop Quick Nav Controls */}
         <div className="hidden md:flex items-center gap-2">
-          {!isCronograma && (
-            <button
-              onClick={onSelectCronograma}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold text-zinc-300 hover:text-white bg-ink-850 border border-ink-800 hover:border-ink-700 transition-all active:scale-95"
-              title="Ir para o Cronograma"
-            >
-              <Calendar className="w-3.5 h-3.5 text-red-500" />
-              <span>Cronograma</span>
-            </button>
-          )}
-
-          <a
-            href={BANCO_QUESTOES_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold text-zinc-300 hover:text-white bg-ink-850 border border-ink-800 hover:border-ink-700 transition-all active:scale-95"
-            title="Acessar Banco de Questões no Google Drive"
+          <button
+            onClick={onSelectCronograma}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all active:scale-95 ${
+              isCronograma
+                ? 'bg-red-600 text-white shadow-md shadow-red-600/25'
+                : 'text-zinc-300 hover:text-white bg-ink-850 border border-ink-800 hover:border-ink-700'
+            }`}
+            title="Ir para o Cronograma"
           >
-            <BookOpen className="w-3.5 h-3.5 text-red-500" />
+            <Calendar className={`w-3.5 h-3.5 ${isCronograma ? 'text-white' : 'text-red-500'}`} />
+            <span>Cronograma</span>
+          </button>
+
+          <button
+            onClick={onSelectQuestoes}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all active:scale-95 ${
+              isQuestoes
+                ? 'bg-red-600 text-white shadow-md shadow-red-600/25'
+                : 'text-zinc-300 hover:text-white bg-ink-850 border border-ink-800 hover:border-ink-700'
+            }`}
+            title="Abrir Banco de Questões (Estilo Medcurso)"
+          >
+            <BookOpen className={`w-3.5 h-3.5 ${isQuestoes ? 'text-white' : 'text-red-500'}`} />
             <span>Questões</span>
-          </a>
+          </button>
 
           <PWAInstallButton />
 

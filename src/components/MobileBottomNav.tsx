@@ -1,19 +1,18 @@
 import { Calendar, Play, Layers, BookOpen } from 'lucide-react';
 
-const BANCO_QUESTOES_URL =
-  'https://drive.google.com/drive/folders/1lPgsWzctV6GUMvwTp-yzcjbfr_DOEBc8?usp=drive_link';
-
 interface MobileBottomNavProps {
-  isCronograma: boolean;
+  activeTab: 'cronograma' | 'aula' | 'questoes';
   onSelectCronograma: () => void;
   onSelectVideoPlayer: () => void;
+  onSelectQuestoes: () => void;
   onOpenDrawer: () => void;
 }
 
 export function MobileBottomNav({
-  isCronograma,
+  activeTab,
   onSelectCronograma,
   onSelectVideoPlayer,
+  onSelectQuestoes,
   onOpenDrawer,
 }: MobileBottomNavProps) {
   return (
@@ -27,7 +26,7 @@ export function MobileBottomNav({
           type="button"
           onClick={onSelectCronograma}
           className={`flex flex-col items-center justify-center gap-1 h-full rounded-xl transition-all active:scale-95 ${
-            isCronograma
+            activeTab === 'cronograma'
               ? 'text-red-500 font-bold'
               : 'text-zinc-400 hover:text-zinc-200'
           }`}
@@ -41,13 +40,27 @@ export function MobileBottomNav({
           type="button"
           onClick={onSelectVideoPlayer}
           className={`flex flex-col items-center justify-center gap-1 h-full rounded-xl transition-all active:scale-95 ${
-            !isCronograma
+            activeTab === 'aula'
               ? 'text-red-500 font-bold'
               : 'text-zinc-400 hover:text-zinc-200'
           }`}
         >
           <Play className="w-5 h-5" />
           <span className="text-[10px] tracking-tight">Aula Atual</span>
+        </button>
+
+        {/* Banco de Questões Interativo */}
+        <button
+          type="button"
+          onClick={onSelectQuestoes}
+          className={`flex flex-col items-center justify-center gap-1 h-full rounded-xl transition-all active:scale-95 ${
+            activeTab === 'questoes'
+              ? 'text-red-500 font-bold'
+              : 'text-zinc-400 hover:text-zinc-200'
+          }`}
+        >
+          <BookOpen className="w-5 h-5" />
+          <span className="text-[10px] tracking-tight">Questões</span>
         </button>
 
         {/* Disciplinas / Gaveta */}
@@ -59,17 +72,6 @@ export function MobileBottomNav({
           <Layers className="w-5 h-5" />
           <span className="text-[10px] tracking-tight">Disciplinas</span>
         </button>
-
-        {/* Questões Externas */}
-        <a
-          href={BANCO_QUESTOES_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col items-center justify-center gap-1 h-full rounded-xl text-zinc-400 hover:text-red-400 transition-all active:scale-95"
-        >
-          <BookOpen className="w-5 h-5" />
-          <span className="text-[10px] tracking-tight">Questões</span>
-        </a>
       </div>
     </nav>
   );

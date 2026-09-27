@@ -17,6 +17,8 @@ import {
 import type { ProgressMap } from '@/types';
 import { isLessonCompleted } from '@/types';
 import { VideoModal } from '@/components/VideoModal';
+import { MentorCard } from '@/components/MentorCard';
+import type { RevisaoPendente } from '@/services/mentorService';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 
 export type FilterArea =
@@ -31,6 +33,7 @@ export type FilterArea =
 interface CronogramaScreenProps {
   progress: ProgressMap;
   onToggleComplete: (entryId: string) => void;
+  onStartRevision?: (revisao: RevisaoPendente) => void;
 }
 
 function matchesAreaFilter(entry: CronogramaEntry, filter: FilterArea): boolean {
@@ -52,6 +55,7 @@ function matchesAreaFilter(entry: CronogramaEntry, filter: FilterArea): boolean 
 export function CronogramaScreen({
   progress,
   onToggleComplete,
+  onStartRevision,
 }: CronogramaScreenProps) {
   const [search, setSearch] = useState('');
   const [areaFilter, setAreaFilter] = useState<FilterArea>('Todas');
@@ -189,6 +193,9 @@ export function CronogramaScreen({
             </span>
           </div>
         </div>
+
+        {/* Card Superior Visual: Mentor do Dia (Repetição Espaçada Medcurso R1, R2, R3) */}
+        <MentorCard onStartRevision={onStartRevision || (() => {})} />
 
         {/* Card Superior Único: AULAS & Progresso Geral */}
         <div className="rounded-2xl bg-ink-900 border border-ink-875 p-4 sm:p-5 shadow-lg">

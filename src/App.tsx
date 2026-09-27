@@ -3,11 +3,15 @@ import { Sidebar } from '@/components/Sidebar';
 import { Header } from '@/components/Header';
 import { VideoPlayer } from '@/components/VideoPlayer';
 import { CronogramaScreen } from '@/components/CronogramaScreen';
+import { QuestoesScreen, type RevisionExamConfig } from '@/components/QuestoesScreen';
 import { MobileBottomNav } from '@/components/MobileBottomNav';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { curriculum } from '@/data/curriculum';
+import { registrarConclusaoAula, type RevisaoPendente } from '@/services/mentorService';
 import type { ProgressMap } from '@/types';
 import { isLessonCompleted } from '@/types';
+
+type ActiveTab = 'cronograma' | 'aula' | 'questoes';
 
 interface Selection {
   areaId: string;
@@ -18,10 +22,12 @@ interface Selection {
 export default function App() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
-  // Default directly to Cronograma
-  const [showCronograma, setShowCronograma] = useState(true);
+  
+  // Navigation active tab: 'cronograma' | 'aula' | 'questoes'
+  const [activeTab, setActiveTab] = useState<ActiveTab>('cronograma');
+  const [currentRevision, setCurrentRevision] = useState<RevisionExamConfig | null>(null);
 
-  // Default selection
+  // Default lesson selection
   const [selection, setSelection] = useState<Selection>(() => {
     const pedArea = curriculum.find((a) => a.id === 'pediatria') ?? curriculum[0];
     const firstMod = pedArea.modules[0];
@@ -76,23 +82,50 @@ export default function App() {
 
   const handleSelectLesson = useCallback((areaId: string, moduleId: string, lessonId: string) => {
     setSelection({ areaId, moduleId, lessonId });
-    setShowCronograma(false);
+    setActiveTab('aula');
     setMobileSidebarOpen(false);
   }, []);
 
   const handleSelectCronograma = useCallback(() => {
-    setShowCronograma(true);
+    setActiveTab('cronograma');
     setMobileSidebarOpen(false);
   }, []);
 
-  // Toggle single completion status in LocalStorage
+  const handleSelectQuestoes = useCallback(() => {
+    setCurrentRevision(null);
+    setActiveTab('questoes');
+    setMobileSidebarOpen(false);
+  }, []);
+
+  // Inicia revisão agendada pelo Mentor Inteligente
+  const handleStartRevision = useCallback((revisao: RevisaoPendente) => {
+    setCurrentRevision({
+      temaId: revisao.temaId,
+      tema: revisao.tema,
+      especialidade: revisao.especialidade,
+      ciclo: revisao.ciclo,
+      diasCiclo: revisao.diasCiclo,
+      autoStart: true,
+    });
+    setActiveTab('questoes');
+    setMobileSidebarOpen(false);
+  }, []);
+
+  // Toggle single completion status in LocalStorage + Repetição Espaçada automática
   const handleToggleComplete = useCallback(
     (id: string) => {
       setProgress((prev) => {
         const isDone = isLessonCompleted(prev, id);
+        const nextState = !isDone;
+
+        // Se marcada como assistida, cadastra no Mentor Inteligente (R1: 7d, R2: 30d, R3: 60d)
+        if (nextState) {
+          registrarConclusaoAula(id);
+        }
+
         return {
           ...prev,
-          [id]: !isDone,
+          [id]: nextState,
         };
       });
     },
@@ -102,14 +135,14 @@ export default function App() {
   const handlePrev = useCallback(() => {
     if (hasPrev) {
       setSelection(flatLessonList[currentIndex - 1]);
-      setShowCronograma(false);
+      setActiveTab('aula');
     }
   }, [hasPrev, flatLessonList, currentIndex]);
 
   const handleNext = useCallback(() => {
     if (hasNext) {
       setSelection(flatLessonList[currentIndex + 1]);
-      setShowCronograma(false);
+      setActiveTab('aula');
     }
   }, [hasNext, flatLessonList, currentIndex]);
 
@@ -124,7 +157,9 @@ export default function App() {
       <Header
         onToggleSidebar={() => setMobileSidebarOpen((v) => !v)}
         onSelectCronograma={handleSelectCronograma}
-        isCronograma={showCronograma}
+        onSelectQuestoes={handleSelectQuestoes}
+        isCronograma={activeTab === 'cronograma'}
+        isQuestoes={activeTab === 'questoes'}
         onResetProgress={() => setShowResetConfirm(true)}
       />
 
@@ -138,7 +173,9 @@ export default function App() {
             progress={progress}
             onSelectLesson={handleSelectLesson}
             onSelectCronograma={handleSelectCronograma}
-            isCronogramaActive={showCronograma}
+            onSelectQuestoes={handleSelectQuestoes}
+            isCronogramaActive={activeTab === 'cronograma'}
+            isQuestoesActive={activeTab === 'questoes'}
             collapsed={sidebarCollapsed}
             onToggleCollapse={() => setSidebarCollapsed((v) => !v)}
           />
@@ -161,7 +198,9 @@ export default function App() {
                 progress={progress}
                 onSelectLesson={handleSelectLesson}
                 onSelectCronograma={handleSelectCronograma}
-                isCronogramaActive={showCronograma}
+                onSelectQuestoes={handleSelectQuestoes}
+                isCronogramaActive={activeTab === 'cronograma'}
+                isQuestoesActive={activeTab === 'questoes'}
                 collapsed={false}
                 onToggleCollapse={() => setMobileSidebarOpen(false)}
                 isMobileDrawer={true}
@@ -171,14 +210,17 @@ export default function App() {
           </div>
         )}
 
-        {/* Center Content: Either Cronograma or VideoPlayer */}
+        {/* Center Content: Cronograma, VideoPlayer or Banco de Questões */}
         <main className="flex-1 flex flex-col min-h-0 min-w-0 overflow-y-auto relative overflow-x-hidden pb-14 md:pb-0">
-          {showCronograma ? (
+          {activeTab === 'cronograma' && (
             <CronogramaScreen
               progress={progress}
               onToggleComplete={handleToggleComplete}
+              onStartRevision={handleStartRevision}
             />
-          ) : (
+          )}
+
+          {activeTab === 'aula' && (
             <VideoPlayer
               lesson={currentLesson}
               isCompleted={isCurrentCompleted}
@@ -189,17 +231,29 @@ export default function App() {
               hasNext={hasNext}
             />
           )}
+
+          {activeTab === 'questoes' && (
+            <QuestoesScreen
+              initialRevision={currentRevision}
+              onClearRevision={() => setCurrentRevision(null)}
+              onGoBackToCronograma={() => {
+                setCurrentRevision(null);
+                setActiveTab('cronograma');
+              }}
+            />
+          )}
         </main>
       </div>
 
       {/* Mobile Bottom Navigation Bar */}
       <MobileBottomNav
-        isCronograma={showCronograma}
+        activeTab={activeTab}
         onSelectCronograma={handleSelectCronograma}
         onSelectVideoPlayer={() => {
-          setShowCronograma(false);
+          setActiveTab('aula');
           setMobileSidebarOpen(false);
         }}
+        onSelectQuestoes={handleSelectQuestoes}
         onOpenDrawer={() => setMobileSidebarOpen(true)}
       />
 

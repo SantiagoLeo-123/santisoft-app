@@ -15,16 +15,15 @@ import { isLessonCompleted } from '@/types';
 import { getIcon } from '@/lib/icons';
 import { SantiSoftLogo } from '@/components/Logo';
 
-const BANCO_QUESTOES_URL =
-  'https://drive.google.com/drive/folders/1lPgsWzctV6GUMvwTp-yzcjbfr_DOEBc8?usp=drive_link';
-
 interface SidebarProps {
   curriculum: SubjectArea[];
   selectedLessonId: string | null;
   progress: ProgressMap;
   onSelectLesson: (areaId: string, moduleId: string, lessonId: string) => void;
   onSelectCronograma: () => void;
+  onSelectQuestoes: () => void;
   isCronogramaActive: boolean;
+  isQuestoesActive: boolean;
   collapsed: boolean;
   onToggleCollapse: () => void;
   isMobileDrawer?: boolean;
@@ -37,7 +36,9 @@ export function Sidebar({
   progress,
   onSelectLesson,
   onSelectCronograma,
+  onSelectQuestoes,
   isCronogramaActive,
+  isQuestoesActive,
   collapsed,
   onToggleCollapse,
   isMobileDrawer,
@@ -90,15 +91,17 @@ export function Sidebar({
         >
           <Calendar className="w-5 h-5" />
         </button>
-        <a
-          href={BANCO_QUESTOES_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="p-2 rounded-xl text-zinc-400 hover:text-red-500 hover:bg-ink-850 transition-colors"
-          title="Questões"
+        <button
+          onClick={onSelectQuestoes}
+          className={`p-2 rounded-xl transition-colors ${
+            isQuestoesActive
+              ? 'bg-red-600/15 text-red-500'
+              : 'text-zinc-400 hover:text-red-500 hover:bg-ink-850'
+          }`}
+          title="Banco de Questões"
         >
           <BookOpen className="w-5 h-5" />
-        </a>
+        </button>
         <div className="w-8 border-t border-ink-875 my-1" />
         <div className="flex-1 overflow-y-auto scrollbar-thin space-y-2 no-scrollbar">
           {curriculum.map((area) => {
@@ -154,7 +157,7 @@ export function Sidebar({
       </div>
 
       <div className="flex-1 overflow-y-auto scrollbar-thin px-3 py-3 space-y-1.5 touch-pan-y">
-        {/* Navigation Buttons */}
+        {/* Cronograma Button */}
         <button
           onClick={() => {
             onSelectCronograma();
@@ -174,15 +177,30 @@ export function Sidebar({
           <span className="text-left flex-1">Cronograma de Estudos</span>
         </button>
 
-        <a
-          href={BANCO_QUESTOES_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full flex items-center gap-2.5 px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs sm:text-sm font-semibold text-zinc-300 hover:text-white hover:bg-ink-850 transition-all active:scale-[0.98]"
+        {/* Banco de Questões Button */}
+        <button
+          onClick={() => {
+            onSelectQuestoes();
+            onCloseMobileDrawer?.();
+          }}
+          className={`w-full flex items-center gap-2.5 px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs sm:text-sm font-semibold transition-all active:scale-[0.98] ${
+            isQuestoesActive
+              ? 'bg-red-600 text-white shadow-md shadow-red-600/20'
+              : 'text-zinc-300 hover:bg-ink-850 hover:text-white'
+          }`}
         >
-          <BookOpen className="w-4 h-4 shrink-0 text-red-500" />
-          <span className="text-left flex-1">Banco de Questões</span>
-        </a>
+          <BookOpen
+            className={`w-4 h-4 shrink-0 ${
+              isQuestoesActive ? 'text-white' : 'text-red-500'
+            }`}
+          />
+          <div className="text-left flex-1 flex items-center justify-between">
+            <span>Banco de Questões</span>
+            <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-red-500/20 text-red-300">
+              Novo
+            </span>
+          </div>
+        </button>
 
         {/* Section Divider: Áreas */}
         <div className="pt-3 pb-1 px-3">
@@ -237,7 +255,8 @@ export function Sidebar({
                             {mod.lessons.map((lesson) => {
                               const isSelected =
                                 lesson.id === selectedLessonId &&
-                                !isCronogramaActive;
+                                !isCronogramaActive &&
+                                !isQuestoesActive;
                               const isDone = isLessonCompleted(progress, lesson.id);
 
                               return (
