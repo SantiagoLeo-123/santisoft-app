@@ -105,7 +105,7 @@ export function VideoModal({
 
         {/* 2. Organização dos Botões (Eliminando a quebra e botão solto) */}
         <div className="w-full flex flex-col shrink-0">
-          {/* Linha 1 (Ação principal): Botão "Marcar como Assistida" ocupando toda a largura */}
+          {/* Linha 1 (Ação principal): Botão "Marcar como Assistido" ocupando toda a largura */}
           <button
             type="button"
             onClick={onToggleComplete}
@@ -118,12 +118,12 @@ export function VideoModal({
             {isCompleted ? (
               <>
                 <CheckCircle2 className="w-5 h-5 text-emerald-100" />
-                <span>Aula Assistida! (Toque para desmarcar)</span>
+                <span>✓ Assistido (Toque para voltar para Pendente)</span>
               </>
             ) : (
               <>
                 <Circle className="w-5 h-5 text-red-200" />
-                <span>Marcar como Assistida</span>
+                <span>Marcar como Assistido</span>
               </>
             )}
           </button>

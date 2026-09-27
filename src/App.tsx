@@ -4,14 +4,20 @@ import { Header } from '@/components/Header';
 import { VideoPlayer } from '@/components/VideoPlayer';
 import { CronogramaScreen } from '@/components/CronogramaScreen';
 import { QuestoesScreen, type RevisionExamConfig } from '@/components/QuestoesScreen';
+import { MentorInteligenteTab } from '@/components/MentorInteligenteTab';
 import { MobileBottomNav } from '@/components/MobileBottomNav';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { curriculum } from '@/data/curriculum';
-import { registrarConclusaoAula, type RevisaoPendente } from '@/services/mentorService';
+import {
+  registrarConclusaoAula,
+  removerConclusaoAula,
+  MENTOR_STORAGE_KEY,
+  type RevisaoPendente,
+} from '@/services/mentorService';
 import type { ProgressMap } from '@/types';
 import { isLessonCompleted } from '@/types';
 
-type ActiveTab = 'cronograma' | 'aula' | 'questoes';
+type ActiveTab = 'cronograma' | 'aula' | 'questoes' | 'mentor';
 
 interface Selection {
   areaId: string;
@@ -97,6 +103,11 @@ export default function App() {
     setMobileSidebarOpen(false);
   }, []);
 
+  const handleSelectMentor = useCallback(() => {
+    setActiveTab('mentor');
+    setMobileSidebarOpen(false);
+  }, []);
+
   // Inicia revisão agendada pelo Mentor Inteligente
   const handleStartRevision = useCallback((revisao: RevisaoPendente) => {
     setCurrentRevision({
@@ -121,6 +132,8 @@ export default function App() {
         // Se marcada como assistida, cadastra no Mentor Inteligente (R1: 7d, R2: 30d, R3: 60d)
         if (nextState) {
           registrarConclusaoAula(id);
+        } else {
+          removerConclusaoAula(id);
         }
 
         return {
@@ -148,6 +161,10 @@ export default function App() {
 
   const handleResetAllData = useCallback(() => {
     setProgress({});
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem(MENTOR_STORAGE_KEY);
+      window.dispatchEvent(new CustomEvent('santisoft_mentor_updated', { detail: {} }));
+    }
     setShowResetConfirm(false);
   }, [setProgress]);
 
@@ -158,8 +175,10 @@ export default function App() {
         onToggleSidebar={() => setMobileSidebarOpen((v) => !v)}
         onSelectCronograma={handleSelectCronograma}
         onSelectQuestoes={handleSelectQuestoes}
+        onSelectMentor={handleSelectMentor}
         isCronograma={activeTab === 'cronograma'}
         isQuestoes={activeTab === 'questoes'}
+        isMentor={activeTab === 'mentor'}
         onResetProgress={() => setShowResetConfirm(true)}
       />
 
@@ -174,8 +193,10 @@ export default function App() {
             onSelectLesson={handleSelectLesson}
             onSelectCronograma={handleSelectCronograma}
             onSelectQuestoes={handleSelectQuestoes}
+            onSelectMentor={handleSelectMentor}
             isCronogramaActive={activeTab === 'cronograma'}
             isQuestoesActive={activeTab === 'questoes'}
+            isMentorActive={activeTab === 'mentor'}
             collapsed={sidebarCollapsed}
             onToggleCollapse={() => setSidebarCollapsed((v) => !v)}
           />
@@ -199,8 +220,10 @@ export default function App() {
                 onSelectLesson={handleSelectLesson}
                 onSelectCronograma={handleSelectCronograma}
                 onSelectQuestoes={handleSelectQuestoes}
+                onSelectMentor={handleSelectMentor}
                 isCronogramaActive={activeTab === 'cronograma'}
                 isQuestoesActive={activeTab === 'questoes'}
+                isMentorActive={activeTab === 'mentor'}
                 collapsed={false}
                 onToggleCollapse={() => setMobileSidebarOpen(false)}
                 isMobileDrawer={true}
@@ -210,13 +233,12 @@ export default function App() {
           </div>
         )}
 
-        {/* Center Content: Cronograma, VideoPlayer or Banco de Questões */}
+        {/* Center Content: Cronograma, VideoPlayer, Banco de Questões ou Mentor */}
         <main className="flex-1 flex flex-col min-h-0 min-w-0 overflow-y-auto relative overflow-x-hidden pb-14 md:pb-0">
           {activeTab === 'cronograma' && (
             <CronogramaScreen
               progress={progress}
               onToggleComplete={handleToggleComplete}
-              onStartRevision={handleStartRevision}
             />
           )}
 
@@ -242,6 +264,14 @@ export default function App() {
               }}
             />
           )}
+
+          {activeTab === 'mentor' && (
+            <MentorInteligenteTab
+              onIniciarRevisao={handleStartRevision}
+              onGoBackToCronograma={handleSelectCronograma}
+              onGoToQuestoes={handleSelectQuestoes}
+            />
+          )}
         </main>
       </div>
 
@@ -254,6 +284,7 @@ export default function App() {
           setMobileSidebarOpen(false);
         }}
         onSelectQuestoes={handleSelectQuestoes}
+        onSelectMentor={handleSelectMentor}
         onOpenDrawer={() => setMobileSidebarOpen(true)}
       />
 

@@ -211,8 +211,13 @@ export function QuestoesScreen({
     useState<SpecialtySelection>('Todas');
   const [selectedSubtopic, setSelectedSubtopic] = useState<string>('todos');
   const [questionCountChoice, setQuestionCountChoice] = useState<
-    '5' | '10' | '20' | '50' | '100' | 'todas'
+    '5' | '10' | '20' | '30' | '50' | '100' | 'todas'
   >('5');
+  const [showRevisionFallbackModal, setShowRevisionFallbackModal] = useState(false);
+  const [pendingRevisionPayload, setPendingRevisionPayload] = useState<{
+    spec: SpecialtySelection;
+    theme: string;
+  } | null>(null);
 
   // Subtópicos dinâmicos baseados na Grande Área selecionada (para Pediatria, puxa direto da lista de aulas)
   const availableSubtopics = useMemo(() => {
@@ -224,9 +229,10 @@ export function QuestoesScreen({
     setSelectedSubtopic('todos');
   }, [selectedSpecialty]);
 
-  // Contagem de questões disponíveis para os filtros selecionados
+  // Contagem de questões disponíveis para os filtros selecionados (Treino Livre: apenas questões comuns, isRevisao !== true)
   const availableQuestionsCount = useMemo(() => {
     return questoesData.filter((q) => {
+      if (q.isRevisao === true) return false;
       if (selectedSpecialty !== 'Todas' && q.specialty !== selectedSpecialty)
         return false;
       if (selectedSubtopic !== 'todos' && !matchesTheme(q, selectedSubtopic))
@@ -288,10 +294,21 @@ export function QuestoesScreen({
       const spec = (initialRevision.especialidade as SpecialtySelection) || 'Pediatria';
       setSelectedSpecialty(spec);
       setSelectedSubtopic(initialRevision.tema);
-      setQuestionCountChoice('10');
+      setQuestionCountChoice('30');
 
       if (initialRevision.autoStart) {
-        startExamWithParams(spec, initialRevision.tema, '10');
+        // Filtro Exclusivo no Mentor Inteligente: estritamente questões com isRevisao === true
+        const revisionPool = questoesData.filter(
+          (q) => q.isRevisao === true && matchesTheme(q, initialRevision.tema),
+        );
+
+        if (revisionPool.length >= 30) {
+          startExamWithParams(spec, initialRevision.tema, '30', true);
+        } else {
+          // Caso o tema ainda não possua as 30 questões exclusivas de revisão cadastradas, exibe aviso suave
+          setPendingRevisionPayload({ spec, theme: initialRevision.tema });
+          setShowRevisionFallbackModal(true);
+        }
       }
     }
   }, [initialRevision]);
@@ -300,17 +317,26 @@ export function QuestoesScreen({
   const startExamWithParams = (
     specialty: SpecialtySelection,
     theme: string,
-    countChoice: '5' | '10' | '20' | '50' | '100' | 'todas' = '10',
+    countChoice: '5' | '10' | '20' | '30' | '50' | '100' | 'todas' = '10',
+    isRevisionMode: boolean = false,
   ) => {
     let pool = questoesData.filter((q) => {
+      if (isRevisionMode) {
+        // Mentor Inteligente: apenas questões com isRevisao === true
+        if (q.isRevisao !== true) return false;
+      } else {
+        // Treino Livre: apenas questões de treino comum (isRevisao !== true)
+        if (q.isRevisao === true) return false;
+      }
       if (specialty !== 'Todas' && q.specialty !== specialty) return false;
       if (theme !== 'todos' && !matchesTheme(q, theme)) return false;
       return true;
     });
 
-    // Se o tema específico ainda não tiver questão isolada, usa as questões da área
-    if (pool.length === 0) {
+    // Se o tema específico ainda não tiver questão isolada no modo livre, usa as da área
+    if (pool.length === 0 && !isRevisionMode) {
       pool = questoesData.filter((q) => {
+        if (q.isRevisao === true) return false;
         if (specialty !== 'Todas' && q.specialty !== specialty) return false;
         return true;
       });
@@ -339,9 +365,9 @@ export function QuestoesScreen({
     setStage('em_andamento');
   };
 
-  // Iniciar Prova pelo botão da UI
+  // Iniciar Prova pelo botão da UI (Treino Livre)
   const handleStartExam = () => {
-    startExamWithParams(selectedSpecialty, selectedSubtopic, questionCountChoice);
+    startExamWithParams(selectedSpecialty, selectedSubtopic, questionCountChoice, false);
   };
 
   // Marcar alternativa na prova
@@ -570,8 +596,8 @@ export function QuestoesScreen({
               </label>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
-              {(['5', '10', '20', '50', '100', 'todas'] as const).map((count) => {
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2">
+              {(['5', '10', '20', '30', '50', '100', 'todas'] as const).map((count) => {
                 const isSelected = questionCountChoice === count;
                 const label =
                   count === 'todas'
@@ -621,6 +647,67 @@ export function QuestoesScreen({
               <span>Iniciar Prova</span>
             </button>
           </div>
+
+          {/* Modal de Aviso Suave: Questões exclusivas de revisão em elaboração */}
+          {showRevisionFallbackModal && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in safe-top safe-bottom">
+              <div className="w-full max-w-md rounded-2xl bg-ink-900 border border-amber-500/30 p-5 sm:p-6 shadow-2xl space-y-4 animate-scale-up">
+                <div className="w-12 h-12 rounded-2xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 mx-auto">
+                  <AlertTriangle className="w-6 h-6" />
+                </div>
+
+                <div className="text-center space-y-1.5">
+                  <h3 className="text-base sm:text-lg font-bold text-white">
+                    Mentor Inteligente
+                  </h3>
+                  <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-medium">
+                    Questões exclusivas de revisão em elaboração para este tema. Deseja realizar com as questões gerais disponíveis?
+                  </p>
+                  {pendingRevisionPayload?.theme && (
+                    <div className="inline-block mt-2 px-2.5 py-1 rounded-lg bg-ink-850 border border-ink-800 text-[11px] font-bold text-amber-400">
+                      Tema: {pendingRevisionPayload.theme}
+                    </div>
+                  )}
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-2.5 pt-3 border-t border-ink-850">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setShowRevisionFallbackModal(false);
+                      setPendingRevisionPayload(null);
+                      if (onGoBackToCronograma) {
+                        onGoBackToCronograma();
+                      } else {
+                        setStage('configuracao');
+                      }
+                    }}
+                    className="flex-1 py-2.5 px-4 rounded-xl bg-ink-850 hover:bg-ink-800 text-zinc-300 hover:text-white text-xs font-bold transition-all text-center"
+                  >
+                    Voltar ao Cronograma
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setShowRevisionFallbackModal(false);
+                      if (pendingRevisionPayload) {
+                        startExamWithParams(
+                          pendingRevisionPayload.spec,
+                          pendingRevisionPayload.theme,
+                          '30',
+                          false,
+                        );
+                        setPendingRevisionPayload(null);
+                      }
+                    }}
+                    className="flex-1 py-2.5 px-4 rounded-xl bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white text-xs font-black shadow-lg shadow-red-600/25 transition-all text-center"
+                  >
+                    Sim, realizar com questões gerais
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
 
         </div>
       </div>

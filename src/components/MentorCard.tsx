@@ -8,25 +8,26 @@ import {
   ChevronDown,
   Clock,
   BookOpen,
-  PlusCircle,
 } from 'lucide-react';
 import {
   getRevisoesDeHoje,
   getProximasRevisoes,
-  criarRevisaoTesteHoje,
+  limparDadosTesteMentor,
   type RevisaoPendente,
 } from '@/services/mentorService';
 
 interface MentorCardProps {
   onStartRevision: (revisao: RevisaoPendente) => void;
+  onOpenMentorTab?: () => void;
 }
 
-export function MentorCard({ onStartRevision }: MentorCardProps) {
+export function MentorCard({ onStartRevision, onOpenMentorTab }: MentorCardProps) {
   const [revisoesHoje, setRevisoesHoje] = useState<RevisaoPendente[]>([]);
   const [proximas, setProximas] = useState<ReturnType<typeof getProximasRevisoes>>([]);
   const [showProximas, setShowProximas] = useState(false);
 
   const loadData = () => {
+    limparDadosTesteMentor();
     setRevisoesHoje(getRevisoesDeHoje());
     setProximas(getProximasRevisoes());
   };
@@ -44,11 +45,6 @@ export function MentorCard({ onStartRevision }: MentorCardProps) {
       window.removeEventListener('storage', handleUpdate);
     };
   }, []);
-
-  const handleCriarTeste = (tema: string) => {
-    criarRevisaoTesteHoje(tema, 'Pediatria');
-    loadData();
-  };
 
   // Cores por ciclo
   const getCicloBadge = (ciclo: string, dias: number) => {
@@ -98,11 +94,24 @@ export function MentorCard({ onStartRevision }: MentorCardProps) {
           </div>
         </div>
 
-        {revisoesHoje.length > 0 && (
-          <span className="px-3 py-1 rounded-full bg-red-600 text-white text-xs font-black shadow-md shadow-red-600/30">
-            {revisoesHoje.length} {revisoesHoje.length === 1 ? 'revisão pendente' : 'revisões pendentes'}
-          </span>
-        )}
+        <div className="flex items-center gap-2">
+          {onOpenMentorTab && (
+            <button
+              type="button"
+              onClick={onOpenMentorTab}
+              className="px-3 py-1.5 rounded-xl bg-ink-850 hover:bg-ink-800 border border-ink-800 text-xs font-semibold text-zinc-300 hover:text-white transition-all flex items-center gap-1.5"
+            >
+              <span>Acessar Mentor</span>
+              <ChevronRight className="w-3.5 h-3.5" />
+            </button>
+          )}
+
+          {revisoesHoje.length > 0 && (
+            <span className="px-3 py-1 rounded-full bg-red-600 text-white text-xs font-black shadow-md shadow-red-600/30">
+              {revisoesHoje.length} {revisoesHoje.length === 1 ? 'revisão pendente' : 'revisões pendentes'}
+            </span>
+          )}
+        </div>
       </div>
 
       {/* Corpo do Card */}
@@ -151,52 +160,32 @@ export function MentorCard({ onStartRevision }: MentorCardProps) {
             })}
           </div>
         ) : (
-          /* Mensagem amigável quando tudo está em dia */
-          <div className="p-4 sm:p-5 rounded-xl bg-ink-950/60 border border-emerald-500/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          /* Mensagem limpa quando não há revisões pendentes para hoje */
+          <div className="p-4 sm:p-5 rounded-xl bg-ink-950/60 border border-ink-875 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
             <div className="flex items-center gap-3.5">
               <div className="flex items-center justify-center w-11 h-11 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 shrink-0">
                 <CheckCircle2 className="w-6 h-6" />
               </div>
               <div>
                 <p className="text-sm font-bold text-emerald-300">
-                  Parabéns! Todas as revisões em dia para hoje.
+                  Nenhuma revisão pendente para hoje
                 </p>
                 <p className="text-xs text-zinc-400 mt-0.5">
-                  Ao clicar em &quot;Marcar como Assistida&quot; nas aulas, o Mentor agendará os ciclos R1, R2 e R3 automaticamente.
+                  Ao concluir ou marcar aulas como assistidas no cronograma, os ciclos de revisão espaçada (R1: 7d, R2: 30d e R3: 60d) aparecerão aqui.
                 </p>
               </div>
             </div>
 
-            {/* Ações de conveniência para testar imediatamente com 1 clique */}
-            <div className="flex flex-wrap items-center justify-center sm:justify-end gap-2 shrink-0">
+            {onOpenMentorTab && (
               <button
                 type="button"
-                onClick={() => handleCriarTeste('CARDIOLOGIA PEDIATRICA')}
-                className="px-3 py-1.5 rounded-lg bg-ink-850 hover:bg-ink-800 border border-ink-800 text-[11px] font-semibold text-zinc-300 hover:text-white flex items-center gap-1.5 transition-colors"
-                title="Gera uma revisão pendente de teste para hoje"
+                onClick={onOpenMentorTab}
+                className="w-full sm:w-auto px-4 py-2 rounded-xl bg-ink-850 hover:bg-ink-800 border border-ink-800 text-xs font-semibold text-zinc-300 hover:text-white transition-all flex items-center justify-center gap-1.5 shrink-0"
               >
-                <PlusCircle className="w-3.5 h-3.5 text-cyan-400" />
-                <span>Testar Cardio Ped (R1)</span>
+                <span>Ver todas as revisões</span>
+                <ChevronRight className="w-3.5 h-3.5" />
               </button>
-              <button
-                type="button"
-                onClick={() => handleCriarTeste('ITU PEDIATRICO')}
-                className="px-3 py-1.5 rounded-lg bg-ink-850 hover:bg-ink-800 border border-ink-800 text-[11px] font-semibold text-zinc-300 hover:text-white flex items-center gap-1.5 transition-colors"
-                title="Gera uma revisão pendente de teste para hoje"
-              >
-                <PlusCircle className="w-3.5 h-3.5 text-amber-400" />
-                <span>Testar ITU Ped (R1)</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => handleCriarTeste('CRESCIMENTO E SEUS DISTURBIOS')}
-                className="px-3 py-1.5 rounded-lg bg-ink-850 hover:bg-ink-800 border border-ink-800 text-[11px] font-semibold text-zinc-300 hover:text-white flex items-center gap-1.5 transition-colors"
-                title="Gera uma revisão pendente de teste para hoje"
-              >
-                <PlusCircle className="w-3.5 h-3.5 text-emerald-400" />
-                <span>Testar Crescimento (R1)</span>
-              </button>
-            </div>
+            )}
           </div>
         )}
 

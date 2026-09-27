@@ -138,17 +138,86 @@ export function resolverTemaEEspecialidade(lessonOrEntryId: string): {
   };
 }
 
-// Recupera a loja do LocalStorage
+// Recupera a loja do LocalStorage garantindo ausência de dados fictícios/teste
 export function getMentorStore(): MentorStore {
   if (typeof window === 'undefined') return {};
   try {
     const raw = localStorage.getItem(MENTOR_STORAGE_KEY);
     if (!raw) return {};
-    return JSON.parse(raw) as MentorStore;
+    const store = JSON.parse(raw) as MentorStore;
+    let modified = false;
+
+    // Purga quaisquer dados de teste/mock pré-cadastrados ou antigos
+    for (const key of Object.keys(store)) {
+      const item = store[key];
+      const isTestKey =
+        key.startsWith('revisao-teste') ||
+        key.toLowerCase().includes('teste') ||
+        key.toLowerCase().includes('test') ||
+        key.toLowerCase().includes('mock');
+      const isTestItem =
+        !item ||
+        !item.id ||
+        item.id.startsWith('revisao-teste') ||
+        item.id.toLowerCase().includes('teste') ||
+        item.id.toLowerCase().includes('test') ||
+        item.id.toLowerCase().includes('mock');
+
+      if (isTestKey || isTestItem) {
+        delete store[key];
+        modified = true;
+      }
+    }
+
+    if (modified) {
+      localStorage.setItem(MENTOR_STORAGE_KEY, JSON.stringify(store));
+    }
+
+    return store;
   } catch (err) {
     console.error('Erro ao ler mentorStore do LocalStorage:', err);
     return {};
   }
+}
+
+// Limpa explicitamente a chave do localStorage se contiver dados de teste antigos
+export function limparDadosTesteMentor(): void {
+  if (typeof window === 'undefined') return;
+  try {
+    const raw = localStorage.getItem(MENTOR_STORAGE_KEY);
+    if (!raw) return;
+    const store = JSON.parse(raw) as MentorStore;
+    let modified = false;
+
+    for (const key of Object.keys(store)) {
+      const item = store[key];
+      if (
+        key.startsWith('revisao-teste') ||
+        key.toLowerCase().includes('teste') ||
+        key.toLowerCase().includes('test') ||
+        !item ||
+        !item.id ||
+        item.id.startsWith('revisao-teste') ||
+        item.id.toLowerCase().includes('teste') ||
+        item.id.toLowerCase().includes('test')
+      ) {
+        delete store[key];
+        modified = true;
+      }
+    }
+
+    if (modified) {
+      localStorage.setItem(MENTOR_STORAGE_KEY, JSON.stringify(store));
+      window.dispatchEvent(new CustomEvent('santisoft_mentor_updated', { detail: store }));
+    }
+  } catch (err) {
+    console.error('Erro ao limpar dados de teste do Mentor:', err);
+  }
+}
+
+// Executa verificação e limpeza inicial imediatamente
+if (typeof window !== 'undefined') {
+  limparDadosTesteMentor();
 }
 
 // Salva a loja no LocalStorage e dispara evento reativo
@@ -372,51 +441,6 @@ export function concluirCicloRevisao(
     item.cicloAtual = 'FINALIZADO';
   }
 
-  saveMentorStore(store);
-  return item;
-}
-
-/**
- * Helper para criar uma revisão de teste com data de hoje para demonstração imediata
- */
-export function criarRevisaoTesteHoje(
-  tema = 'CARDIOLOGIA PEDIATRICA',
-  especialidade = 'Pediatria',
-): TemaRevisao {
-  const store = getMentorStore();
-  const slug = tema.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-  const testId = `revisao-teste-${slug}`;
-  const todayStr = toDateStr(new Date());
-
-  const item: TemaRevisao = {
-    id: testId,
-    tema,
-    especialidade,
-    dataConclusaoAula: toDateStr(addDays(new Date(), -7)),
-    ciclos: {
-      R1: {
-        ciclo: 'R1',
-        diasAposConclusao: 7,
-        dataPrevista: todayStr, // Hoje!
-        concluido: false,
-      },
-      R2: {
-        ciclo: 'R2',
-        diasAposConclusao: 30,
-        dataPrevista: toDateStr(addDays(new Date(), 23)),
-        concluido: false,
-      },
-      R3: {
-        ciclo: 'R3',
-        diasAposConclusao: 60,
-        dataPrevista: toDateStr(addDays(new Date(), 53)),
-        concluido: false,
-      },
-    },
-    cicloAtual: 'R1',
-  };
-
-  store[testId] = item;
   saveMentorStore(store);
   return item;
 }

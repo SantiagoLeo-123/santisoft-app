@@ -7,6 +7,7 @@ import {
   CheckCircle2,
   Circle,
   Play,
+  Check,
 } from 'lucide-react';
 import {
   cronogramaData,
@@ -17,8 +18,6 @@ import {
 import type { ProgressMap } from '@/types';
 import { isLessonCompleted } from '@/types';
 import { VideoModal } from '@/components/VideoModal';
-import { MentorCard } from '@/components/MentorCard';
-import type { RevisaoPendente } from '@/services/mentorService';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 
 export type FilterArea =
@@ -33,7 +32,6 @@ export type FilterArea =
 interface CronogramaScreenProps {
   progress: ProgressMap;
   onToggleComplete: (entryId: string) => void;
-  onStartRevision?: (revisao: RevisaoPendente) => void;
 }
 
 function matchesAreaFilter(entry: CronogramaEntry, filter: FilterArea): boolean {
@@ -55,7 +53,6 @@ function matchesAreaFilter(entry: CronogramaEntry, filter: FilterArea): boolean 
 export function CronogramaScreen({
   progress,
   onToggleComplete,
-  onStartRevision,
 }: CronogramaScreenProps) {
   const [search, setSearch] = useState('');
   const [areaFilter, setAreaFilter] = useState<FilterArea>('Todas');
@@ -194,9 +191,6 @@ export function CronogramaScreen({
           </div>
         </div>
 
-        {/* Card Superior Visual: Mentor do Dia (Repetição Espaçada Medcurso R1, R2, R3) */}
-        <MentorCard onStartRevision={onStartRevision || (() => {})} />
-
         {/* Card Superior Único: AULAS & Progresso Geral */}
         <div className="rounded-2xl bg-ink-900 border border-ink-875 p-4 sm:p-5 shadow-lg">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -260,7 +254,7 @@ export function CronogramaScreen({
             )}
           </div>
 
-          {/* Status Filter (Todas, Pendentes, Concluídas) */}
+          {/* Status Filter (Todas, Pendentes, Assistidas) */}
           <div className="flex gap-1 bg-ink-900 border border-ink-875 p-1 rounded-xl shrink-0 self-stretch sm:self-auto overflow-x-auto no-scrollbar">
             <button
               onClick={() => setStatusFilter('todos')}
@@ -284,13 +278,14 @@ export function CronogramaScreen({
             </button>
             <button
               onClick={() => setStatusFilter('concluidas')}
-              className={`flex-1 sm:flex-initial px-3 py-1.5 min-h-[36px] rounded-lg text-xs font-semibold transition-colors flex items-center justify-center ${
+              className={`flex-1 sm:flex-initial px-3 py-1.5 min-h-[36px] rounded-lg text-xs font-semibold transition-colors flex items-center justify-center gap-1.5 ${
                 statusFilter === 'concluidas'
-                  ? 'bg-emerald-600/30 text-emerald-300 shadow-sm'
+                  ? 'bg-emerald-600/30 text-emerald-300 shadow-sm border border-emerald-500/30'
                   : 'text-zinc-400 hover:text-zinc-200'
               }`}
             >
-              Concluídas
+              <Check className="w-3 h-3 text-emerald-400" />
+              <span>Assistidas</span>
             </button>
           </div>
         </div>
@@ -358,13 +353,20 @@ export function CronogramaScreen({
 
                   {/* Status Pill */}
                   <span
-                    className={`text-[11px] font-bold px-2 py-0.5 rounded-md ${
+                    className={`inline-flex items-center gap-1 text-[11px] font-bold px-2 py-0.5 rounded-md ${
                       isDone
                         ? 'bg-emerald-600/20 text-emerald-300 border border-emerald-500/30'
                         : 'bg-ink-950 text-zinc-500 border border-ink-850'
                     }`}
                   >
-                    {isDone ? 'Concluída' : 'Pendente'}
+                    {isDone ? (
+                      <>
+                        <Check className="w-3 h-3 text-emerald-400 stroke-[2.5]" />
+                        <span>Assistido</span>
+                      </>
+                    ) : (
+                      <span>Pendente</span>
+                    )}
                   </span>
                 </div>
 
@@ -393,7 +395,7 @@ export function CronogramaScreen({
                   </div>
                 )}
 
-                {/* Mobile Action Buttons: Assistir Aula & Concluída (min-height 48px e touch target amplo) */}
+                {/* Mobile Action Buttons: Assistir Aula & Assistido / Pendente (min-height 48px e touch target amplo) */}
                 <div className="pt-2 border-t border-ink-875/80 flex items-center gap-2.5">
                   <button
                     type="button"
@@ -401,7 +403,7 @@ export function CronogramaScreen({
                     className="min-h-[48px] h-12 flex-1 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 bg-red-600/15 text-red-400 hover:bg-red-600/25 border border-red-600/30 active:scale-[0.98] transition-all shadow-sm"
                   >
                     <Play className="w-4 h-4 fill-current shrink-0" />
-                    <span>Assistir Aula</span>
+                    <span>Assistir</span>
                   </button>
 
                   <button
@@ -409,19 +411,20 @@ export function CronogramaScreen({
                     onClick={() => onToggleComplete(entry.id)}
                     className={`min-h-[48px] h-12 flex-1 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all active:scale-[0.98] shadow-sm ${
                       isDone
-                        ? 'bg-emerald-600 text-white shadow-emerald-600/20'
+                        ? 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-600/20'
                         : 'bg-ink-950 border border-ink-800 text-zinc-300 hover:bg-ink-850 hover:text-white'
                     }`}
+                    title={isDone ? 'Clique para desmarcar e voltar para Pendente' : 'Clique para marcar como Assistido'}
                   >
                     {isDone ? (
                       <>
-                        <CheckCircle2 className="w-4 h-4 text-emerald-200 shrink-0" />
-                        <span>Concluída</span>
+                        <CheckCircle2 className="w-4 h-4 text-emerald-100 shrink-0" />
+                        <span>✓ Assistido</span>
                       </>
                     ) : (
                       <>
                         <Circle className="w-4 h-4 text-zinc-500 shrink-0" />
-                        <span>Marcar Concluída</span>
+                        <span>Marcar Assistido</span>
                       </>
                     )}
                   </button>
@@ -439,6 +442,7 @@ export function CronogramaScreen({
                 <th className="px-4 py-3.5 w-24">Semana</th>
                 <th className="px-3 py-3.5 w-28">Área</th>
                 <th className="px-5 py-3.5">Aula Principal &amp; Bônus</th>
+                <th className="px-4 py-3.5 w-32 text-center">Status</th>
                 <th className="px-5 py-3.5 text-right w-64">Ações</th>
               </tr>
             </thead>
@@ -501,6 +505,29 @@ export function CronogramaScreen({
                       )}
                     </td>
 
+                    {/* Status Visual Destaque (Badge) */}
+                    <td className="px-4 py-3.5 whitespace-nowrap text-center">
+                      <span
+                        className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold transition-all shadow-sm ${
+                          isDone
+                            ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
+                            : 'bg-ink-950 text-zinc-400 border border-ink-850'
+                        }`}
+                      >
+                        {isDone ? (
+                          <>
+                            <Check className="w-3.5 h-3.5 text-emerald-400 stroke-[2.5]" />
+                            <span>✓ Assistido</span>
+                          </>
+                        ) : (
+                          <>
+                            <Circle className="w-2.5 h-2.5 text-zinc-500 fill-zinc-500/40" />
+                            <span>Pendente</span>
+                          </>
+                        )}
+                      </span>
+                    </td>
+
                     {/* Action Controls */}
                     <td className="px-5 py-3.5 text-right whitespace-nowrap">
                       <div className="inline-flex items-center gap-2 justify-end">
@@ -522,19 +549,19 @@ export function CronogramaScreen({
                           className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all shadow-sm active:scale-95 ${
                             isDone
                               ? 'bg-emerald-600 text-white hover:bg-emerald-700 shadow-emerald-600/20'
-                              : 'bg-ink-950 border border-ink-800 text-zinc-400 hover:text-white hover:border-zinc-600 hover:bg-ink-850'
+                              : 'bg-ink-950 border border-ink-800 text-zinc-300 hover:text-white hover:border-zinc-600 hover:bg-ink-850'
                           }`}
-                          title={isDone ? 'Clique para desmarcar' : 'Clique para marcar como assistida'}
+                          title={isDone ? 'Clique para desmarcar e voltar para Pendente' : 'Clique para marcar como Assistido'}
                         >
                           {isDone ? (
                             <>
-                              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-200" />
-                              <span>Assistida</span>
+                              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-100" />
+                              <span>✓ Assistido</span>
                             </>
                           ) : (
                             <>
                               <Circle className="w-3 h-3 text-zinc-500" />
-                              <span>Pendente</span>
+                              <span>Marcar Assistido</span>
                             </>
                           )}
                         </button>

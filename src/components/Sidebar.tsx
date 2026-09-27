@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   ChevronDown,
   ChevronRight,
@@ -8,6 +8,7 @@ import {
   PanelLeft,
   Calendar,
   BookOpen,
+  Brain,
   X,
 } from 'lucide-react';
 import type { SubjectArea, ProgressMap } from '@/types';
@@ -22,8 +23,10 @@ interface SidebarProps {
   onSelectLesson: (areaId: string, moduleId: string, lessonId: string) => void;
   onSelectCronograma: () => void;
   onSelectQuestoes: () => void;
+  onSelectMentor?: () => void;
   isCronogramaActive: boolean;
   isQuestoesActive: boolean;
+  isMentorActive?: boolean;
   collapsed: boolean;
   onToggleCollapse: () => void;
   isMobileDrawer?: boolean;
@@ -37,19 +40,39 @@ export function Sidebar({
   onSelectLesson,
   onSelectCronograma,
   onSelectQuestoes,
+  onSelectMentor,
   isCronogramaActive,
   isQuestoesActive,
+  isMentorActive,
   collapsed,
   onToggleCollapse,
   isMobileDrawer,
   onCloseMobileDrawer,
 }: SidebarProps) {
-  const [expandedAreas, setExpandedAreas] = useState<Set<string>>(
-    () => new Set(['pediatria', 'ginecologia-e-obstetricia', 'clinica-medica']),
-  );
-  const [expandedModules, setExpandedModules] = useState<Set<string>>(
-    () => new Set(['aulas-ped', 'ginecologia', 'obstetricia']),
-  );
+  // Estado inicial rigorosamente FECHADO por padrão (sem áreas ou módulos pré-expandidos)
+  const [expandedAreas, setExpandedAreas] = useState<Set<string>>(() => new Set());
+  const [expandedModules, setExpandedModules] = useState<Set<string>>(() => new Set());
+
+  // Limpa explicitamente quaisquer chaves antigas de persistência de áreas expandidas caso existam no LocalStorage
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      try {
+        localStorage.removeItem('santisoft_expanded_areas');
+        localStorage.removeItem('santisoft_expanded_modules');
+        localStorage.removeItem('santisoft_sidebar_areas');
+      } catch {
+        // ignora erro silenciosamente
+      }
+    }
+  }, []);
+
+  // Garante que, ao alternar para Cronograma, Banco de Questões ou Mentor, as Grandes Áreas voltem a ficar 100% recolhidas/fechadas
+  useEffect(() => {
+    if (isCronogramaActive || isQuestoesActive || isMentorActive) {
+      setExpandedAreas(new Set());
+      setExpandedModules(new Set());
+    }
+  }, [isCronogramaActive, isQuestoesActive, isMentorActive]);
 
   const toggleArea = (areaId: string) => {
     setExpandedAreas((prev) => {
@@ -102,6 +125,19 @@ export function Sidebar({
         >
           <BookOpen className="w-5 h-5" />
         </button>
+        {onSelectMentor && (
+          <button
+            onClick={onSelectMentor}
+            className={`p-2 rounded-xl transition-colors ${
+              isMentorActive
+                ? 'bg-red-600/15 text-red-500'
+                : 'text-zinc-400 hover:text-red-500 hover:bg-ink-850'
+            }`}
+            title="Mentor Inteligente"
+          >
+            <Brain className="w-5 h-5" />
+          </button>
+        )}
         <div className="w-8 border-t border-ink-875 my-1" />
         <div className="flex-1 overflow-y-auto scrollbar-thin space-y-2 no-scrollbar">
           {curriculum.map((area) => {
@@ -194,13 +230,30 @@ export function Sidebar({
               isQuestoesActive ? 'text-white' : 'text-red-500'
             }`}
           />
-          <div className="text-left flex-1 flex items-center justify-between">
-            <span>Banco de Questões</span>
-            <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-red-500/20 text-red-300">
-              Novo
-            </span>
-          </div>
+          <span className="text-left flex-1">Banco de Questões</span>
         </button>
+
+        {/* Mentor Inteligente Button */}
+        {onSelectMentor && (
+          <button
+            onClick={() => {
+              onSelectMentor();
+              onCloseMobileDrawer?.();
+            }}
+            className={`w-full flex items-center gap-2.5 px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs sm:text-sm font-semibold transition-all active:scale-[0.98] ${
+              isMentorActive
+                ? 'bg-red-600 text-white shadow-md shadow-red-600/20'
+                : 'text-zinc-300 hover:bg-ink-850 hover:text-white'
+            }`}
+          >
+            <Brain
+              className={`w-4 h-4 shrink-0 ${
+                isMentorActive ? 'text-white' : 'text-red-500'
+              }`}
+            />
+            <span className="text-left flex-1">Mentor Inteligente</span>
+          </button>
+        )}
 
         {/* Section Divider: Áreas */}
         <div className="pt-3 pb-1 px-3">
@@ -256,7 +309,8 @@ export function Sidebar({
                               const isSelected =
                                 lesson.id === selectedLessonId &&
                                 !isCronogramaActive &&
-                                !isQuestoesActive;
+                                !isQuestoesActive &&
+                                !isMentorActive;
                               const isDone = isLessonCompleted(progress, lesson.id);
 
                               return (

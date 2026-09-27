@@ -2,6 +2,7 @@ import {
   Menu,
   Calendar,
   BookOpen,
+  Brain,
   RotateCcw,
 } from 'lucide-react';
 import { SantiSoftLogo } from '@/components/Logo';
@@ -11,8 +12,10 @@ interface HeaderProps {
   onToggleSidebar: () => void;
   onSelectCronograma: () => void;
   onSelectQuestoes: () => void;
+  onSelectMentor?: () => void;
   isCronograma: boolean;
   isQuestoes: boolean;
+  isMentor?: boolean;
   onResetProgress?: () => void;
 }
 
@@ -20,8 +23,10 @@ export function Header({
   onToggleSidebar,
   onSelectCronograma,
   onSelectQuestoes,
+  onSelectMentor,
   isCronograma,
   isQuestoes,
+  isMentor,
   onResetProgress,
 }: HeaderProps) {
   return (
@@ -63,6 +68,21 @@ export function Header({
             <BookOpen className={`w-3.5 h-3.5 ${isQuestoes ? 'text-white' : 'text-red-500'}`} />
             <span>Questões</span>
           </button>
+
+          {onSelectMentor && (
+            <button
+              onClick={onSelectMentor}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all active:scale-95 ${
+                isMentor
+                  ? 'bg-red-600 text-white shadow-md shadow-red-600/25'
+                  : 'text-zinc-300 hover:text-white bg-ink-850 border border-ink-800 hover:border-ink-700'
+              }`}
+              title="Abrir Aba do Mentor Inteligente"
+            >
+              <Brain className={`w-3.5 h-3.5 ${isMentor ? 'text-white' : 'text-red-500'}`} />
+              <span>Mentor</span>
+            </button>
+          )}
 
           <PWAInstallButton />
 

@@ -1,4 +1,11 @@
 import type { Question } from '@/types';
+import { QUESTOES_EXANTEMATICAS } from './questoesExantematicas';
+import { QUESTOES_IMUNIZACAO } from './questoesImunizacao';
+import { QUESTOES_ITU_PEDIATRICA } from './questoesITUPediatrica';
+import { QUESTOES_NEONATOLOGIA } from './questoesNeonatologia';
+import { QUESTOES_NEONATOLOGIA_2 } from './questoesNeonatologia2';
+import { QUESTOES_PUBERDADE } from './questoesPuberdade';
+import { QUESTOES_IRA_BAIXA } from './questoesIRABaixa';
 
 export interface RawCardioQuestion {
   id: string;
@@ -28,6 +35,7 @@ export const TEMAS_PEDIATRIA = [
   "Neonatologia I (Icterícia Neonatal e Reanimação)",
   "Neonatologia II (Infecções Congênitas e Distúrbios Respiratórios)",
   "Puberdade e seus Distúrbios",
+  "Infecções Respiratórias Inferiores",
   "IRA (Infecções de Vias Aéreas Inferiores)",
   "IRA com Estridor",
   "IRA Infecções de Vias Aéreas Superiores",
@@ -10864,6 +10872,195 @@ const baseStaticQuestions: Question[] = [
   },
 ];
 
+// Mapeamento das questões de Doenças Exantemáticas para a interface Question do simulado
+const exantematicasAsQuestions: Question[] = QUESTOES_EXANTEMATICAS.map((q) => ({
+  id: q.id,
+  specialty: 'Pediatria',
+  topic: 'DOENÇAS EXANTEMATICAS',
+  subtopic: q.subtema || 'Doenças Exantemáticas',
+  institution: 'Residência Médica / SBP',
+  year: 2024,
+  statement: q.enunciado,
+  options: q.alternativas.map((alt) => ({
+    letter: alt.id,
+    text: alt.texto,
+  })),
+  correctOption: q.respostaCorreta,
+  generalComment: q.comentario,
+  optionsExplanations: q.alternativas.map((alt) => ({
+    letter: alt.id,
+    text: alt.texto,
+    isCorrect: alt.id === q.respostaCorreta,
+    explanation:
+      q.comentariosAlternativas?.[alt.id] ||
+      (alt.id === q.respostaCorreta
+        ? `Correta. ${q.comentario}`
+        : 'Incorreta de acordo com as diretrizes e fisiopatologia clínica.'),
+  })),
+}));
+
+// Mapeamento das questões de Imunização para a interface Question do simulado
+const imunizacaoAsQuestions: Question[] = QUESTOES_IMUNIZACAO.map((q) => ({
+  id: q.id,
+  specialty: 'Pediatria',
+  topic: 'IMUNIZAÇÕES',
+  subtopic: q.subtema || 'Imunização',
+  institution: 'Residência Médica / SBP',
+  year: 2024,
+  statement: q.enunciado,
+  options: q.alternativas.map((alt) => ({
+    letter: alt.id,
+    text: alt.texto,
+  })),
+  correctOption: q.respostaCorreta,
+  generalComment: q.comentario,
+  optionsExplanations: q.alternativas.map((alt) => ({
+    letter: alt.id,
+    text: alt.texto,
+    isCorrect: alt.id === q.respostaCorreta,
+    explanation:
+      q.comentariosAlternativas?.[alt.id] ||
+      (alt.id === q.respostaCorreta
+        ? `Correta. ${q.comentario}`
+        : 'Incorreta de acordo com as diretrizes e fisiopatologia clínica.'),
+  })),
+}));
+
+// Mapeamento das questões inéditas de ITU Pediátrica para a interface Question do simulado
+const ituPediatricaNovasAsQuestions: Question[] = QUESTOES_ITU_PEDIATRICA.map((q) => ({
+  id: `ituped-${q.id}`,
+  specialty: 'Pediatria',
+  topic: 'ITU PEDIATRICO',
+  subtopic: q.subtema || 'Infecção do Trato Urinário',
+  institution: 'Residência Médica / SBP',
+  year: 2024,
+  statement: q.enunciado,
+  options: q.alternativas.map((alt) => ({
+    letter: alt.id,
+    text: alt.texto,
+  })),
+  correctOption: q.respostaCorreta,
+  generalComment: q.comentario,
+  optionsExplanations: q.alternativas.map((alt) => ({
+    letter: alt.id,
+    text: alt.texto,
+    isCorrect: alt.id === q.respostaCorreta,
+    explanation:
+      q.comentariosAlternativas?.[alt.id] ||
+      (alt.id === q.respostaCorreta
+        ? `Correta. ${q.comentario}`
+        : 'Incorreta de acordo com as diretrizes e fisiopatologia clínica.'),
+  })),
+}));
+
+// Mapeamento das questões de Neonatologia para a interface Question do simulado
+const neonatologiaAsQuestions: Question[] = QUESTOES_NEONATOLOGIA.map((q) => ({
+  id: `neo-${q.id}`,
+  specialty: 'Pediatria',
+  topic: 'Neonatologia I (Icterícia Neonatal e Reanimação)',
+  subtopic: q.subtema || 'Reanimação Neonatal em Sala de Parto',
+  institution: 'Residência Médica / SBP',
+  year: 2024,
+  statement: q.enunciado,
+  options: q.alternativas.map((alt) => ({
+    letter: alt.id,
+    text: alt.texto,
+  })),
+  correctOption: q.respostaCorreta,
+  generalComment: q.comentario,
+  optionsExplanations: q.alternativas.map((alt) => ({
+    letter: alt.id,
+    text: alt.texto,
+    isCorrect: alt.id === q.respostaCorreta,
+    explanation:
+      q.comentariosAlternativas?.[alt.id] ||
+      (alt.id === q.respostaCorreta
+        ? `Correta. ${q.comentario}`
+        : 'Incorreta de acordo com as diretrizes e fisiopatologia clínica.'),
+  })),
+}));
+
+// Mapeamento das questões de Neonatologia 2 para a interface Question do simulado
+const neonatologia2AsQuestions: Question[] = QUESTOES_NEONATOLOGIA_2.map((q) => ({
+  id: `neo2-${q.id}`,
+  specialty: 'Pediatria',
+  topic: 'Neonatologia II (Infecções Congênitas e Distúrbios Respiratórios)',
+  subtopic: q.subtema || 'Infecções Congênitas: Sífilis e Toxoplasmose',
+  institution: 'Residência Médica / MS / SBP',
+  year: 2024,
+  statement: q.enunciado,
+  options: q.alternativas.map((alt) => ({
+    letter: alt.id,
+    text: alt.texto,
+  })),
+  correctOption: q.respostaCorreta,
+  generalComment: q.comentario,
+  optionsExplanations: q.alternativas.map((alt) => ({
+    letter: alt.id,
+    text: alt.texto,
+    isCorrect: alt.id === q.respostaCorreta,
+    explanation:
+      q.comentariosAlternativas?.[alt.id] ||
+      (alt.id === q.respostaCorreta
+        ? `Correta. ${q.comentario}`
+        : 'Incorreta de acordo com as diretrizes e fisiopatologia clínica.'),
+  })),
+}));
+
+// Mapeamento das questões de Puberdade e seus Distúrbios para a interface Question
+const puberdadeAsQuestions: Question[] = QUESTOES_PUBERDADE.map((q) => ({
+  id: `pub-${q.id}`,
+  specialty: 'Pediatria',
+  topic: 'Puberdade e seus Distúrbios',
+  subtopic: q.subtema || 'Fisiologia do Eixo HHG e Classificação de Tanner',
+  institution: 'Residência Médica / SBP / Enare',
+  year: 2024,
+  statement: q.enunciado,
+  options: q.alternativas.map((alt) => ({
+    letter: alt.id,
+    text: alt.texto,
+  })),
+  correctOption: q.respostaCorreta,
+  generalComment: q.comentario,
+  optionsExplanations: q.alternativas.map((alt) => ({
+    letter: alt.id,
+    text: alt.texto,
+    isCorrect: alt.id === q.respostaCorreta,
+    explanation:
+      q.comentariosAlternativas?.[alt.id] ||
+      (alt.id === q.respostaCorreta
+        ? `Correta. ${q.comentario}`
+        : 'Incorreta de acordo com as diretrizes e fisiopatologia clínica.'),
+  })),
+}));
+
+// Mapeamento das questões de Infecções Respiratórias Inferiores para a interface Question
+const iraBaixaAsQuestions: Question[] = QUESTOES_IRA_BAIXA.map((q) => ({
+  id: `irab-${q.id}`,
+  specialty: 'Pediatria',
+  topic: 'Infecções Respiratórias Inferiores',
+  subtopic: q.subtema || 'Bronquiolite Viral Aguda',
+  institution: 'Residência Médica / SBP / Enare',
+  year: 2024,
+  statement: q.enunciado,
+  options: q.alternativas.map((alt) => ({
+    letter: alt.id,
+    text: alt.texto,
+  })),
+  correctOption: q.respostaCorreta,
+  generalComment: q.comentario,
+  optionsExplanations: q.alternativas.map((alt) => ({
+    letter: alt.id,
+    text: alt.texto,
+    isCorrect: alt.id === q.respostaCorreta,
+    explanation:
+      q.comentariosAlternativas?.[alt.id] ||
+      (alt.id === q.respostaCorreta
+        ? `Correta. ${q.comentario}`
+        : 'Incorreta de acordo com as diretrizes e evidências clínicas.'),
+  })),
+}));
+
 // Unifica todas as questões sem duplicatas
 const idsSet = new Set<string>();
 const allCombined: Question[] = [];
@@ -10872,6 +11069,13 @@ for (const q of [
   ...cardioPediatricaAsQuestions,
   ...ituPediatricoAsQuestions,
   ...crescimentoPediatricoAsQuestions,
+  ...exantematicasAsQuestions,
+  ...imunizacaoAsQuestions,
+  ...ituPediatricaNovasAsQuestions,
+  ...neonatologiaAsQuestions,
+  ...neonatologia2AsQuestions,
+  ...puberdadeAsQuestions,
+  ...iraBaixaAsQuestions,
   ...baseStaticQuestions,
 ]) {
   if (!idsSet.has(q.id)) {
@@ -10881,3 +11085,12 @@ for (const q of [
 }
 
 export const questoesData: Question[] = allCombined;
+export {
+  QUESTOES_EXANTEMATICAS,
+  QUESTOES_IMUNIZACAO,
+  QUESTOES_ITU_PEDIATRICA,
+  QUESTOES_NEONATOLOGIA,
+  QUESTOES_NEONATOLOGIA_2,
+  QUESTOES_PUBERDADE,
+  QUESTOES_IRA_BAIXA,
+};

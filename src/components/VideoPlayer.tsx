@@ -126,7 +126,7 @@ export function VideoPlayer({
             </h1>
           </div>
 
-          {/* Botão Marcar como Assistida */}
+          {/* Botão Marcar como Assistido */}
           <button
             type="button"
             onClick={onToggleComplete}
@@ -139,12 +139,12 @@ export function VideoPlayer({
             {isCompleted ? (
               <>
                 <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-100 shrink-0" />
-                <span>Aula Assistida! (Toque para desmarcar)</span>
+                <span>✓ Assistido (Toque para voltar para Pendente)</span>
               </>
             ) : (
               <>
                 <Circle className="w-4 h-4 sm:w-5 sm:h-5 text-red-200 shrink-0" />
-                <span>Marcar como Assistida</span>
+                <span>Marcar como Assistido</span>
               </>
             )}
           </button>

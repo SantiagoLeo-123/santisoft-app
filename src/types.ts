@@ -62,4 +62,5 @@ export interface Question {
   correctOption: 'A' | 'B' | 'C' | 'D' | 'E';
   generalComment: string; // Raciocínio clínico geral / síntese
   optionsExplanations: OptionExplanation[]; // Análise de cada alternativa
+  isRevisao?: boolean; // Questão exclusiva do Mentor Inteligente
 }
