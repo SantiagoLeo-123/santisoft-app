@@ -6,6 +6,9 @@ import { QUESTOES_NEONATOLOGIA } from './questoesNeonatologia';
 import { QUESTOES_NEONATOLOGIA_2 } from './questoesNeonatologia2';
 import { QUESTOES_PUBERDADE } from './questoesPuberdade';
 import { QUESTOES_IRA_BAIXA } from './questoesIRABaixa';
+import { QUESTOES_ESTRIDOR } from './questoesEstridor';
+import { QUESTOES_IVAS } from './questoesIVAS';
+import { QUESTOES_GASTRO_PEDIATRICA } from './questoesGastroPediatrica';
 
 export interface RawCardioQuestion {
   id: string;
@@ -11062,6 +11065,84 @@ const iraBaixaAsQuestions: Question[] = QUESTOES_IRA_BAIXA.map((q) => ({
 }));
 
 // Unifica todas as questões sem duplicatas
+// Mapeamento das questões de IRA com Estridor para a interface Question
+const estridorAsQuestions: Question[] = QUESTOES_ESTRIDOR.map((q) => ({
+  id: `est-${q.id}`,
+  specialty: 'Pediatria',
+  topic: 'IRA com Estridor',
+  subtopic: q.subtema,
+  statement: q.enunciado,
+  options: q.alternativas.map((alt) => ({
+    id: alt.id,
+    label: alt.id,
+    text: alt.texto,
+  })),
+  correctOption: q.respostaCorreta,
+  generalComment: q.comentario,
+  optionsExplanations: q.alternativas.map((alt) => ({
+    letter: alt.id,
+    text: alt.texto,
+    isCorrect: alt.id === q.respostaCorreta,
+    explanation:
+      q.comentariosAlternativas?.[alt.id] ||
+      (alt.id === q.respostaCorreta
+        ? `Correta. ${q.comentario}`
+        : 'Incorreta de acordo com as diretrizes e evidências clínicas.'),
+  })),
+}));
+
+// Mapeamento das questões de IRA Infecções de Vias Aéreas Superiores para a interface Question
+const ivasAsQuestions: Question[] = QUESTOES_IVAS.map((q) => ({
+  id: `ivas-${q.id}`,
+  specialty: 'Pediatria',
+  topic: 'IRA Infecções de Vias Aéreas Superiores',
+  subtopic: q.subtema,
+  statement: q.enunciado,
+  options: q.alternativas.map((alt) => ({
+    id: alt.id,
+    label: alt.id,
+    text: alt.texto,
+  })),
+  correctOption: q.respostaCorreta,
+  generalComment: q.comentario,
+  optionsExplanations: q.alternativas.map((alt) => ({
+    letter: alt.id,
+    text: alt.texto,
+    isCorrect: alt.id === q.respostaCorreta,
+    explanation:
+      q.comentariosAlternativas?.[alt.id] ||
+      (alt.id === q.respostaCorreta
+        ? `Correta. ${q.comentario}`
+        : 'Incorreta de acordo com as diretrizes e evidências clínicas.'),
+  })),
+}));
+
+// Mapeamento das questões de Doenças Gastrointestinais para a interface Question
+const gastroPediatricaAsQuestions: Question[] = QUESTOES_GASTRO_PEDIATRICA.map((q) => ({
+  id: `gas-${q.id}`,
+  specialty: 'Pediatria',
+  topic: 'Doenças Gastrointestinais',
+  subtopic: q.subtema,
+  statement: q.enunciado,
+  options: q.alternativas.map((alt) => ({
+    id: alt.id,
+    label: alt.id,
+    text: alt.texto,
+  })),
+  correctOption: q.respostaCorreta,
+  generalComment: q.comentario,
+  optionsExplanations: q.alternativas.map((alt) => ({
+    letter: alt.id,
+    text: alt.texto,
+    isCorrect: alt.id === q.respostaCorreta,
+    explanation:
+      q.comentariosAlternativas?.[alt.id] ||
+      (alt.id === q.respostaCorreta
+        ? `Correta. ${q.comentario}`
+        : 'Incorreta de acordo com as diretrizes e evidências clínicas.'),
+  })),
+}));
+
 const idsSet = new Set<string>();
 const allCombined: Question[] = [];
 
@@ -11076,6 +11157,9 @@ for (const q of [
   ...neonatologia2AsQuestions,
   ...puberdadeAsQuestions,
   ...iraBaixaAsQuestions,
+  ...estridorAsQuestions,
+  ...ivasAsQuestions,
+  ...gastroPediatricaAsQuestions,
   ...baseStaticQuestions,
 ]) {
   if (!idsSet.has(q.id)) {
@@ -11093,4 +11177,7 @@ export {
   QUESTOES_NEONATOLOGIA_2,
   QUESTOES_PUBERDADE,
   QUESTOES_IRA_BAIXA,
+  QUESTOES_ESTRIDOR,
+  QUESTOES_IVAS,
+  QUESTOES_GASTRO_PEDIATRICA,
 };
