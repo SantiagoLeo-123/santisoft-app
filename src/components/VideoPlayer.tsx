@@ -67,9 +67,9 @@ export function VideoPlayer({
     <div className="w-full min-h-screen overflow-y-auto pb-32 flex flex-col bg-ink-950">
       <div className="w-full max-w-4xl mx-auto flex flex-col">
         
-        {/* 2. Container envolvente do <iframe> com flex-shrink-0 e 16:9 real */}
+        {/* 2. Container envolvente do <iframe> com altura adaptada no mobile e cinema no landscape */}
         <div className="w-full px-2 sm:px-4">
-          <div className="w-full aspect-video flex-shrink-0 bg-black rounded-xl overflow-hidden relative shadow-lg my-2">
+          <div className="w-full h-[290px] sm:h-[360px] md:aspect-video rounded-xl overflow-hidden bg-black relative shadow-lg my-2 flex-shrink-0 video-cinema-container">
             {isMp4 ? (
               <video
                 key={lesson.id}
@@ -86,7 +86,7 @@ export function VideoPlayer({
                 key={lesson.id}
                 src={embedUrl ?? ''}
                 className="w-full h-full border-0"
-                allow="autoplay; encrypted-media; fullscreen"
+                allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
                 allowFullScreen
                 loading="lazy"
                 title={lesson.title}
@@ -96,7 +96,7 @@ export function VideoPlayer({
 
           {/* Botão de Contingência Mobile (Fallback Essencial) */}
           {externalDriveUrl && (
-            <div className="w-full shrink-0 flex flex-col gap-1.5 mt-2">
+            <div className="w-full shrink-0 flex flex-col gap-1.5 mt-2 hide-on-landscape">
               <a
                 href={externalDriveUrl}
                 target="_blank"
@@ -115,8 +115,8 @@ export function VideoPlayer({
           )}
         </div>
 
-        {/* 3. Conteúdo e Botões abaixo do vídeo: w-full flex flex-col gap-3 px-4 py-3 flex-shrink-0 */}
-        <div className="w-full flex flex-col gap-3 px-4 py-3 flex-shrink-0">
+        {/* 3. Conteúdo e Botões abaixo do vídeo: ocultados em modo landscape */}
+        <div className="w-full flex flex-col gap-3 px-4 py-3 flex-shrink-0 hide-on-landscape">
           {/* Informações da Aula */}
           <div className="space-y-1.5 pb-1">
             <div className="flex items-center justify-between gap-2 flex-wrap">

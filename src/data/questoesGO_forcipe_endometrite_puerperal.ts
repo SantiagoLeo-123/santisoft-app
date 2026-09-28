@@ -1,6 +1,6 @@
 import type { Question } from '@/types';
 
-// Banco com 100 questões clínicas comentadas para Fórcipe, Endometrite e Hemorragia Puerperal
+// Banco de 100 questões clínicas comentadas para Fórcipe, Endometrite e Hemorragia Puerperal
 export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
   {
     "id": "go-forcipe_endometrite_puerperal-001",
@@ -9,49 +9,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -65,49 +65,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -121,49 +121,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -177,51 +177,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -233,49 +233,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -289,49 +289,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -345,49 +345,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -401,51 +401,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -457,49 +457,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -513,49 +513,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -569,49 +569,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -625,51 +625,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -681,49 +681,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -737,49 +737,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -793,49 +793,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -849,51 +849,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -905,49 +905,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -961,49 +961,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -1017,49 +1017,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -1073,51 +1073,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -1129,49 +1129,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -1185,49 +1185,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -1241,49 +1241,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -1297,51 +1297,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -1353,49 +1353,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade, com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Fórcipe de alívio e de rotação: indicações, tipos e condições de aplicabilidade\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -1409,49 +1409,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -1465,49 +1465,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -1521,49 +1521,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -1577,51 +1577,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -1633,49 +1633,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -1689,49 +1689,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -1745,49 +1745,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -1801,51 +1801,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -1857,49 +1857,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -1913,49 +1913,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -1969,49 +1969,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -2025,51 +2025,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -2081,49 +2081,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -2137,49 +2137,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -2193,49 +2193,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -2249,51 +2249,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -2305,49 +2305,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -2361,49 +2361,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -2417,49 +2417,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -2473,51 +2473,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -2529,49 +2529,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -2585,49 +2585,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -2641,49 +2641,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -2697,51 +2697,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -2753,49 +2753,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Endometrite puerperal (tríplice esquema). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia, com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Infecção puerperal e endometrite pós-parto: diagnóstico e antibioticoterapia\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -2809,49 +2809,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -2865,49 +2865,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -2921,49 +2921,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -2977,51 +2977,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -3033,49 +3033,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -3089,49 +3089,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -3145,49 +3145,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -3201,51 +3201,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -3257,49 +3257,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -3313,49 +3313,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -3369,49 +3369,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -3425,51 +3425,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -3481,49 +3481,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -3537,49 +3537,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -3593,49 +3593,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -3649,51 +3649,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -3705,49 +3705,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -3761,49 +3761,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -3817,49 +3817,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -3873,51 +3873,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -3929,49 +3929,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -3985,49 +3985,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -4041,49 +4041,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -4097,51 +4097,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -4153,49 +4153,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Hemorragia pós-parto e os 4 Ts (Tônus, Trauma, Tecido, Trombina). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina), com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Hemorragia pós-parto imediata e os 4 Ts (Tônus, Trauma, Tecido, Trombina)\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -4209,49 +4209,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -4265,49 +4265,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -4321,49 +4321,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -4377,51 +4377,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -4433,49 +4433,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -4489,49 +4489,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -4545,49 +4545,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -4601,51 +4601,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -4657,49 +4657,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -4713,49 +4713,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -4769,49 +4769,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -4825,51 +4825,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -4881,49 +4881,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -4937,49 +4937,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -4993,49 +4993,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -5049,51 +5049,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -5105,49 +5105,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -5161,49 +5161,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -5217,49 +5217,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -5273,51 +5273,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -5329,49 +5329,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -5385,49 +5385,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "B",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
-        "letter": "B",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa B define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
-      },
-      {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -5441,49 +5441,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "C",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa C define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
@@ -5497,51 +5497,51 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
-    "correctOption": "D",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "correctOption": "A",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Indicar cirurgia radical de urgência sem documentação comprobatória prévia.",
-        "isCorrect": false,
-        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
+        "isCorrect": true,
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
-        "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa D define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
+        "isCorrect": false,
+        "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }
     ],
     "isRevisao": false
@@ -5553,49 +5553,49 @@ export const QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL: Question[] = [
     "subtopic": "Fórcipe, Endometrite e Hemorragia Puerperal",
     "institution": "Residência Médica / FEBRASGO / ENARE",
     "year": 2024,
-    "statement": "Paciente feminina em consulta ginecológica/obstétrica com queixa clínica e evolução compatível com \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\". Ao exame físico detalhado, apresenta sinais vitais estáveis, achados específicos direcionados e avaliação complementar subsidiária (exames laboratoriais e ultrassonográficos). Considerando as diretrizes brasileiras da FEBRASGO e do Ministério da Saúde para Fórcipe, Endometrite e Hemorragia Puerperal, qual é a conduta diagnóstica ou terapêutica correta para o caso?",
+    "statement": "Mulher atendida em serviço especializado com quadro relacionado a Indicações e variedades de Fórcipe (Simpson, Kielland). Apresenta anamnese detalhada, parâmetros vitais aferidos, exame ginecológico/obstétrico direcionado e exames complementares comprobatórios (laboratoriais e ultrassonográficos). Diante da história clínica e das diretrizes brasileiras vigentes (FEBRASGO / Ministério da Saúde), qual é a conduta diagnóstica ou terapêutica mais adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado."
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada."
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática."
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária."
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte."
       }
     ],
     "correctOption": "A",
-    "generalComment": "O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico.",
+    "generalComment": "A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica.",
     "optionsExplanations": [
       {
         "letter": "A",
-        "text": "Conduta padrão-ouro preconizada para Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri, com suporte clínico integral e seguimento adequado.",
+        "text": "Realizar conduta prioritária preconizada pelas diretrizes para Fórcipe, Endometrite e Hemorragia Puerperal, orientando seguimento clínico e vigilância dos parâmetros clínicos.",
         "isCorrect": true,
-        "explanation": "Gabarito correto. O manejo clínico adequado para \"Manejo farmacológico da atonia uterina e tamponamento intrauterino com balão de Bakri\" dentro de Fórcipe, Endometrite e Hemorragia Puerperal deve seguir as orientações baseadas em evidências da FEBRASGO. A alternativa A define com precisão a propedêutica e terapêutica prioritária, prevenindo complicações e assegurando o melhor desfecho obstétrico/ginecológico."
+        "explanation": "Gabarito correto. A conduta correta no tema de Fórcipe, Endometrite e Hemorragia Puerperal fundamenta-se nas recomendações atuais da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO) e do Ministério da Saúde. A alternativa A reflete com precisão o manejo baseado em evidências, garantindo segurança materno-fetal ou ginecológica."
       },
       {
         "letter": "B",
-        "text": "Prescrever medicação proscrita para a idade gestacional ou condição clínica relatada.",
+        "text": "Iniciar abordagem invasiva imediata sem confirmação diagnóstica prévia ou avaliação de risco.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "C",
-        "text": "Aguardar evolução espontânea sem realizar exames complementares ou intervenção profilática.",
+        "text": "Prescrever terapêutica contraindicada de acordo com os critérios de segurança e eficácia clínica da FEBRASGO.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       },
       {
         "letter": "D",
-        "text": "Solicitar transferência imediata sem realizar medidas de estabilização hemodinâmica primária.",
+        "text": "Aguardar evolução espontânea sem acompanhamento ambulatorial ou medidas de suporte.",
         "isCorrect": false,
         "explanation": "Incorreta. Conforme diretrizes da FEBRASGO para Fórcipe, Endometrite e Hemorragia Puerperal, esta opção não corresponde à conduta recomendada."
       }

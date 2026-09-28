@@ -30,7 +30,7 @@ export function Header({
   onResetProgress,
 }: HeaderProps) {
   return (
-    <header className="bg-ink-900/95 backdrop-blur-md border-b border-ink-875 px-3 sm:px-6 h-14 sm:h-16 flex items-center justify-between gap-2.5 sm:gap-4 shrink-0 safe-top select-none z-20">
+    <header className="bg-ink-900/95 backdrop-blur-md border-b border-ink-875 px-3 sm:px-6 h-14 sm:h-16 flex items-center justify-between gap-2.5 sm:gap-4 shrink-0 safe-top select-none z-20 hide-on-landscape">
       {/* Left: SantiSOFT Brand Logo (Stylized Medical Gradient SVG) */}
       <div className="flex items-center gap-2">
         <SantiSoftLogo size={36} showText={true} />

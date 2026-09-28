@@ -64,15 +64,26 @@ export function VideoModal({
 
   return (
     /* Modal Backdrop e Centralização */
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80 backdrop-blur-sm overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80 backdrop-blur-sm overflow-y-auto video-modal-backdrop-landscape">
       {/* Click outside backdrop */}
-      <div className="fixed inset-0 -z-10" onClick={onClose} />
+      <div className="fixed inset-0 -z-10 hide-on-landscape" onClick={onClose} />
 
       {/* Caixa do Modal: w-[96vw] max-w-full no mobile, max-w-xl em telas maiores */}
-      <div className="bg-neutral-900 border border-neutral-800 rounded-2xl w-[96vw] max-w-full sm:max-w-xl p-3.5 sm:p-5 max-h-[92vh] overflow-y-auto flex flex-col gap-3 relative shadow-2xl">
+      <div className="bg-neutral-900 border border-neutral-800 rounded-2xl w-[96vw] max-w-full sm:max-w-xl p-3.5 sm:p-5 max-h-[92vh] overflow-y-auto flex flex-col gap-3 relative shadow-2xl video-modal-landscape-wrapper">
         
+        {/* Botão flutuante para fechar durante landscape / tela cheia automática */}
+        <button
+          type="button"
+          onClick={onClose}
+          className="landscape-cinema-close w-9 h-9 rounded-full bg-black/75 hover:bg-black text-white/90 hover:text-white items-center justify-center backdrop-blur-md border border-white/20 shadow-xl transition-all"
+          aria-label="Fechar videoaula"
+          title="Fechar (ESC)"
+        >
+          <X className="w-5 h-5" />
+        </button>
+
         {/* Topo do Modal: Especialidade, Título e Botão Fechar (X) */}
-        <div className="flex items-start justify-between gap-3 shrink-0">
+        <div className="flex items-start justify-between gap-3 shrink-0 hide-on-landscape">
           <div className="min-w-0 flex-1">
             <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-red-400 bg-red-600/15 border border-red-600/30 px-2 py-0.5 rounded-md inline-block mb-1">
               {specialty}
@@ -93,13 +104,13 @@ export function VideoModal({
           </button>
         </div>
 
-        {/* Container do Vídeo: aspect-video w-full rounded-lg overflow-hidden */}
-        <div className="aspect-video w-full rounded-lg overflow-hidden bg-black flex-shrink-0 relative shadow-md">
+        {/* Container do Vídeo: altura confortável portrait e modo cinema no landscape */}
+        <div className="w-full h-[290px] sm:h-[360px] md:aspect-video rounded-xl overflow-hidden bg-black flex-shrink-0 relative shadow-lg video-cinema-container">
           <iframe
             key={embedUrl}
             src={embedUrl}
             className="w-full h-full border-0"
-            allow="autoplay; encrypted-media; fullscreen"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
             allowFullScreen
             loading="lazy"
             title={lessonTitle}
@@ -108,7 +119,7 @@ export function VideoModal({
 
         {/* Botão de Contingência Mobile (Fallback Essencial) */}
         {externalUrl && (
-          <div className="w-full shrink-0 flex flex-col gap-1.5">
+          <div className="w-full shrink-0 flex flex-col gap-1.5 hide-on-landscape">
             <a
               href={externalUrl}
               target="_blank"
@@ -127,7 +138,7 @@ export function VideoModal({
         )}
 
         {/* Organização dos Botões de Ação */}
-        <div className="w-full flex flex-col shrink-0 gap-2">
+        <div className="w-full flex flex-col shrink-0 gap-2 hide-on-landscape">
           {/* Ação principal: Botão "Marcar como Assistido" ocupando toda a largura */}
           <button
             type="button"
