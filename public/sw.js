@@ -1,11 +1,14 @@
 // SantiSOFT Service Worker - Offline & PWA support
-const CACHE_NAME = 'santisoft-cache-v1';
+const CACHE_NAME = 'santisoft-cache-v2';
 const PRECACHE_ASSETS = [
   '/',
   '/index.html',
   '/manifest.webmanifest',
   '/manifest.json',
+  '/logo.svg',
+  '/logo.png',
   '/icon.svg',
+  '/icon.png',
   '/apple-touch-icon.png',
   '/pwa-192x192.png',
   '/pwa-512x512.png',
