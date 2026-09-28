@@ -122,7 +122,7 @@ const SUBTEMAS_POR_AREA: Record<SpecialtySelection, SubtemaItem[]> = {
       matches: (q) => {
         const top = normalizeStr(q.topic);
         const sub = normalizeStr(q.subtopic || '');
-        return top === 'doencas exantematicas' || sub === 'doencas exantematicas';
+        return top === 'doencas exantematicas' || sub === 'doencas exantematicas' || top.includes('exantema');
       },
     },
     {
@@ -165,7 +165,7 @@ const SUBTEMAS_POR_AREA: Record<SpecialtySelection, SubtemaItem[]> = {
       matches: (q) => {
         const top = normalizeStr(q.topic);
         const sub = normalizeStr(q.subtopic || '');
-        return top === 'puberdade e seus disturbios' || sub === 'puberdade e seus disturbios';
+        return top === 'puberdade e seus disturbios' || sub === 'puberdade e seus disturbios' || top.includes('puberdade');
       },
     },
     {
@@ -182,7 +182,7 @@ const SUBTEMAS_POR_AREA: Record<SpecialtySelection, SubtemaItem[]> = {
       label: 'Doenças Gastrointestinais',
       matches: (q) => {
         const top = normalizeStr(q.topic);
-        return top === 'doencas gastrointestinais' || top.includes('gastrointestinal');
+        return top === 'doencas gastrointestinais' || top.includes('gastrointestinal') || top.includes('diarreia aguda');
       },
     },
     {
@@ -193,7 +193,8 @@ const SUBTEMAS_POR_AREA: Record<SpecialtySelection, SubtemaItem[]> = {
         return (
           top === 'infeccoes respiratorias inferiores' ||
           top === 'ira infeccoes de vias aereas inferiores' ||
-          top.includes('respiratorias inferiores')
+          top.includes('respiratorias inferiores') ||
+          top.includes('ira baixa')
         );
       },
     },
@@ -210,7 +211,7 @@ const SUBTEMAS_POR_AREA: Record<SpecialtySelection, SubtemaItem[]> = {
       label: 'IRA Infecções de Vias Aéreas Superiores (IVAS)',
       matches: (q) => {
         const top = normalizeStr(q.topic);
-        return top === 'ira infeccoes de vias aereas superiores' || top.includes('vias aereas superiores');
+        return top === 'ira infeccoes de vias aereas superiores' || top.includes('vias aereas superiores') || top.includes('ivas');
       },
     },
     {
@@ -230,22 +231,38 @@ const SUBTEMAS_POR_AREA: Record<SpecialtySelection, SubtemaItem[]> = {
         return top.includes('crescimento');
       },
     },
+    {
+      id: 'aleitamento',
+      label: 'Aleitamento Materno',
+      matches: (q) => {
+        const top = normalizeStr(q.topic);
+        return top.includes('aleitamento');
+      },
+    },
+    {
+      id: 'infecto_ped',
+      label: 'Infectologia Pediátrica',
+      matches: (q) => {
+        const top = normalizeStr(q.topic);
+        return top.includes('infectologia');
+      },
+    },
   ],
   'Clínica Médica': [
     {
       id: 'cm_cardiologia',
       label: 'Cardiologia',
-      matches: (q) => normalizeStr(q.topic) === 'cardiologia',
+      matches: (q) => normalizeStr(q.topic).includes('cardio'),
     },
     {
       id: 'cm_endocrinologia',
       label: 'Endocrinologia',
-      matches: (q) => normalizeStr(q.topic) === 'endocrinologia',
+      matches: (q) => normalizeStr(q.topic).includes('endocrino'),
     },
     {
       id: 'cm_pneumologia',
       label: 'Pneumologia',
-      matches: (q) => normalizeStr(q.topic) === 'pneumologia',
+      matches: (q) => normalizeStr(q.topic).includes('pneumo'),
     },
     {
       id: 'cm_gastroenterologia',
@@ -272,17 +289,22 @@ const SUBTEMAS_POR_AREA: Record<SpecialtySelection, SubtemaItem[]> = {
       label: 'Neurologia',
       matches: (q) => normalizeStr(q.topic).includes('neuro'),
     },
+    {
+      id: 'cm_reumatologia',
+      label: 'Reumatologia',
+      matches: (q) => normalizeStr(q.topic).includes('reumato'),
+    },
   ],
   Cirurgia: [
     {
       id: 'cir_abdome_agudo',
       label: 'Abdome Agudo',
-      matches: (q) => normalizeStr(q.topic) === 'abdome agudo',
+      matches: (q) => normalizeStr(q.topic) === 'abdome agudo' || normalizeStr(q.topic).includes('abdome agudo'),
     },
     {
       id: 'cir_trauma',
       label: 'Trauma',
-      matches: (q) => normalizeStr(q.topic) === 'trauma',
+      matches: (q) => normalizeStr(q.topic) === 'trauma' || normalizeStr(q.topic).includes('trauma'),
     },
     {
       id: 'cir_digestivo',
@@ -299,34 +321,239 @@ const SUBTEMAS_POR_AREA: Record<SpecialtySelection, SubtemaItem[]> = {
       label: 'Cirurgia Vascular',
       matches: (q) => normalizeStr(q.topic).includes('vascular'),
     },
+    {
+      id: 'cir_hernias',
+      label: 'Hérnias da Parede Abdominal',
+      matches: (q) => normalizeStr(q.topic).includes('hernia'),
+    },
+    {
+      id: 'cir_plastica_queimaduras',
+      label: 'Queimaduras e Cirurgia Plástica',
+      matches: (q) => normalizeStr(q.topic).includes('queimadura') || normalizeStr(q.topic).includes('plastica'),
+    },
   ],
   'Ginecologia e Obstetrícia': [
     {
-      id: 'go_obstetricia',
-      label: 'Obstetrícia',
-      matches: (q) => normalizeStr(q.topic) === 'obstetricia',
+      id: 'go_diag_gravidez',
+      label: 'Diagnósticos de Gravidez e Modificações do Organismo',
+      matches: (q) => {
+        const top = normalizeStr(q.topic);
+        const sub = normalizeStr(q.subtopic || '');
+        return (
+          top === 'diagnosticos de gravidez e modificacoes do organismo' ||
+          (top.includes('modificacoes') && top.includes('organismo')) ||
+          (top.includes('diagnostico') && top.includes('gravidez')) ||
+          sub.includes('modificacoes do organismo')
+        );
+      },
     },
     {
-      id: 'go_ginecologia',
-      label: 'Ginecologia',
-      matches: (q) => normalizeStr(q.topic) === 'ginecologia',
+      id: 'go_prenatal_estatica',
+      label: 'Pré-natal, Estática Fetal e Indução de Parto',
+      matches: (q) => {
+        const top = normalizeStr(q.topic);
+        const sub = normalizeStr(q.subtopic || '');
+        return (
+          top === 'pre natal estatica fetal e inducao de parto' ||
+          top === 'pre natal e parto' ||
+          top.includes('estatica fetal') ||
+          top.includes('inducao') ||
+          sub.includes('estatica fetal') ||
+          (top.includes('pre natal') && !top.includes('modificacoes'))
+        );
+      },
     },
     {
-      id: 'go_oncologia',
-      label: 'Oncologia Ginecológica',
-      matches: (q) => normalizeStr(q.topic).includes('onco'),
+      id: 'go_parto_prematuridade',
+      label: 'Parto e Prematuridade',
+      matches: (q) => {
+        const top = normalizeStr(q.topic);
+        const sub = normalizeStr(q.subtopic || '');
+        return (
+          top === 'parto e prematuridade' ||
+          sub === 'parto e prematuridade' ||
+          top.includes('prematuridade') ||
+          (top.includes('parto') && !top.includes('inducao') && !top.includes('pre natal'))
+        );
+      },
     },
     {
-      id: 'go_prenatal',
-      label: 'Pré-natal e Parto',
-      matches: (q) => normalizeStr(q.topic).includes('parto') || normalizeStr(q.topic).includes('prenatal'),
+      id: 'go_hemorragias_1',
+      label: 'Hemorragias na Primeira Metade',
+      matches: (q) => {
+        const top = normalizeStr(q.topic);
+        const sub = normalizeStr(q.subtopic || '');
+        return (
+          top === 'hemorragias na primeira metade' ||
+          (top.includes('hemorragia') && top.includes('primeira')) ||
+          (sub.includes('hemorragia') && sub.includes('primeira')) ||
+          top.includes('abortamento') ||
+          top.includes('ectopica')
+        );
+      },
+    },
+    {
+      id: 'go_hemorragias_2',
+      label: 'Hemorragias na Segunda Metade e DHP',
+      matches: (q) => {
+        const top = normalizeStr(q.topic);
+        const sub = normalizeStr(q.subtopic || '');
+        return (
+          top === 'hemorragias na segunda metade e dhp' ||
+          top === 'hemorragias da segunda metade da gravidez' ||
+          (top.includes('hemorragia') && top.includes('segunda')) ||
+          (sub.includes('hemorragia') && sub.includes('segunda')) ||
+          top.includes('dhp') ||
+          sub.includes('dhp') ||
+          sub.includes('placenta previa') ||
+          sub.includes('descolamento prematuro')
+        );
+      },
+    },
+    {
+      id: 'go_doencas_clinicas',
+      label: 'Doenças Clínicas da Gestação',
+      matches: (q) => {
+        const top = normalizeStr(q.topic);
+        const sub = normalizeStr(q.subtopic || '');
+        return (
+          top === 'doencas clinicas da gestacao' ||
+          top.includes('doencas clinicas') ||
+          sub.includes('doencas clinicas') ||
+          top.includes('dheg') ||
+          top.includes('diabetes gestacional')
+        );
+      },
+    },
+    {
+      id: 'go_sofrimento_fetal',
+      label: 'Sofrimento Fetal',
+      matches: (q) => {
+        const top = normalizeStr(q.topic);
+        const sub = normalizeStr(q.subtopic || '');
+        return (
+          top === 'sofrimento fetal' ||
+          top.includes('sofrimento fetal') ||
+          sub.includes('sofrimento fetal') ||
+          top.includes('cardiotocografia')
+        );
+      },
+    },
+    {
+      id: 'go_forcipe_puerperal',
+      label: 'Fórcipe, Endometrite e Hemorragia Puerperal',
+      matches: (q) => {
+        const top = normalizeStr(q.topic);
+        const sub = normalizeStr(q.subtopic || '');
+        return (
+          top === 'forceps endometrite e hemorragia puerperal' ||
+          top === 'forcipe endometrite e hemorragia puerperal' ||
+          top.includes('forcip') ||
+          top.includes('forceps') ||
+          top.includes('endometrite') ||
+          top.includes('puerperal') ||
+          sub.includes('puerperal')
+        );
+      },
+    },
+    {
+      id: 'go_anticoncepcao',
+      label: 'Anticoncepção',
+      matches: (q) => {
+        const top = normalizeStr(q.topic);
+        const sub = normalizeStr(q.subtopic || '');
+        return (
+          top === 'anticoncepcao' ||
+          top.includes('anticoncepcao') ||
+          top.includes('contracepcao') ||
+          sub.includes('anticoncepcao') ||
+          sub.includes('contracepcao')
+        );
+      },
+    },
+    {
+      id: 'go_endocrino_infertilidade',
+      label: 'Endocrinoginecologia e Infertilidade',
+      matches: (q) => {
+        const top = normalizeStr(q.topic);
+        const sub = normalizeStr(q.subtopic || '');
+        return (
+          top === 'endocrinoginecologia e infertilidade' ||
+          top.includes('endocrinoginecologia') ||
+          (top.includes('infertilidade') && !top.includes('endometriose')) ||
+          sub.includes('endocrinoginecologia')
+        );
+      },
+    },
+    {
+      id: 'go_neoplasias',
+      label: 'Neoplasias Ginecológicas',
+      matches: (q) => {
+        const top = normalizeStr(q.topic);
+        const sub = normalizeStr(q.subtopic || '');
+        return (
+          top === 'neoplasias ginecologicas' ||
+          top === 'oncologia ginecologica' ||
+          top.includes('neoplasia') ||
+          top.includes('cancer de colo') ||
+          sub.includes('cancer de colo') ||
+          sub.includes('lesoes precursoras') ||
+          top.includes('colo uterino')
+        );
+      },
+    },
+    {
+      id: 'go_sua_endometriose',
+      label: 'Sangramento Uterino Anormal e Endometriose',
+      matches: (q) => {
+        const top = normalizeStr(q.topic);
+        const sub = normalizeStr(q.subtopic || '');
+        return (
+          top === 'sangramento uterino anormal e endometriose' ||
+          top.includes('sangramento uterino anormal') ||
+          top.includes('endometriose') ||
+          sub.includes('sangramento uterino') ||
+          sub.includes('endometriose')
+        );
+      },
+    },
+    {
+      id: 'go_uroginecologia',
+      label: 'Uroginecologia - Incontinência e Prolapso',
+      matches: (q) => {
+        const top = normalizeStr(q.topic);
+        const sub = normalizeStr(q.subtopic || '');
+        return (
+          top === 'uroginecologia incontinencia e prolapso' ||
+          top.includes('uroginecologia') ||
+          top.includes('incontinencia') ||
+          top.includes('prolapso') ||
+          sub.includes('uroginecologia')
+        );
+      },
+    },
+    {
+      id: 'go_ist',
+      label: 'IST (Infecções Sexualmente Transmissíveis)',
+      matches: (q) => {
+        const top = normalizeStr(q.topic);
+        const sub = normalizeStr(q.subtopic || '');
+        return (
+          top === 'ist infeccoes sexualmente transmissiveis' ||
+          top.includes('sexualmente transmissiveis') ||
+          top === 'ist' ||
+          sub.includes('ist') ||
+          top.includes('vulvovaginite') ||
+          sub.includes('vulvovaginite')
+        );
+      },
     },
   ],
   Preventiva: [
     {
       id: 'prev_epidemiologia',
       label: 'Epidemiologia',
-      matches: (q) => normalizeStr(q.topic) === 'epidemiologia',
+      matches: (q) => normalizeStr(q.topic).includes('epidemiologia'),
     },
     {
       id: 'prev_sus',
@@ -342,6 +569,11 @@ const SUBTEMAS_POR_AREA: Record<SpecialtySelection, SubtemaItem[]> = {
       id: 'prev_vigilancia',
       label: 'Vigilância em Saúde',
       matches: (q) => normalizeStr(q.topic).includes('vigilancia'),
+    },
+    {
+      id: 'prev_trabalhador_etica',
+      label: 'Saúde do Trabalhador e Ética Médica',
+      matches: (q) => normalizeStr(q.topic).includes('trabalhador') || normalizeStr(q.topic).includes('etica'),
     },
   ],
 };
@@ -1276,15 +1508,12 @@ export function QuestoesScreen({
 
         {/* EMPTY STATE: ENQUANTO NÃO TIVER SELECIONADO UMA GRANDE ÁREA E UM SUBTEMA */}
         {(!selectedSpecialty || !selectedSubtopic) && (
-          <div className="py-16 sm:py-20 px-4 rounded-3xl bg-ink-900/60 border border-dashed border-ink-800 flex flex-col items-center justify-center text-center space-y-4 animate-fade-in">
+          <div className="py-20 sm:py-28 px-4 rounded-3xl bg-ink-900/50 border border-dashed border-ink-800 flex flex-col items-center justify-center text-center space-y-4 animate-fade-in">
             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-600/15 to-zinc-800/30 border border-red-500/20 flex items-center justify-center text-red-500 shadow-xl shadow-red-600/10">
               <BookOpen className="w-8 h-8" />
             </div>
             <div className="space-y-1.5 max-w-md">
-              <h3 className="text-base sm:text-lg font-bold text-white">
-                Foco e Organização Estrita
-              </h3>
-              <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+              <p className="text-sm sm:text-base font-medium text-zinc-300 leading-relaxed">
                 Selecione uma Grande Área e um tema acima para começar a resolver as questões.
               </p>
             </div>
@@ -1305,7 +1534,7 @@ export function QuestoesScreen({
                   <span className="text-zinc-500 text-xs">• Banco Livre</span>
                 </div>
                 <h2 className="text-lg sm:text-2xl font-black text-white tracking-tight">
-                  {selectedSubtopic} — {filteredQuestions.length} Questões
+                  {selectedSubtopic} — {filteredQuestions.length} {filteredQuestions.length === 1 ? 'Questão' : 'Questões'}
                 </h2>
                 <div className="flex items-center gap-3 text-xs text-zinc-400 pt-0.5 flex-wrap">
                   <span>Respondidas: <strong className="text-white">{themeStats.answered}/{themeStats.total}</strong></span>
@@ -1362,7 +1591,7 @@ export function QuestoesScreen({
                       : 'text-zinc-400 hover:text-white'
                   }`}
                 >
-                  Todas ({filteredQuestions.length})
+                  Todas do Tema ({filteredQuestions.length})
                 </button>
                 <button
                   type="button"

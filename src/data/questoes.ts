@@ -1,4 +1,18 @@
 import type { Question } from '@/types';
+import { QUESTOES_GO_DIAGNOSTICOS_GRAVIDEZ } from './questoesGO_diagnosticos_gravidez';
+import { QUESTOES_GO_PRENATAL_ESTATICA } from './questoesGO_prenatal_estatica';
+import { QUESTOES_GO_PARTO_PREMATURIDADE } from './questoesGO_parto_prematuridade';
+import { QUESTOES_GO_HEMORRAGIAS_PRIMEIRA_METADE } from './questoesGO_hemorragias_primeira_metade';
+import { QUESTOES_GO_HEMORRAGIAS_SEGUNDA_METADE } from './questoesGO_hemorragias_segunda_metade';
+import { QUESTOES_GO_DOENCAS_CLINICAS_GESTACAO } from './questoesGO_doencas_clinicas_gestacao';
+import { QUESTOES_GO_SOFRIMENTO_FETAL } from './questoesGO_sofrimento_fetal';
+import { QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL } from './questoesGO_forcipe_endometrite_puerperal';
+import { QUESTOES_GO_ANTICONCEPCAO } from './questoesGO_anticoncepcao';
+import { QUESTOES_GO_ENDOCRINOGINECOLOGIA_INFERTILIDADE } from './questoesGO_endocrinoginecologia_infertilidade';
+import { QUESTOES_GO_NEOPLASIAS_GINECOLOGICAS } from './questoesGO_neoplasias_ginecologicas';
+import { QUESTOES_GO_SUA_ENDOMETRIOSE } from './questoesGO_sua_endometriose';
+import { QUESTOES_GO_UROGINECOLOGIA_INCONTINENCIA } from './questoesGO_uroginecologia_incontinencia';
+import { QUESTOES_GO_IST } from './questoesGO_ist';
 import { QUESTOES_EXANTEMATICAS } from './questoesExantematicas';
 import { QUESTOES_IMUNIZACAO } from './questoesImunizacao';
 import { QUESTOES_ITU_PEDIATRICA } from './questoesITUPediatrica';
@@ -11161,6 +11175,20 @@ for (const q of [
   ...ivasAsQuestions,
   ...gastroPediatricaAsQuestions,
   ...baseStaticQuestions,
+  ...QUESTOES_GO_DIAGNOSTICOS_GRAVIDEZ,
+  ...QUESTOES_GO_PRENATAL_ESTATICA,
+  ...QUESTOES_GO_PARTO_PREMATURIDADE,
+  ...QUESTOES_GO_HEMORRAGIAS_PRIMEIRA_METADE,
+  ...QUESTOES_GO_HEMORRAGIAS_SEGUNDA_METADE,
+  ...QUESTOES_GO_DOENCAS_CLINICAS_GESTACAO,
+  ...QUESTOES_GO_SOFRIMENTO_FETAL,
+  ...QUESTOES_GO_FORCIPE_ENDOMETRITE_PUERPERAL,
+  ...QUESTOES_GO_ANTICONCEPCAO,
+  ...QUESTOES_GO_ENDOCRINOGINECOLOGIA_INFERTILIDADE,
+  ...QUESTOES_GO_NEOPLASIAS_GINECOLOGICAS,
+  ...QUESTOES_GO_SUA_ENDOMETRIOSE,
+  ...QUESTOES_GO_UROGINECOLOGIA_INCONTINENCIA,
+  ...QUESTOES_GO_IST,
 ]) {
   if (!idsSet.has(q.id)) {
     idsSet.add(q.id);
