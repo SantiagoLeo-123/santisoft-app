@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, useEffect } from 'react';
 import { Sidebar } from '@/components/Sidebar';
 import { Header } from '@/components/Header';
 import { VideoPlayer } from '@/components/VideoPlayer';
@@ -149,6 +149,7 @@ export default function App() {
     if (hasPrev) {
       setSelection(flatLessonList[currentIndex - 1]);
       setActiveTab('aula');
+      setMobileSidebarOpen(false);
     }
   }, [hasPrev, flatLessonList, currentIndex]);
 
@@ -156,8 +157,48 @@ export default function App() {
     if (hasNext) {
       setSelection(flatLessonList[currentIndex + 1]);
       setActiveTab('aula');
+      setMobileSidebarOpen(false);
     }
   }, [hasNext, flatLessonList, currentIndex]);
+
+  // Fecho automático da barra lateral ao rodar o ecrã (Landscape) ou ao redimensionar
+  useEffect(() => {
+    const handleOrientationOrResize = () => {
+      if (typeof window === 'undefined') return;
+      const isLandscape =
+        (window.matchMedia && window.matchMedia('(orientation: landscape)').matches) ||
+        (window.innerHeight < 500 && window.innerWidth > window.innerHeight);
+
+      if (isLandscape) {
+        setMobileSidebarOpen(false);
+      }
+    };
+
+    // Verificação inicial no carregamento
+    handleOrientationOrResize();
+
+    window.addEventListener('resize', handleOrientationOrResize);
+    window.addEventListener('orientationchange', handleOrientationOrResize);
+
+    const mql =
+      typeof window !== 'undefined' && window.matchMedia
+        ? window.matchMedia('(orientation: landscape)')
+        : null;
+    mql?.addEventListener?.('change', handleOrientationOrResize);
+
+    return () => {
+      window.removeEventListener('resize', handleOrientationOrResize);
+      window.removeEventListener('orientationchange', handleOrientationOrResize);
+      mql?.removeEventListener?.('change', handleOrientationOrResize);
+    };
+  }, []);
+
+  // Fecho automático da barra lateral ao entrar na visualização da Aula (fechada por predefinição)
+  useEffect(() => {
+    if (activeTab === 'aula') {
+      setMobileSidebarOpen(false);
+    }
+  }, [activeTab]);
 
   const handleResetAllData = useCallback(() => {
     setProgress({});
@@ -184,8 +225,8 @@ export default function App() {
 
       {/* Main Container */}
       <div className="flex flex-1 min-h-0 overflow-hidden relative overflow-x-hidden">
-        {/* Desktop Sidebar (Hidden below 768px as requested: 'hidden md:flex') */}
-        <div className="hidden md:flex">
+        {/* Desktop Sidebar (Hidden below 768px as requested: 'hidden md:flex', and hidden on landscape mobile) */}
+        <div className="hidden md:flex hide-on-landscape">
           <Sidebar
             curriculum={curriculum}
             selectedLessonId={selection?.lessonId ?? null}
@@ -202,17 +243,18 @@ export default function App() {
           />
         </div>
 
-        {/* Mobile Drawer (Smooth overlay drawer without squeezing content) */}
+        {/* Mobile / Landscape Overlay Drawer with Backdrop */}
         {mobileSidebarOpen && (
-          <div className="fixed inset-0 z-50 md:hidden flex">
-            {/* Backdrop */}
-            <div
-              className="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity"
+          <>
+            {/* Backdrop (camada de captura de clique) */}
+            <div 
+              className="fixed inset-0 bg-black/60 backdrop-blur-xs z-40 transition-opacity"
               onClick={() => setMobileSidebarOpen(false)}
+              aria-hidden="true"
             />
             
-            {/* Drawer Content */}
-            <div className="relative z-10 w-[85vw] max-w-sm h-full bg-ink-900 shadow-2xl animate-slide-in flex flex-col overflow-hidden">
+            {/* Drawer Content com z-50 acima do backdrop */}
+            <div className="fixed inset-y-0 left-0 z-50 w-[85vw] max-w-sm h-full bg-ink-900 shadow-2xl animate-slide-in flex flex-col overflow-hidden md:hidden">
               <Sidebar
                 curriculum={curriculum}
                 selectedLessonId={selection?.lessonId ?? null}
@@ -230,11 +272,11 @@ export default function App() {
                 onCloseMobileDrawer={() => setMobileSidebarOpen(false)}
               />
             </div>
-          </div>
+          </>
         )}
 
         {/* Center Content: Cronograma, VideoPlayer, Banco de Questões ou Mentor */}
-        <main className="flex-1 flex flex-col min-h-0 min-w-0 overflow-y-auto relative overflow-x-hidden pb-14 md:pb-0">
+        <main className="flex-1 flex flex-col min-h-0 min-w-0 overflow-y-auto relative z-0 overflow-x-hidden pb-14 md:pb-0">
           {activeTab === 'cronograma' && (
             <CronogramaScreen
               progress={progress}

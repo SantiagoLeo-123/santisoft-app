@@ -64,12 +64,12 @@ export function VideoPlayer({
 
   return (
     /* 1. Contentor Principal: Sem h-screen ou overflow-hidden; rolagem livre com polegar */
-    <div className="w-full min-h-screen overflow-y-auto pb-32 flex flex-col bg-ink-950">
-      <div className="w-full max-w-4xl mx-auto flex flex-col">
+    <div className="w-full min-h-screen overflow-y-auto pb-32 flex flex-col bg-ink-950 relative z-0">
+      <div className="w-full max-w-4xl mx-auto flex flex-col relative z-0">
         
         {/* 2. Container envolvente do <iframe> com altura adaptada no mobile e cinema no landscape */}
-        <div className="w-full px-2 sm:px-4">
-          <div className="w-full h-[290px] sm:h-[360px] md:aspect-video rounded-xl overflow-hidden bg-black relative shadow-lg my-2 flex-shrink-0 video-cinema-container">
+        <div className="w-full px-2 sm:px-4 relative z-0">
+          <div className="w-full h-[290px] sm:h-[360px] md:aspect-video rounded-xl overflow-hidden bg-black relative z-0 shadow-lg my-2 flex-shrink-0 video-cinema-container">
             {isMp4 ? (
               <video
                 key={lesson.id}

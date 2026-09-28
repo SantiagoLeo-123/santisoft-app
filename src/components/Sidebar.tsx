@@ -165,7 +165,7 @@ export function Sidebar({
     <aside
       className={`flex flex-col bg-ink-900 border-r border-ink-875 shrink-0 h-full ${
         isMobileDrawer
-          ? 'w-full max-w-[85vw] sm:max-w-sm safe-top safe-bottom shadow-2xl'
+          ? 'w-full max-w-[85vw] sm:max-w-sm safe-top safe-bottom shadow-2xl z-50'
           : 'w-64 animate-slide-in'
       }`}
     >
@@ -176,18 +176,20 @@ export function Sidebar({
         {isMobileDrawer ? (
           <button
             onClick={onCloseMobileDrawer}
-            className="w-9 h-9 rounded-xl bg-ink-850 hover:bg-ink-800 flex items-center justify-center text-zinc-300 hover:text-white transition-colors"
+            className="p-3 min-w-[44px] min-h-[44px] rounded-xl bg-ink-850 hover:bg-ink-800 flex items-center justify-center text-zinc-300 hover:text-white active:scale-95 transition-all shadow-sm"
             aria-label="Fechar gaveta"
+            title="Fechar menu"
           >
             <X className="w-5 h-5" />
           </button>
         ) : (
           <button
             onClick={onToggleCollapse}
-            className="p-1.5 rounded-lg hover:bg-ink-850 text-zinc-400 hover:text-white transition-colors"
+            className="p-3 min-w-[44px] min-h-[44px] rounded-xl hover:bg-ink-850 text-zinc-400 hover:text-white transition-colors flex items-center justify-center"
             aria-label="Recolher barra lateral"
+            title="Recolher barra lateral"
           >
-            <PanelLeftClose className="w-4 h-4" />
+            <PanelLeftClose className="w-5 h-5" />
           </button>
         )}
       </div>
