@@ -105,16 +105,18 @@ export function VideoModal({
         </div>
 
         {/* Container do Vídeo: altura confortável portrait e modo cinema no landscape */}
-        <div className="w-full h-[290px] sm:h-[360px] md:aspect-video rounded-xl overflow-hidden bg-black flex-shrink-0 relative shadow-lg video-cinema-container">
-          <iframe
-            key={embedUrl}
-            src={embedUrl}
-            className="w-full h-full border-0"
-            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-            allowFullScreen
-            loading="lazy"
-            title={lessonTitle}
-          />
+        <div className="w-full relative video-landscape-outer">
+          <div className="w-full h-[290px] sm:h-[360px] md:aspect-video rounded-xl overflow-hidden bg-black flex-shrink-0 relative shadow-lg video-cinema-container">
+            <iframe
+              key={embedUrl}
+              src={embedUrl}
+              className="w-full h-full border-0"
+              allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+              title={lessonTitle}
+            />
+          </div>
         </div>
 
         {/* Botão de Contingência Mobile (Fallback Essencial) */}

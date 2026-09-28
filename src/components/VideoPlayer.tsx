@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import {
   ChevronLeft,
   ChevronRight,
@@ -28,6 +29,32 @@ export function VideoPlayer({
   hasPrev,
   hasNext,
 }: VideoPlayerProps) {
+  // Detecção de orientação paisagem no mobile (altura reduzida <= 550px)
+  const [isMobileLandscape, setIsMobileLandscape] = useState(false);
+
+  useEffect(() => {
+    const handleOrientation = () => {
+      if (typeof window === 'undefined') return;
+      const isLandscape =
+        (window.matchMedia && window.matchMedia('(orientation: landscape)').matches) ||
+        (window.innerWidth > window.innerHeight);
+      const isShortScreen = window.innerHeight <= 550;
+      setIsMobileLandscape(isLandscape && isShortScreen);
+    };
+
+    handleOrientation();
+    window.addEventListener('resize', handleOrientation);
+    window.addEventListener('orientationchange', handleOrientation);
+    const mql = window.matchMedia?.('(orientation: landscape)');
+    mql?.addEventListener?.('change', handleOrientation);
+
+    return () => {
+      window.removeEventListener('resize', handleOrientation);
+      window.removeEventListener('orientationchange', handleOrientation);
+      mql?.removeEventListener?.('change', handleOrientation);
+    };
+  }, []);
+
   if (!lesson) {
     return (
       <div className="w-full min-h-screen overflow-y-auto pb-32 flex flex-col items-center justify-center p-6 bg-ink-950">
@@ -67,9 +94,21 @@ export function VideoPlayer({
     <div className="w-full min-h-screen overflow-y-auto pb-32 flex flex-col bg-ink-950 relative z-0">
       <div className="w-full max-w-4xl mx-auto flex flex-col relative z-0">
         
-        {/* 2. Container envolvente do <iframe> com altura adaptada no mobile e cinema no landscape */}
-        <div className="w-full px-2 sm:px-4 relative z-0">
-          <div className="w-full h-[290px] sm:h-[360px] md:aspect-video rounded-xl overflow-hidden bg-black relative z-0 shadow-lg my-2 flex-shrink-0 video-cinema-container">
+        {/* 2. Container envolvente do <iframe> com enquadramento 16:9 no landscape */}
+        <div
+          className={`w-full relative z-0 video-landscape-outer ${
+            isMobileLandscape
+              ? 'fixed inset-0 z-50 bg-black flex items-center justify-center p-0 pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)]'
+              : 'px-2 sm:px-4'
+          }`}
+        >
+          <div
+            className={`overflow-hidden bg-black relative shadow-lg video-cinema-container ${
+              isMobileLandscape
+                ? 'w-full max-w-[calc(100dvh*16/9)] max-h-[100dvh] aspect-video relative flex items-center justify-center'
+                : 'w-full h-[290px] sm:h-[360px] md:aspect-video rounded-xl my-2 flex-shrink-0'
+            }`}
+          >
             {isMp4 ? (
               <video
                 key={lesson.id}
