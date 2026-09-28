@@ -55,55 +55,67 @@ export const KNOWN_DRIVE_IDS: Record<string, string> = {
 };
 
 /**
- * Converts any Google Drive URL (like /view?usp=sharing) into /preview for iframe embed
+ * Extracts a clean Google Drive file ID from any URL or raw ID,
+ * stripping parameters like /view, /edit, /preview, ?usp=sharing, etc.
  */
-export function convertToEmbedDriveUrl(rawUrlOrId: string): string {
+export function extractDriveFileId(rawUrlOrId: string): string {
   if (!rawUrlOrId) return '';
   const trimmed = rawUrlOrId.trim();
 
-  // If it's already an embed/preview URL
-  if (trimmed.includes('/preview')) return trimmed;
+  // Match /file/d/([a-zA-Z0-9_-]+)
+  const fileDMatch = trimmed.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
+  if (fileDMatch) return fileDMatch[1];
 
-  // If it ends with /view or /view?usp=...
-  if (trimmed.includes('/view')) {
-    return trimmed.replace(/\/view(\?.*)?$/, '/preview');
-  }
+  // Match ?id=([a-zA-Z0-9_-]+) or &id=([a-zA-Z0-9_-]+)
+  const idQueryMatch = trimmed.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+  if (idQueryMatch) return idQueryMatch[1];
 
-  // Extract ID from full URL https://drive.google.com/file/d/ID/...
-  const match = trimmed.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
-  if (match) {
-    return `https://drive.google.com/file/d/${match[1]}/preview`;
-  }
+  // Match /d/([a-zA-Z0-9_-]+)
+  const dMatch = trimmed.match(/\/d\/([a-zA-Z0-9_-]+)/);
+  if (dMatch) return dMatch[1];
 
-  // If it's a bare Drive file ID
+  // If already bare ID (20+ chars)
   if (/^[a-zA-Z0-9_-]{20,}$/.test(trimmed)) {
-    return `https://drive.google.com/file/d/${trimmed}/preview`;
+    return trimmed;
+  }
+
+  // Fallback: strip query params and /view, /edit, /preview
+  const clean = trimmed
+    .replace(/[?#].*$/, '')
+    .replace(/\/(preview|view|edit)(\/.*)?$/, '');
+  const segments = clean.split('/');
+  const last = segments[segments.length - 1];
+  if (last && /^[a-zA-Z0-9_-]{15,}$/.test(last)) {
+    return last;
   }
 
   return trimmed;
 }
 
 /**
- * Returns external URL for opening in Google Drive in a new tab
+ * Converts any Google Drive URL or ID into a clean /preview embed URL:
+ * https://drive.google.com/file/d/${id}/preview
+ */
+export function convertToEmbedDriveUrl(rawUrlOrId: string): string {
+  if (!rawUrlOrId) return '';
+  const id = extractDriveFileId(rawUrlOrId);
+  if (id && !id.startsWith('http://') && !id.startsWith('https://')) {
+    return `https://drive.google.com/file/d/${id}/preview`;
+  }
+  return rawUrlOrId.trim();
+}
+
+/**
+ * Returns external URL for opening cleanly in Google Drive:
+ * https://drive.google.com/file/d/${id}/view
  */
 export function convertToExternalDriveUrl(rawUrlOrId: string): string {
   if (!rawUrlOrId) return '';
-  const trimmed = rawUrlOrId.trim();
-
-  if (trimmed.includes('/preview')) {
-    return trimmed.replace(/\/preview(\?.*)?$/, '/view?usp=sharing');
+  const id = extractDriveFileId(rawUrlOrId);
+  if (id && !id.startsWith('http://') && !id.startsWith('https://')) {
+    return `https://drive.google.com/file/d/${id}/view`;
   }
-
-  const match = trimmed.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
-  if (match) {
-    return `https://drive.google.com/file/d/${match[1]}/view?usp=sharing`;
-  }
-
-  if (/^[a-zA-Z0-9_-]{20,}$/.test(trimmed)) {
-    return `https://drive.google.com/file/d/${trimmed}/view?usp=sharing`;
-  }
-
-  return trimmed;
+  return rawUrlOrId.trim();
 }
 
 /**
@@ -113,38 +125,47 @@ export function resolveLessonDriveUrls(
   lessonId: string,
   customUrls?: Record<string, string>,
   directDriveId?: string,
-): { embedUrl: string; externalUrl: string; isCustom: boolean } {
+): { embedUrl: string; externalUrl: string; isCustom: boolean; driveId: string } {
+  let fileId = '';
+
   const custom = customUrls?.[lessonId];
   if (custom && custom.trim()) {
+    fileId = extractDriveFileId(custom);
     return {
-      embedUrl: convertToEmbedDriveUrl(custom),
-      externalUrl: convertToExternalDriveUrl(custom),
+      embedUrl: `https://drive.google.com/file/d/${fileId}/preview`,
+      externalUrl: `https://drive.google.com/file/d/${fileId}/view`,
       isCustom: true,
+      driveId: fileId,
     };
   }
 
   if (directDriveId && directDriveId.trim()) {
-    const id = directDriveId.trim();
+    fileId = extractDriveFileId(directDriveId);
     return {
-      embedUrl: `https://drive.google.com/file/d/${id}/preview`,
-      externalUrl: `https://drive.google.com/file/d/${id}/view?usp=sharing`,
+      embedUrl: `https://drive.google.com/file/d/${fileId}/preview`,
+      externalUrl: `https://drive.google.com/file/d/${fileId}/view`,
       isCustom: false,
+      driveId: fileId,
     };
   }
 
   const knownId = KNOWN_DRIVE_IDS[lessonId];
   if (knownId) {
+    fileId = extractDriveFileId(knownId);
     return {
-      embedUrl: `https://drive.google.com/file/d/${knownId}/preview`,
-      externalUrl: `https://drive.google.com/file/d/${knownId}/view?usp=sharing`,
+      embedUrl: `https://drive.google.com/file/d/${fileId}/preview`,
+      externalUrl: `https://drive.google.com/file/d/${fileId}/view`,
       isCustom: false,
+      driveId: fileId,
     };
   }
 
   // Default fallback sample video or general drive preview
+  const defaultId = '1avJORgPn_FEnENyqiapcgj2XsFwF2zBV';
   return {
-    embedUrl: 'https://drive.google.com/file/d/1avJORgPn_FEnENyqiapcgj2XsFwF2zBV/preview',
-    externalUrl: 'https://drive.google.com/file/d/1avJORgPn_FEnENyqiapcgj2XsFwF2zBV/view?usp=sharing',
+    embedUrl: `https://drive.google.com/file/d/${defaultId}/preview`,
+    externalUrl: `https://drive.google.com/file/d/${defaultId}/view`,
     isCustom: false,
+    driveId: defaultId,
   };
 }

@@ -7,6 +7,7 @@ import {
   ExternalLink,
 } from 'lucide-react';
 import type { Lesson } from '@/types';
+import { extractDriveFileId } from '@/lib/driveUrls';
 
 interface VideoPlayerProps {
   lesson: Lesson | null;
@@ -43,17 +44,22 @@ export function VideoPlayer({
     );
   }
 
-  const driveId =
+  const rawDriveRef =
     lesson.driveId ||
-    (lesson.source.kind === 'drive' ? lesson.source.fileId : null);
-  const isMp4 = lesson.source.kind === 'mp4' && !lesson.driveId;
+    (lesson.source.kind === 'drive' ? lesson.source.fileId : null) ||
+    lesson.driveUrl ||
+    '';
+  const cleanDriveId = rawDriveRef ? extractDriveFileId(rawDriveRef) : null;
+  const isMp4 = lesson.source.kind === 'mp4' && !cleanDriveId;
+
   const embedUrl = isMp4
     ? lesson.source.url
-    : driveId
-    ? `https://drive.google.com/file/d/${driveId}/preview`
+    : cleanDriveId
+    ? `https://drive.google.com/file/d/${cleanDriveId}/preview`
     : null;
-  const externalDriveUrl = driveId
-    ? `https://drive.google.com/file/d/${driveId}/view?usp=sharing`
+
+  const externalDriveUrl = cleanDriveId
+    ? `https://drive.google.com/file/d/${cleanDriveId}/view`
     : null;
 
   return (
@@ -63,7 +69,7 @@ export function VideoPlayer({
         
         {/* 2. Container envolvente do <iframe> com flex-shrink-0 e 16:9 real */}
         <div className="w-full px-2 sm:px-4">
-          <div className="w-full aspect-video min-h-[220px] max-h-[300px] flex-shrink-0 bg-black rounded-xl overflow-hidden relative shadow-lg my-2">
+          <div className="w-full aspect-video flex-shrink-0 bg-black rounded-xl overflow-hidden relative shadow-lg my-2">
             {isMp4 ? (
               <video
                 key={lesson.id}
@@ -80,12 +86,33 @@ export function VideoPlayer({
                 key={lesson.id}
                 src={embedUrl ?? ''}
                 className="w-full h-full border-0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-                allowFullScreen={true}
+                allow="autoplay; encrypted-media; fullscreen"
+                allowFullScreen
+                loading="lazy"
                 title={lesson.title}
               />
             )}
           </div>
+
+          {/* Botão de Contingência Mobile (Fallback Essencial) */}
+          {externalDriveUrl && (
+            <div className="w-full shrink-0 flex flex-col gap-1.5 mt-2">
+              <a
+                href={externalDriveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full min-h-[44px] py-2.5 px-4 rounded-xl text-xs sm:text-sm font-semibold bg-neutral-900/90 hover:bg-neutral-850 border border-red-500/30 text-neutral-100 hover:text-white flex items-center justify-center gap-2 transition-all active:scale-[0.98] shadow-md group"
+                title="Abrir no Google Drive (Tela Cheia)"
+              >
+                <Play className="w-4 h-4 fill-red-500 text-red-500 shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="font-bold text-red-100">Abrir no Google Drive (Tela Cheia)</span>
+                <ExternalLink className="w-3.5 h-3.5 text-neutral-400 group-hover:text-white shrink-0 ml-0.5" />
+              </a>
+              <p className="text-[11px] text-zinc-400 text-center leading-tight">
+                Se o player do Safari/iOS não reproduzir no celular, toque no botão acima para abrir em tela cheia no Google Drive nativo.
+              </p>
+            </div>
+          )}
         </div>
 
         {/* 3. Conteúdo e Botões abaixo do vídeo: w-full flex flex-col gap-3 px-4 py-3 flex-shrink-0 */}
@@ -106,19 +133,6 @@ export function VideoPlayer({
                   </span>
                 )}
               </div>
-
-              {externalDriveUrl && (
-                <a
-                  href={externalDriveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl text-xs font-semibold bg-ink-900 border border-ink-875 text-zinc-400 hover:text-white hover:bg-ink-850 transition-all active:scale-95"
-                  title="Abrir no Google Drive externo"
-                >
-                  <ExternalLink className="w-3.5 h-3.5 text-zinc-400" />
-                  <span>Abrir no Drive</span>
-                </a>
-              )}
             </div>
 
             <h1 className="text-base sm:text-2xl font-extrabold text-white tracking-tight leading-snug">
