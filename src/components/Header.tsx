@@ -4,6 +4,7 @@ import {
   BookOpen,
   Brain,
   RotateCcw,
+  FileText,
 } from 'lucide-react';
 import { SantiSoftLogo } from '@/components/Logo';
 import { PWAInstallButton } from '@/components/PWAInstallButton';
@@ -13,9 +14,11 @@ interface HeaderProps {
   onSelectCronograma: () => void;
   onSelectQuestoes: () => void;
   onSelectMentor?: () => void;
+  onSelectCasalMed?: () => void;
   isCronograma: boolean;
   isQuestoes: boolean;
   isMentor?: boolean;
+  isCasalMed?: boolean;
   onResetProgress?: () => void;
 }
 
@@ -24,9 +27,11 @@ export function Header({
   onSelectCronograma,
   onSelectQuestoes,
   onSelectMentor,
+  onSelectCasalMed,
   isCronograma,
   isQuestoes,
   isMentor,
+  isCasalMed,
   onResetProgress,
 }: HeaderProps) {
   return (
@@ -81,6 +86,21 @@ export function Header({
             >
               <Brain className={`w-3.5 h-3.5 ${isMentor ? 'text-white' : 'text-red-500'}`} />
               <span>Mentor</span>
+            </button>
+          )}
+
+          {onSelectCasalMed && (
+            <button
+              onClick={onSelectCasalMed}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all active:scale-95 ${
+                isCasalMed
+                  ? 'bg-red-600 text-white shadow-md shadow-red-600/25'
+                  : 'text-zinc-300 hover:text-white bg-ink-850 border border-ink-800 hover:border-ink-700'
+              }`}
+              title="CASALMED — Resumos 2026"
+            >
+              <FileText className={`w-3.5 h-3.5 ${isCasalMed ? 'text-white' : 'text-red-500'}`} />
+              <span>CasalMed</span>
             </button>
           )}
 

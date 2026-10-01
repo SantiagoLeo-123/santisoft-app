@@ -5,6 +5,7 @@ import { VideoPlayer } from '@/components/VideoPlayer';
 import { CronogramaScreen } from '@/components/CronogramaScreen';
 import { QuestoesScreen, type RevisionExamConfig } from '@/components/QuestoesScreen';
 import { MentorInteligenteTab } from '@/components/MentorInteligenteTab';
+import { CasalMedView } from '@/components/CasalMedView';
 import { MobileBottomNav } from '@/components/MobileBottomNav';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { curriculum } from '@/data/curriculum';
@@ -17,7 +18,7 @@ import {
 import type { ProgressMap } from '@/types';
 import { isLessonCompleted } from '@/types';
 
-type ActiveTab = 'cronograma' | 'aula' | 'questoes' | 'mentor';
+type ActiveTab = 'cronograma' | 'aula' | 'questoes' | 'mentor' | 'casalmed';
 
 interface Selection {
   areaId: string;
@@ -105,6 +106,11 @@ export default function App() {
 
   const handleSelectMentor = useCallback(() => {
     setActiveTab('mentor');
+    setMobileSidebarOpen(false);
+  }, []);
+
+  const handleSelectCasalMed = useCallback(() => {
+    setActiveTab('casalmed');
     setMobileSidebarOpen(false);
   }, []);
 
@@ -217,9 +223,11 @@ export default function App() {
         onSelectCronograma={handleSelectCronograma}
         onSelectQuestoes={handleSelectQuestoes}
         onSelectMentor={handleSelectMentor}
+        onSelectCasalMed={handleSelectCasalMed}
         isCronograma={activeTab === 'cronograma'}
         isQuestoes={activeTab === 'questoes'}
         isMentor={activeTab === 'mentor'}
+        isCasalMed={activeTab === 'casalmed'}
         onResetProgress={() => setShowResetConfirm(true)}
       />
 
@@ -235,9 +243,11 @@ export default function App() {
             onSelectCronograma={handleSelectCronograma}
             onSelectQuestoes={handleSelectQuestoes}
             onSelectMentor={handleSelectMentor}
+            onSelectCasalMed={handleSelectCasalMed}
             isCronogramaActive={activeTab === 'cronograma'}
             isQuestoesActive={activeTab === 'questoes'}
             isMentorActive={activeTab === 'mentor'}
+            isCasalMedActive={activeTab === 'casalmed'}
             collapsed={sidebarCollapsed}
             onToggleCollapse={() => setSidebarCollapsed((v) => !v)}
           />
@@ -263,9 +273,11 @@ export default function App() {
                 onSelectCronograma={handleSelectCronograma}
                 onSelectQuestoes={handleSelectQuestoes}
                 onSelectMentor={handleSelectMentor}
+                onSelectCasalMed={handleSelectCasalMed}
                 isCronogramaActive={activeTab === 'cronograma'}
                 isQuestoesActive={activeTab === 'questoes'}
                 isMentorActive={activeTab === 'mentor'}
+                isCasalMedActive={activeTab === 'casalmed'}
                 collapsed={false}
                 onToggleCollapse={() => setMobileSidebarOpen(false)}
                 isMobileDrawer={true}
@@ -314,6 +326,10 @@ export default function App() {
               onGoToQuestoes={handleSelectQuestoes}
             />
           )}
+
+          {activeTab === 'casalmed' && (
+            <CasalMedView />
+          )}
         </main>
       </div>
 
@@ -327,6 +343,7 @@ export default function App() {
         }}
         onSelectQuestoes={handleSelectQuestoes}
         onSelectMentor={handleSelectMentor}
+        onSelectCasalMed={handleSelectCasalMed}
         onOpenDrawer={() => setMobileSidebarOpen(true)}
       />
 

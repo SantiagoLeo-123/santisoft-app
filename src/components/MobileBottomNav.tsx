@@ -1,11 +1,12 @@
-import { Calendar, Play, Layers, BookOpen, Brain } from 'lucide-react';
+import { Calendar, Play, Layers, BookOpen, Brain, FileText } from 'lucide-react';
 
 interface MobileBottomNavProps {
-  activeTab: 'cronograma' | 'aula' | 'questoes' | 'mentor';
+  activeTab: 'cronograma' | 'aula' | 'questoes' | 'mentor' | 'casalmed';
   onSelectCronograma: () => void;
   onSelectVideoPlayer: () => void;
   onSelectQuestoes: () => void;
   onSelectMentor?: () => void;
+  onSelectCasalMed?: () => void;
   onOpenDrawer: () => void;
 }
 
@@ -15,6 +16,7 @@ export function MobileBottomNav({
   onSelectVideoPlayer,
   onSelectQuestoes,
   onSelectMentor,
+  onSelectCasalMed,
   onOpenDrawer,
 }: MobileBottomNavProps) {
   return (
@@ -22,7 +24,7 @@ export function MobileBottomNav({
       className="md:hidden fixed bottom-0 left-0 right-0 z-30 bg-ink-900/95 backdrop-blur-xl border-t border-ink-875 safe-bottom hide-on-landscape"
       aria-label="Navegação móvel"
     >
-      <div className="grid grid-cols-5 h-14 items-center px-1">
+      <div className="grid grid-cols-6 h-14 items-center px-1">
         {/* Cronograma */}
         <button
           type="button"
@@ -77,6 +79,20 @@ export function MobileBottomNav({
         >
           <Brain className="w-4 h-4" />
           <span className="text-[9px] tracking-tight">Mentor</span>
+        </button>
+
+        {/* CASALMED */}
+        <button
+          type="button"
+          onClick={onSelectCasalMed || onSelectCronograma}
+          className={`flex flex-col items-center justify-center gap-1 h-full rounded-xl transition-all active:scale-95 ${
+            activeTab === 'casalmed'
+              ? 'text-red-500 font-bold'
+              : 'text-zinc-400 hover:text-zinc-200'
+          }`}
+        >
+          <FileText className="w-4 h-4" />
+          <span className="text-[9px] tracking-tight">CasalMed</span>
         </button>
 
         {/* Disciplinas / Gaveta */}

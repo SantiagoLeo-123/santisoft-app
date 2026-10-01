@@ -9,6 +9,7 @@ import {
   Calendar,
   BookOpen,
   Brain,
+  FileText,
   X,
 } from 'lucide-react';
 import type { SubjectArea, ProgressMap } from '@/types';
@@ -24,9 +25,11 @@ interface SidebarProps {
   onSelectCronograma: () => void;
   onSelectQuestoes: () => void;
   onSelectMentor?: () => void;
+  onSelectCasalMed?: () => void;
   isCronogramaActive: boolean;
   isQuestoesActive: boolean;
   isMentorActive?: boolean;
+  isCasalMedActive?: boolean;
   collapsed: boolean;
   onToggleCollapse: () => void;
   isMobileDrawer?: boolean;
@@ -41,9 +44,11 @@ export function Sidebar({
   onSelectCronograma,
   onSelectQuestoes,
   onSelectMentor,
+  onSelectCasalMed,
   isCronogramaActive,
   isQuestoesActive,
   isMentorActive,
+  isCasalMedActive,
   collapsed,
   onToggleCollapse,
   isMobileDrawer,
@@ -68,11 +73,11 @@ export function Sidebar({
 
   // Garante que, ao alternar para Cronograma, Banco de Questões ou Mentor, as Grandes Áreas voltem a ficar 100% recolhidas/fechadas
   useEffect(() => {
-    if (isCronogramaActive || isQuestoesActive || isMentorActive) {
+    if (isCronogramaActive || isQuestoesActive || isMentorActive || isCasalMedActive) {
       setExpandedAreas(new Set());
       setExpandedModules(new Set());
     }
-  }, [isCronogramaActive, isQuestoesActive, isMentorActive]);
+  }, [isCronogramaActive, isQuestoesActive, isMentorActive, isCasalMedActive]);
 
   const toggleArea = (areaId: string) => {
     setExpandedAreas((prev) => {
@@ -136,6 +141,19 @@ export function Sidebar({
             title="Mentor Inteligente"
           >
             <Brain className="w-5 h-5" />
+          </button>
+        )}
+        {onSelectCasalMed && (
+          <button
+            onClick={onSelectCasalMed}
+            className={`p-2 rounded-xl transition-colors ${
+              isCasalMedActive
+                ? 'bg-red-600/15 text-red-500'
+                : 'text-zinc-400 hover:text-red-500 hover:bg-ink-850'
+            }`}
+            title="CASALMED"
+          >
+            <FileText className="w-5 h-5" />
           </button>
         )}
         <div className="w-8 border-t border-ink-875 my-1" />
@@ -254,6 +272,28 @@ export function Sidebar({
               }`}
             />
             <span className="text-left flex-1">Mentor Inteligente</span>
+          </button>
+        )}
+
+        {/* CASALMED Button */}
+        {onSelectCasalMed && (
+          <button
+            onClick={() => {
+              onSelectCasalMed();
+              onCloseMobileDrawer?.();
+            }}
+            className={`w-full flex items-center gap-2.5 px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs sm:text-sm font-semibold transition-all active:scale-[0.98] ${
+              isCasalMedActive
+                ? 'bg-red-600 text-white shadow-md shadow-red-600/20'
+                : 'text-zinc-300 hover:bg-ink-850 hover:text-white'
+            }`}
+          >
+            <FileText
+              className={`w-4 h-4 shrink-0 ${
+                isCasalMedActive ? 'text-white' : 'text-red-500'
+              }`}
+            />
+            <span className="text-left flex-1">CASALMED</span>
           </button>
         )}
 
