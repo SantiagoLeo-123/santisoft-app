@@ -1,4 +1,4 @@
-import { ExternalLink, FileText } from 'lucide-react';
+import { ExternalLink, FileText, AlertCircle } from 'lucide-react';
 
 const PREVIEW_URL = 'https://drive.google.com/file/d/1me5d3No_NE2x3zJk2jRex8xmEkithkF7/preview';
 const SHARE_URL = 'https://drive.google.com/file/d/1me5d3No_NE2x3zJk2jRex8xmEkithkF7/view?usp=sharing';
@@ -27,18 +27,28 @@ export function CasalMedView() {
             href={SHARE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-semibold bg-ink-850 text-zinc-300 hover:text-white hover:bg-ink-825 border border-ink-800 transition-all active:scale-95"
+            className="flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-xs font-bold bg-red-600 text-white hover:bg-red-700 shadow-lg shadow-red-600/25 transition-all active:scale-95"
           >
             <ExternalLink className="w-4 h-4" />
-            <span>Abrir em Nova Aba</span>
+            <span>Abrir Caderno em Nova Aba</span>
           </a>
+        </div>
+
+        {/* Warning Bar */}
+        <div className="flex items-center gap-2 mb-3 px-3.5 py-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-300/90">
+          <AlertCircle className="w-4 h-4 shrink-0 text-amber-400" />
+          <p className="text-xs leading-relaxed">
+            Se o navegador bloquear a pré-visualização embutida, clique em{' '}
+            <span className="font-semibold text-amber-200">'Abrir Caderno em Nova Aba'</span>
+            {' '}para visualizar sem restrições.
+          </p>
         </div>
 
         {/* Iframe Container */}
         <div className="w-full h-[76vh] md:h-[86vh] rounded-2xl overflow-hidden border border-white/10 bg-zinc-950">
           <iframe
             src={PREVIEW_URL}
-            className="w-full h-full border-0"
+            className="w-full h-full border-0 rounded-2xl bg-zinc-950"
             allow="autoplay; fullscreen"
             allowFullScreen
             title="CASALMED — Resumos 2026"
