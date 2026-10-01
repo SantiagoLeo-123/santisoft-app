@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import {
   ChevronLeft,
   ChevronRight,
@@ -6,9 +6,21 @@ import {
   CheckCircle2,
   Circle,
   ExternalLink,
+  List,
+  X,
 } from 'lucide-react';
 import type { Lesson } from '@/types';
 import { extractDriveFileId } from '@/lib/driveUrls';
+import { curriculum } from '@/data/curriculum';
+
+export interface FlatLessonItem {
+  areaId: string;
+  moduleId: string;
+  lessonId: string;
+  areaName: string;
+  lessonNumber: number;
+  lessonTitle: string;
+}
 
 interface VideoPlayerProps {
   lesson: Lesson | null;
@@ -18,6 +30,9 @@ interface VideoPlayerProps {
   onNext: () => void;
   hasPrev: boolean;
   hasNext: boolean;
+  flatLessonList: FlatLessonItem[];
+  currentIndex: number;
+  onJumpToLesson: (item: FlatLessonItem) => void;
 }
 
 export function VideoPlayer({
@@ -28,7 +43,12 @@ export function VideoPlayer({
   onNext,
   hasPrev,
   hasNext,
+  flatLessonList,
+  currentIndex,
+  onJumpToLesson,
 }: VideoPlayerProps) {
+  const [showLessonList, setShowLessonList] = useState(false);
+  const drawerRef = useRef<HTMLDivElement>(null);
   // Detecção de orientação paisagem no mobile (altura reduzida <= 550px)
   const [isMobileLandscape, setIsMobileLandscape] = useState(false);
 
@@ -202,7 +222,7 @@ export function VideoPlayer({
             )}
           </button>
 
-          {/* Navegação Anterior e Próxima (Lado a lado 50% cada) */}
+          {/* Navegação Anterior, Lista e Próxima */}
           <div className="flex w-full justify-between items-center gap-2">
             <button
               type="button"
@@ -212,6 +232,17 @@ export function VideoPlayer({
             >
               <ChevronLeft className="w-4 h-4 shrink-0" />
               <span>Anterior</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setShowLessonList(true)}
+              className="min-h-[42px] h-11 px-3 rounded-xl text-xs sm:text-sm font-semibold bg-red-600/15 hover:bg-red-600/25 border border-red-600/30 text-red-400 flex items-center justify-center gap-1.5 transition-all active:scale-95 shrink-0"
+              title="Lista de Aulas"
+            >
+              <List className="w-4 h-4 shrink-0" />
+              <span className="hidden sm:inline">Aulas</span>
+              <span className="text-[10px] tabular-nums">({currentIndex + 1}/{flatLessonList.length})</span>
             </button>
 
             <button
@@ -227,6 +258,78 @@ export function VideoPlayer({
         </div>
 
       </div>
+
+      {/* Lesson Selector Drawer */}
+      {showLessonList && (
+        <>
+          <div
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
+            onClick={() => setShowLessonList(false)}
+            aria-hidden="true"
+          />
+          <div
+            ref={drawerRef}
+            className="fixed bottom-0 left-0 right-0 z-50 max-h-[70vh] flex flex-col bg-ink-900 rounded-t-2xl border-t border-ink-800 shadow-2xl animate-slide-up md:max-w-md md:left-1/2 md:-translate-x-1/2"
+          >
+            <div className="flex items-center justify-between px-4 py-3 border-b border-ink-875 shrink-0">
+              <h3 className="text-sm font-bold text-white flex items-center gap-2">
+                <List className="w-4 h-4 text-red-500" />
+                Lista de Aulas
+              </h3>
+              <button
+                type="button"
+                onClick={() => setShowLessonList(false)}
+                className="p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-ink-850 transition-colors"
+                aria-label="Fechar lista"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+            <div className="overflow-y-auto scrollbar-thin px-2 py-2 flex-1">
+              {curriculum.map((area) => {
+                const areaLessons = flatLessonList.filter((l) => l.areaId === area.id);
+                if (areaLessons.length === 0) return null;
+                return (
+                  <div key={area.id} className="mb-3">
+                    <div className="px-2 py-1.5 text-[11px] font-bold text-zinc-500 uppercase tracking-wider">
+                      {area.name}
+                    </div>
+                    {areaLessons.map((item) => {
+                      const itemIndex = flatLessonList.findIndex((l) => l.lessonId === item.lessonId);
+                      const isActive = itemIndex === currentIndex;
+                      return (
+                        <button
+                          key={item.lessonId}
+                          type="button"
+                          onClick={() => {
+                            onJumpToLesson(item);
+                            setShowLessonList(false);
+                          }}
+                          className={`w-full flex items-center gap-2.5 px-3 py-2.5 min-h-[44px] rounded-xl text-left transition-all active:scale-[0.98] ${
+                            isActive
+                              ? 'bg-red-600/15 text-white font-medium border border-red-600/30'
+                              : 'text-zinc-400 hover:text-zinc-200 hover:bg-ink-850'
+                          }`}
+                        >
+                          <span className={`text-[10px] font-bold tabular-nums shrink-0 w-6 text-center ${
+                            isActive ? 'text-red-400' : 'text-zinc-600'
+                          }`}>
+                            {item.lessonNumber}
+                          </span>
+                          <span className="text-xs leading-snug flex-1 truncate">{item.lessonTitle}</span>
+                          {isActive && (
+                            <Play className="w-3 h-3 text-red-500 fill-red-500 shrink-0" />
+                          )}
+                        </button>
+                      );
+                    })}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }

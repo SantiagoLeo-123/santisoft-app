@@ -9,6 +9,7 @@ import { CasalMedView } from '@/components/CasalMedView';
 import { MobileBottomNav } from '@/components/MobileBottomNav';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { curriculum } from '@/data/curriculum';
+import type { FlatLessonItem } from '@/components/VideoPlayer';
 import {
   registrarConclusaoAula,
   removerConclusaoAula,
@@ -66,13 +67,20 @@ export default function App() {
     return isLessonCompleted(progress, selection.lessonId);
   }, [selection, progress]);
 
-  // Flat list of all lessons
-  const flatLessonList = useMemo(() => {
-    const list: { areaId: string; moduleId: string; lessonId: string }[] = [];
+  // Flat list of all lessons with metadata for the lesson selector
+  const flatLessonList = useMemo<FlatLessonItem[]>(() => {
+    const list: FlatLessonItem[] = [];
     for (const area of curriculum) {
       for (const mod of area.modules) {
         for (const lesson of mod.lessons) {
-          list.push({ areaId: area.id, moduleId: mod.id, lessonId: lesson.id });
+          list.push({
+            areaId: area.id,
+            moduleId: mod.id,
+            lessonId: lesson.id,
+            areaName: area.name,
+            lessonNumber: lesson.number,
+            lessonTitle: lesson.title,
+          });
         }
       }
     }
@@ -153,7 +161,8 @@ export default function App() {
 
   const handlePrev = useCallback(() => {
     if (hasPrev) {
-      setSelection(flatLessonList[currentIndex - 1]);
+      const item = flatLessonList[currentIndex - 1];
+      setSelection({ areaId: item.areaId, moduleId: item.moduleId, lessonId: item.lessonId });
       setActiveTab('aula');
       setMobileSidebarOpen(false);
     }
@@ -161,11 +170,18 @@ export default function App() {
 
   const handleNext = useCallback(() => {
     if (hasNext) {
-      setSelection(flatLessonList[currentIndex + 1]);
+      const item = flatLessonList[currentIndex + 1];
+      setSelection({ areaId: item.areaId, moduleId: item.moduleId, lessonId: item.lessonId });
       setActiveTab('aula');
       setMobileSidebarOpen(false);
     }
   }, [hasNext, flatLessonList, currentIndex]);
+
+  const handleJumpToLesson = useCallback((item: FlatLessonItem) => {
+    setSelection({ areaId: item.areaId, moduleId: item.moduleId, lessonId: item.lessonId });
+    setActiveTab('aula');
+    setMobileSidebarOpen(false);
+  }, []);
 
   // Fecho automático da barra lateral ao rodar o ecrã (Landscape) ou ao redimensionar
   useEffect(() => {
@@ -305,6 +321,9 @@ export default function App() {
               onNext={handleNext}
               hasPrev={hasPrev}
               hasNext={hasNext}
+              flatLessonList={flatLessonList}
+              currentIndex={currentIndex}
+              onJumpToLesson={handleJumpToLesson}
             />
           )}
 
