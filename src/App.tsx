@@ -344,7 +344,6 @@ export default function App() {
         onSelectQuestoes={handleSelectQuestoes}
         onSelectMentor={handleSelectMentor}
         onSelectCasalMed={handleSelectCasalMed}
-        onOpenDrawer={() => setMobileSidebarOpen(true)}
       />
 
       {/* Confirmation Modal to Reset Local Progress */}

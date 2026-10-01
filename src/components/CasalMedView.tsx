@@ -1,4 +1,4 @@
-import { ExternalLink, FileText, AlertCircle } from 'lucide-react';
+import { ExternalLink, FileText } from 'lucide-react';
 
 const PREVIEW_URL = 'https://drive.google.com/file/d/1me5d3No_NE2x3zJk2jRex8xmEkithkF7/preview';
 const SHARE_URL = 'https://drive.google.com/file/d/1me5d3No_NE2x3zJk2jRex8xmEkithkF7/view?usp=sharing';
@@ -6,9 +6,9 @@ const SHARE_URL = 'https://drive.google.com/file/d/1me5d3No_NE2x3zJk2jRex8xmEkit
 export function CasalMedView() {
   return (
     <div className="flex flex-col h-full p-4 sm:p-6 overflow-y-auto scrollbar-thin">
-      <div className="w-full max-w-5xl mx-auto">
+      <div className="w-full max-w-5xl mx-auto flex flex-col h-full">
         {/* Header */}
-        <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
+        <div className="flex items-center justify-between mb-4 flex-wrap gap-3 shrink-0">
           <div className="flex items-center gap-2.5">
             <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-red-600/15 border border-red-600/20">
               <FileText className="w-5 h-5 text-red-500" />
@@ -34,18 +34,8 @@ export function CasalMedView() {
           </a>
         </div>
 
-        {/* Warning Bar */}
-        <div className="flex items-center gap-2 mb-3 px-3.5 py-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-300/90">
-          <AlertCircle className="w-4 h-4 shrink-0 text-amber-400" />
-          <p className="text-xs leading-relaxed">
-            Se o navegador bloquear a pré-visualização embutida, clique em{' '}
-            <span className="font-semibold text-amber-200">'Abrir Caderno em Nova Aba'</span>
-            {' '}para visualizar sem restrições.
-          </p>
-        </div>
-
         {/* Iframe Container */}
-        <div className="w-full h-[76vh] md:h-[86vh] rounded-2xl overflow-hidden border border-white/10 bg-zinc-950">
+        <div className="w-full flex-1 min-h-0 rounded-2xl overflow-hidden border border-white/10 bg-zinc-950">
           <iframe
             src={PREVIEW_URL}
             className="w-full h-full border-0 rounded-2xl bg-zinc-950"

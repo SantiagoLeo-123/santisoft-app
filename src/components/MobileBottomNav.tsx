@@ -1,4 +1,4 @@
-import { Calendar, Play, Layers, BookOpen, Brain, FileText } from 'lucide-react';
+import { Calendar, Play, BookOpen, Brain, FileText } from 'lucide-react';
 
 interface MobileBottomNavProps {
   activeTab: 'cronograma' | 'aula' | 'questoes' | 'mentor' | 'casalmed';
@@ -7,7 +7,6 @@ interface MobileBottomNavProps {
   onSelectQuestoes: () => void;
   onSelectMentor?: () => void;
   onSelectCasalMed?: () => void;
-  onOpenDrawer: () => void;
 }
 
 export function MobileBottomNav({
@@ -17,14 +16,13 @@ export function MobileBottomNav({
   onSelectQuestoes,
   onSelectMentor,
   onSelectCasalMed,
-  onOpenDrawer,
 }: MobileBottomNavProps) {
   return (
     <nav
       className="md:hidden fixed bottom-0 left-0 right-0 z-30 bg-ink-900/95 backdrop-blur-xl border-t border-ink-875 safe-bottom hide-on-landscape"
       aria-label="Navegação móvel"
     >
-      <div className="grid grid-cols-6 h-14 items-center px-1">
+      <div className="grid grid-cols-5 h-14 items-center px-1">
         {/* Cronograma */}
         <button
           type="button"
@@ -93,16 +91,6 @@ export function MobileBottomNav({
         >
           <FileText className="w-4 h-4" />
           <span className="text-[9px] tracking-tight">CasalMed</span>
-        </button>
-
-        {/* Disciplinas / Gaveta */}
-        <button
-          type="button"
-          onClick={onOpenDrawer}
-          className="flex flex-col items-center justify-center gap-1 h-full rounded-xl text-zinc-400 hover:text-zinc-200 transition-all active:scale-95"
-        >
-          <Layers className="w-4 h-4" />
-          <span className="text-[9px] tracking-tight">Aulas</span>
         </button>
       </div>
     </nav>
