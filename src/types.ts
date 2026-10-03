@@ -8,9 +8,6 @@ export interface Lesson {
   title: string;
   duration: number; // minutes
   source: VideoSource;
-  driveId?: string;
-  driveUrl?: string;
-  area?: string;
 }
 
 export interface Module {
@@ -27,40 +24,80 @@ export interface SubjectArea {
   modules: Module[];
 }
 
-// 100% local map: { [lessonId]: boolean }
-export type ProgressMap = Record<string, boolean>;
-
-export function isLessonCompleted(progress: ProgressMap | undefined, id: string): boolean {
-  if (!progress) return false;
-  const val = (progress as Record<string, unknown>)[id];
-  if (typeof val === 'boolean') return val;
-  if (val && typeof val === 'object') {
-    return !!((val as { completed?: boolean; aula?: boolean }).completed || (val as { completed?: boolean; aula?: boolean }).aula);
-  }
-  return false;
+export interface LessonProgress {
+  completed: boolean;
 }
 
-export interface OptionExplanation {
-  letter: 'A' | 'B' | 'C' | 'D' | 'E';
-  text: string;
-  isCorrect: boolean;
-  explanation: string;
-}
+export type ProgressMap = Record<string, LessonProgress>;
 
-export interface Question {
+export interface UserProfile {
   id: string;
-  specialty: 'Ginecologia e Obstetrícia' | 'Pediatria' | 'Clínica Médica' | 'Cirurgia' | 'Preventiva';
-  topic: string;
-  subtopic?: string;
-  institution?: string; // ex: "USP-SP", "UFRJ", "Autoral"
-  year?: number;
-  statement: string; // Enunciado com caso clínico
-  options: {
-    letter: 'A' | 'B' | 'C' | 'D' | 'E';
-    text: string;
-  }[];
-  correctOption: 'A' | 'B' | 'C' | 'D' | 'E';
-  generalComment: string; // Raciocínio clínico geral / síntese
-  optionsExplanations: OptionExplanation[]; // Análise de cada alternativa
-  isRevisao?: boolean; // Questão exclusiva do Mentor Inteligente
+  name: string;
+  avatar: string; // avatar preset id or data URL
+  createdAt: number;
 }
+
+export type ProfileList = UserProfile[];
+
+export interface ProfileData {
+  progress: ProgressMap;
+}
+
+export const AVATAR_PRESETS = [
+  { id: 'avatar-1', color: '#dc2626', label: 'Vermelho' },
+  { id: 'avatar-2', color: '#3b82f6', label: 'Azul' },
+  { id: 'avatar-3', color: '#10b981', label: 'Verde' },
+  { id: 'avatar-4', color: '#f59e0b', label: 'Amarelo' },
+  { id: 'avatar-5', color: '#8b5cf6', label: 'Violeta' },
+  { id: 'avatar-6', color: '#ec4899', label: 'Rosa' },
+  { id: 'avatar-7', color: '#06b6d4', label: 'Ciano' },
+  { id: 'avatar-8', color: '#f97316', label: 'Laranja' },
+] as const;
+
+export interface AuthUser {
+  id: string;
+  email: string;
+  isAdmin?: boolean;
+}
+
+export interface UserLessonProgressRecord {
+  id?: string;
+  user_id: string;
+  user_email?: string;
+  lesson_id: string;
+  completed: boolean;
+  progress_percent?: number;
+  updated_at?: string;
+}
+
+export interface UserQuestionHistoryRecord {
+  id?: string;
+  user_id: string;
+  user_email?: string;
+  question_id: string;
+  area?: string;
+  selected_option?: string;
+  is_correct: boolean;
+  notes?: string;
+  created_at?: string;
+}
+
+export interface UserScheduleTaskRecord {
+  id?: string;
+  user_id: string;
+  user_email?: string;
+  task_id: string;
+  completed: boolean;
+  updated_at?: string;
+}
+
+export interface UserMentorMessageRecord {
+  id: string;
+  user_id: string;
+  user_email?: string;
+  sender: 'user' | 'mentor' | 'system';
+  message: string;
+  topic?: string;
+  created_at: string;
+}
+

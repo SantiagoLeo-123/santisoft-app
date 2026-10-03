@@ -1,25 +1,20 @@
-import { useState, useMemo, useCallback, useEffect } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import { Sidebar } from '@/components/Sidebar';
 import { Header } from '@/components/Header';
 import { VideoPlayer } from '@/components/VideoPlayer';
+import { SplashScreen } from '@/components/SplashScreen';
+import { HomeScreen } from '@/components/HomeScreen';
+import { ProfileScreen } from '@/components/ProfileScreen';
 import { CronogramaScreen } from '@/components/CronogramaScreen';
-import { QuestoesScreen, type RevisionExamConfig } from '@/components/QuestoesScreen';
-import { MentorInteligenteTab } from '@/components/MentorInteligenteTab';
-import { CasalMedView } from '@/components/CasalMedView';
-import { MobileBottomNav } from '@/components/MobileBottomNav';
+import { AdminPanel } from '@/components/AdminPanel';
+import { AuthModal } from '@/components/AuthModal';
+import { AuthProvider, useAuth } from '@/hooks/useAuth';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
+import { useCloudSync } from '@/hooks/useCloudSync';
 import { curriculum } from '@/data/curriculum';
-import type { FlatLessonItem } from '@/components/VideoPlayer';
-import {
-  registrarConclusaoAula,
-  removerConclusaoAula,
-  MENTOR_STORAGE_KEY,
-  type RevisaoPendente,
-} from '@/services/mentorService';
-import type { ProgressMap } from '@/types';
-import { isLessonCompleted } from '@/types';
+import type { ProgressMap, ProfileList, UserProfile } from '@/types';
 
-type ActiveTab = 'cronograma' | 'aula' | 'questoes' | 'mentor' | 'casalmed';
+type AppView = 'splash' | 'profiles' | 'home' | 'lessons';
 
 interface Selection {
   areaId: string;
@@ -27,60 +22,61 @@ interface Selection {
   lessonId: string;
 }
 
-export default function App() {
+function AppContent() {
+  const { user, isAdmin, logout, isAuthModalOpen, openAuthModal, closeAuthModal } = useAuth();
+  const [showAdminPanel, setShowAdminPanel] = useState(false);
+  const [view, setView] = useState<AppView>('splash');
+  const [profiles, setProfiles] = useLocalStorage<ProfileList>('santisoft:profiles', []);
+  const [activeProfileId, setActiveProfileId] = useLocalStorage<string | null>('santisoft:activeProfile', null);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
-  
-  // Navigation active tab: 'cronograma' | 'aula' | 'questoes'
-  const [activeTab, setActiveTab] = useState<ActiveTab>('cronograma');
-  const [currentRevision, setCurrentRevision] = useState<RevisionExamConfig | null>(null);
+  const [showCronograma, setShowCronograma] = useState(true);
 
-  // Default lesson selection
-  const [selection, setSelection] = useState<Selection>(() => {
-    const pedArea = curriculum.find((a) => a.id === 'pediatria') ?? curriculum[0];
-    const firstMod = pedArea.modules[0];
-    const firstLesson = firstMod.lessons[0];
-    return { areaId: pedArea.id, moduleId: firstMod.id, lessonId: firstLesson.id };
+  const [selection, setSelection] = useState<Selection | null>(() => {
+    const firstArea = curriculum[0];
+    const firstModule = firstArea.modules[0];
+    const firstLesson = firstModule.lessons[0];
+    return { areaId: firstArea.id, moduleId: firstModule.id, lessonId: firstLesson.id };
   });
 
-  // 100% persistent in LocalStorage: { [aulaId]: boolean }
-  const [progress, setProgress] = useLocalStorage<ProgressMap>(
-    'santisoft_completed_lessons',
-    {},
-  );
+  const progressKey = activeProfileId ? `santisoft:progress:${activeProfileId}` : 'santisoft:progress:_none';
+  const [progress, setProgress] = useLocalStorage<ProgressMap>(progressKey, {});
 
-  const [showResetConfirm, setShowResetConfirm] = useState(false);
+  // Cloud Synchronization Hook (Aulas, Questões, Cronograma e Mentor)
+  const {
+    isSyncing,
+    pushProgressToCloud,
+    pushTaskToCloud,
+  } = useCloudSync(user, progress, setProgress);
+
+  const activeProfile = useMemo(
+    () => profiles.find((p) => p.id === activeProfileId) ?? null,
+    [profiles, activeProfileId],
+  );
 
   const currentArea = useMemo(
     () => curriculum.find((a) => a.id === selection?.areaId) ?? null,
     [selection],
   );
-
   const currentLesson = useMemo(() => {
     if (!currentArea || !selection) return null;
     const mod = currentArea.modules.find((m) => m.id === selection.moduleId);
     return mod?.lessons.find((l) => l.id === selection.lessonId) ?? null;
   }, [currentArea, selection]);
 
-  const isCurrentCompleted = useMemo(() => {
-    if (!selection) return false;
-    return isLessonCompleted(progress, selection.lessonId);
-  }, [selection, progress]);
+  const areaProgress = useMemo(() => {
+    if (!currentArea) return { completed: 0, total: 0 };
+    const allLessons = currentArea.modules.flatMap((m) => m.lessons);
+    const completed = allLessons.filter((l) => progress[l.id]?.completed).length;
+    return { completed, total: allLessons.length };
+  }, [currentArea, progress]);
 
-  // Flat list of all lessons with metadata for the lesson selector
-  const flatLessonList = useMemo<FlatLessonItem[]>(() => {
-    const list: FlatLessonItem[] = [];
+  const flatLessonList = useMemo(() => {
+    const list: { areaId: string; moduleId: string; lessonId: string }[] = [];
     for (const area of curriculum) {
       for (const mod of area.modules) {
         for (const lesson of mod.lessons) {
-          list.push({
-            areaId: area.id,
-            moduleId: mod.id,
-            lessonId: lesson.id,
-            areaName: area.name,
-            lessonNumber: lesson.number,
-            lessonTitle: lesson.title,
-          });
+          list.push({ areaId: area.id, moduleId: mod.id, lessonId: lesson.id });
         }
       }
     }
@@ -95,305 +91,237 @@ export default function App() {
   const hasPrev = currentIndex > 0;
   const hasNext = currentIndex >= 0 && currentIndex < flatLessonList.length - 1;
 
+  // --- Profile handlers ---
+
+  const handleAddProfile = useCallback((name: string, avatar: string) => {
+    const newProfile: UserProfile = {
+      id: `profile-${Date.now()}`,
+      name,
+      avatar,
+      createdAt: Date.now(),
+    };
+    setProfiles((prev) => [...prev, newProfile]);
+  }, [setProfiles]);
+
+  const handleUpdateProfile = useCallback((profileId: string, name: string, avatar: string) => {
+    setProfiles((prev) =>
+      prev.map((p) => (p.id === profileId ? { ...p, name, avatar } : p)),
+    );
+  }, [setProfiles]);
+
+  const handleDeleteProfile = useCallback((profileId: string) => {
+    setProfiles((prev) => prev.filter((p) => p.id !== profileId));
+    if (activeProfileId === profileId) {
+      setActiveProfileId(null);
+    }
+    try {
+      window.localStorage.removeItem(`santisoft:progress:${profileId}`);
+    } catch {
+      /* ignore */
+    }
+  }, [setProfiles, activeProfileId, setActiveProfileId]);
+
+  const handleSelectProfile = useCallback((profileId: string) => {
+    setActiveProfileId(profileId);
+    setView('home');
+  }, [setActiveProfileId]);
+
+  // --- Lesson handlers ---
+
   const handleSelectLesson = useCallback((areaId: string, moduleId: string, lessonId: string) => {
     setSelection({ areaId, moduleId, lessonId });
-    setActiveTab('aula');
+    setShowCronograma(false);
     setMobileSidebarOpen(false);
   }, []);
 
   const handleSelectCronograma = useCallback(() => {
-    setActiveTab('cronograma');
+    setShowCronograma(true);
     setMobileSidebarOpen(false);
   }, []);
 
-  const handleSelectQuestoes = useCallback(() => {
-    setCurrentRevision(null);
-    setActiveTab('questoes');
-    setMobileSidebarOpen(false);
-  }, []);
-
-  const handleSelectMentor = useCallback(() => {
-    setActiveTab('mentor');
-    setMobileSidebarOpen(false);
-  }, []);
-
-  const handleSelectCasalMed = useCallback(() => {
-    setActiveTab('casalmed');
-    setMobileSidebarOpen(false);
-  }, []);
-
-  // Inicia revisão agendada pelo Mentor Inteligente
-  const handleStartRevision = useCallback((revisao: RevisaoPendente) => {
-    setCurrentRevision({
-      temaId: revisao.temaId,
-      tema: revisao.tema,
-      especialidade: revisao.especialidade,
-      ciclo: revisao.ciclo,
-      diasCiclo: revisao.diasCiclo,
-      autoStart: true,
-    });
-    setActiveTab('questoes');
-    setMobileSidebarOpen(false);
-  }, []);
-
-  // Toggle single completion status in LocalStorage + Repetição Espaçada automática
-  const handleToggleComplete = useCallback(
-    (id: string) => {
-      setProgress((prev) => {
-        const isDone = isLessonCompleted(prev, id);
-        const nextState = !isDone;
-
-        // Se marcada como assistida, cadastra no Mentor Inteligente (R1: 7d, R2: 30d, R3: 60d)
-        if (nextState) {
-          registrarConclusaoAula(id);
-        } else {
-          removerConclusaoAula(id);
-        }
-
-        return {
-          ...prev,
-          [id]: nextState,
-        };
-      });
-    },
-    [setProgress],
-  );
+  const handleToggleComplete = useCallback(() => {
+    if (!selection) return;
+    const targetLessonId = selection.lessonId;
+    const newCompleted = !progress[targetLessonId]?.completed;
+    setProgress((prev) => ({
+      ...prev,
+      [targetLessonId]: { completed: newCompleted },
+    }));
+    pushProgressToCloud(targetLessonId, newCompleted);
+  }, [selection, progress, setProgress, pushProgressToCloud]);
 
   const handlePrev = useCallback(() => {
     if (hasPrev) {
-      const item = flatLessonList[currentIndex - 1];
-      setSelection({ areaId: item.areaId, moduleId: item.moduleId, lessonId: item.lessonId });
-      setActiveTab('aula');
-      setMobileSidebarOpen(false);
+      setSelection(flatLessonList[currentIndex - 1]);
+      setShowCronograma(false);
     }
   }, [hasPrev, flatLessonList, currentIndex]);
 
   const handleNext = useCallback(() => {
     if (hasNext) {
-      const item = flatLessonList[currentIndex + 1];
-      setSelection({ areaId: item.areaId, moduleId: item.moduleId, lessonId: item.lessonId });
-      setActiveTab('aula');
-      setMobileSidebarOpen(false);
+      setSelection(flatLessonList[currentIndex + 1]);
+      setShowCronograma(false);
     }
   }, [hasNext, flatLessonList, currentIndex]);
 
-  const handleJumpToLesson = useCallback((item: FlatLessonItem) => {
-    setSelection({ areaId: item.areaId, moduleId: item.moduleId, lessonId: item.lessonId });
-    setActiveTab('aula');
-    setMobileSidebarOpen(false);
-  }, []);
+  const isCompleted = selection ? progress[selection.lessonId]?.completed ?? false : false;
 
-  // Fecho automático da barra lateral ao rodar o ecrã (Landscape) ou ao redimensionar
-  useEffect(() => {
-    const handleOrientationOrResize = () => {
-      if (typeof window === 'undefined') return;
-      const isLandscape =
-        (window.matchMedia && window.matchMedia('(orientation: landscape)').matches) ||
-        (window.innerHeight < 500 && window.innerWidth > window.innerHeight);
+  const handleToggleCronograma = useCallback((entryId: string) => {
+    const newCompleted = !progress[entryId]?.completed;
+    setProgress((prev) => ({
+      ...prev,
+      [entryId]: { completed: newCompleted },
+    }));
+    pushTaskToCloud(entryId, newCompleted);
+  }, [progress, setProgress, pushTaskToCloud]);
 
-      if (isLandscape) {
-        setMobileSidebarOpen(false);
-      }
-    };
+  // --- Views ---
 
-    // Verificação inicial no carregamento
-    handleOrientationOrResize();
+  if (view === 'splash') {
+    return <SplashScreen onFinish={() => setView('profiles')} />;
+  }
 
-    window.addEventListener('resize', handleOrientationOrResize);
-    window.addEventListener('orientationchange', handleOrientationOrResize);
+  if (view === 'profiles') {
+    return (
+      <div className="h-screen flex flex-col bg-ink-950 overflow-hidden">
+        <ProfileScreen
+          profiles={profiles}
+          onSelectProfile={handleSelectProfile}
+          onAddProfile={handleAddProfile}
+          onUpdateProfile={handleUpdateProfile}
+          onDeleteProfile={handleDeleteProfile}
+        />
+        <AuthModal isOpen={isAuthModalOpen} onClose={closeAuthModal} />
+      </div>
+    );
+  }
 
-    const mql =
-      typeof window !== 'undefined' && window.matchMedia
-        ? window.matchMedia('(orientation: landscape)')
-        : null;
-    mql?.addEventListener?.('change', handleOrientationOrResize);
-
-    return () => {
-      window.removeEventListener('resize', handleOrientationOrResize);
-      window.removeEventListener('orientationchange', handleOrientationOrResize);
-      mql?.removeEventListener?.('change', handleOrientationOrResize);
-    };
-  }, []);
-
-  // Fecho automático da barra lateral ao entrar na visualização da Aula (fechada por predefinição)
-  useEffect(() => {
-    if (activeTab === 'aula') {
-      setMobileSidebarOpen(false);
-    }
-  }, [activeTab]);
-
-  const handleResetAllData = useCallback(() => {
-    setProgress({});
-    if (typeof window !== 'undefined') {
-      localStorage.removeItem(MENTOR_STORAGE_KEY);
-      window.dispatchEvent(new CustomEvent('santisoft_mentor_updated', { detail: {} }));
-    }
-    setShowResetConfirm(false);
-  }, [setProgress]);
+  if (view === 'home') {
+    return (
+      <div className="h-screen flex flex-col bg-ink-950 overflow-hidden">
+        <Header
+          areaName={null}
+          lesson={null}
+          area={null}
+          completedCount={0}
+          totalCount={0}
+          onToggleSidebar={() => setMobileSidebarOpen((v) => !v)}
+          onBackToHome={() => setView('home')}
+          onSwitchProfile={() => setView('profiles')}
+          profile={activeProfile}
+          isCronograma={false}
+          isAdmin={isAdmin}
+          onOpenAdmin={() => setShowAdminPanel(true)}
+          onLogout={logout}
+          user={user}
+          onOpenAuthModal={openAuthModal}
+          isSyncing={isSyncing}
+        />
+        <HomeScreen onSelectCourse={() => { setView('lessons'); setShowCronograma(true); }} />
+        <AuthModal isOpen={isAuthModalOpen} onClose={closeAuthModal} />
+      </div>
+    );
+  }
 
   return (
-    <div className="h-screen flex flex-col bg-ink-950 overflow-hidden text-white font-sans antialiased overflow-x-hidden w-full">
-      {/* Top Header */}
+    <div className="h-screen flex flex-col bg-ink-950 overflow-hidden">
       <Header
+        areaName={currentArea?.name ?? null}
+        lesson={currentLesson}
+        area={currentArea}
+        completedCount={areaProgress.completed}
+        totalCount={areaProgress.total}
         onToggleSidebar={() => setMobileSidebarOpen((v) => !v)}
-        onSelectCronograma={handleSelectCronograma}
-        onSelectQuestoes={handleSelectQuestoes}
-        onSelectMentor={handleSelectMentor}
-        onSelectCasalMed={handleSelectCasalMed}
-        isCronograma={activeTab === 'cronograma'}
-        isQuestoes={activeTab === 'questoes'}
-        isMentor={activeTab === 'mentor'}
-        isCasalMed={activeTab === 'casalmed'}
-        onResetProgress={() => setShowResetConfirm(true)}
+        onBackToHome={() => setView('home')}
+        onSwitchProfile={() => setView('profiles')}
+        profile={activeProfile}
+        isCronograma={showCronograma}
+        isAdmin={isAdmin}
+        onOpenAdmin={() => setShowAdminPanel(true)}
+        onLogout={logout}
+        user={user}
+        onOpenAuthModal={openAuthModal}
+        isSyncing={isSyncing}
       />
 
-      {/* Main Container */}
-      <div className="flex flex-1 min-h-0 overflow-hidden relative overflow-x-hidden">
-        {/* Desktop Sidebar (Hidden below 768px as requested: 'hidden md:flex', and hidden on landscape mobile) */}
-        <div className="hidden md:flex hide-on-landscape">
+      <div className="flex flex-1 min-h-0 overflow-hidden">
+        <div className="hidden lg:flex">
           <Sidebar
             curriculum={curriculum}
             selectedLessonId={selection?.lessonId ?? null}
             progress={progress}
             onSelectLesson={handleSelectLesson}
             onSelectCronograma={handleSelectCronograma}
-            onSelectQuestoes={handleSelectQuestoes}
-            onSelectMentor={handleSelectMentor}
-            onSelectCasalMed={handleSelectCasalMed}
-            isCronogramaActive={activeTab === 'cronograma'}
-            isQuestoesActive={activeTab === 'questoes'}
-            isMentorActive={activeTab === 'mentor'}
-            isCasalMedActive={activeTab === 'casalmed'}
+            isCronogramaActive={showCronograma}
             collapsed={sidebarCollapsed}
             onToggleCollapse={() => setSidebarCollapsed((v) => !v)}
+            user={user}
+            onOpenAuthModal={openAuthModal}
+            onLogout={logout}
+            isSyncing={isSyncing}
           />
         </div>
 
-        {/* Mobile / Landscape Overlay Drawer with Backdrop */}
         {mobileSidebarOpen && (
           <>
-            {/* Backdrop (camada de captura de clique) */}
-            <div 
-              className="fixed inset-0 bg-black/60 backdrop-blur-xs z-40 transition-opacity"
+            <div
+              className="fixed inset-0 bg-black/70 z-40 lg:hidden"
               onClick={() => setMobileSidebarOpen(false)}
-              aria-hidden="true"
             />
-            
-            {/* Drawer Content com z-50 acima do backdrop */}
-            <div className="fixed inset-y-0 left-0 z-50 w-[85vw] max-w-sm h-full bg-ink-900 shadow-2xl animate-slide-in flex flex-col overflow-hidden md:hidden">
+            <div className="fixed left-0 top-0 bottom-0 z-50 lg:hidden">
               <Sidebar
                 curriculum={curriculum}
                 selectedLessonId={selection?.lessonId ?? null}
                 progress={progress}
                 onSelectLesson={handleSelectLesson}
                 onSelectCronograma={handleSelectCronograma}
-                onSelectQuestoes={handleSelectQuestoes}
-                onSelectMentor={handleSelectMentor}
-                onSelectCasalMed={handleSelectCasalMed}
-                isCronogramaActive={activeTab === 'cronograma'}
-                isQuestoesActive={activeTab === 'questoes'}
-                isMentorActive={activeTab === 'mentor'}
-                isCasalMedActive={activeTab === 'casalmed'}
+                isCronogramaActive={showCronograma}
                 collapsed={false}
                 onToggleCollapse={() => setMobileSidebarOpen(false)}
-                isMobileDrawer={true}
-                onCloseMobileDrawer={() => setMobileSidebarOpen(false)}
+                user={user}
+                onOpenAuthModal={openAuthModal}
+                onLogout={logout}
+                isSyncing={isSyncing}
               />
             </div>
           </>
         )}
 
-        {/* Center Content: Cronograma, VideoPlayer, Banco de Questões ou Mentor */}
-        <main className="flex-1 flex flex-col min-h-0 min-w-0 overflow-y-auto relative z-0 overflow-x-hidden pb-14 md:pb-0">
-          {activeTab === 'cronograma' && (
-            <CronogramaScreen
-              progress={progress}
-              onToggleComplete={handleToggleComplete}
-            />
-          )}
-
-          {activeTab === 'aula' && (
-            <VideoPlayer
-              lesson={currentLesson}
-              isCompleted={isCurrentCompleted}
-              onToggleComplete={() => selection && handleToggleComplete(selection.lessonId)}
-              onPrev={handlePrev}
-              onNext={handleNext}
-              hasPrev={hasPrev}
-              hasNext={hasNext}
-              flatLessonList={flatLessonList}
-              currentIndex={currentIndex}
-              onJumpToLesson={handleJumpToLesson}
-            />
-          )}
-
-          {activeTab === 'questoes' && (
-            <QuestoesScreen
-              initialRevision={currentRevision}
-              onClearRevision={() => setCurrentRevision(null)}
-              onGoBackToCronograma={() => {
-                setCurrentRevision(null);
-                setActiveTab('cronograma');
-              }}
-            />
-          )}
-
-          {activeTab === 'mentor' && (
-            <MentorInteligenteTab
-              onIniciarRevisao={handleStartRevision}
-              onGoBackToCronograma={handleSelectCronograma}
-              onGoToQuestoes={handleSelectQuestoes}
-            />
-          )}
-
-          {activeTab === 'casalmed' && (
-            <CasalMedView />
-          )}
-        </main>
+        {showCronograma ? (
+          <CronogramaScreen
+            progress={progress}
+            onToggleComplete={handleToggleCronograma}
+          />
+        ) : (
+          <VideoPlayer
+            lesson={currentLesson}
+            isCompleted={isCompleted}
+            onToggleComplete={handleToggleComplete}
+            onPrev={handlePrev}
+            onNext={handleNext}
+            hasPrev={hasPrev}
+            hasNext={hasNext}
+          />
+        )}
       </div>
 
-      {/* Mobile Bottom Navigation Bar */}
-      <MobileBottomNav
-        activeTab={activeTab}
-        onSelectCronograma={handleSelectCronograma}
-        onSelectVideoPlayer={() => {
-          setActiveTab('aula');
-          setMobileSidebarOpen(false);
-        }}
-        onSelectQuestoes={handleSelectQuestoes}
-        onSelectMentor={handleSelectMentor}
-        onSelectCasalMed={handleSelectCasalMed}
-      />
-
-      {/* Confirmation Modal to Reset Local Progress */}
-      {showResetConfirm && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm safe-top safe-bottom">
-          <div className="w-full max-w-sm rounded-2xl bg-ink-900 border border-ink-850 p-6 shadow-2xl space-y-4 animate-scale-up">
-            <h3 className="text-base font-bold text-white">
-              Limpar aulas concluídas?
-            </h3>
-            <p className="text-xs text-zinc-400 leading-relaxed">
-              Todas as marcações de aulas concluídas salvas no LocalStorage do seu navegador serão resetadas.
-            </p>
-            <div className="flex justify-end gap-2 pt-2">
-              <button
-                type="button"
-                onClick={() => setShowResetConfirm(false)}
-                className="px-4 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-ink-850 text-zinc-300 hover:text-white"
-              >
-                Cancelar
-              </button>
-              <button
-                type="button"
-                onClick={handleResetAllData}
-                className="px-4 py-2.5 min-h-[44px] rounded-xl text-xs font-semibold bg-red-600 text-white hover:bg-red-700 shadow-md shadow-red-600/30"
-              >
-                Limpar Tudo
-              </button>
-            </div>
-          </div>
-        </div>
+      {showAdminPanel && isAdmin && user?.email && (
+        <AdminPanel
+          adminEmail={user.email}
+          onClose={() => setShowAdminPanel(false)}
+        />
       )}
+
+      {/* Global Auth Modal for Login & Registration */}
+      <AuthModal isOpen={isAuthModalOpen} onClose={closeAuthModal} />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <AuthProvider>
+      <AppContent />
+    </AuthProvider>
   );
 }
