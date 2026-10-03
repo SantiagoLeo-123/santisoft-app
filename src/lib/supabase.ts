@@ -10,13 +10,6 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   },
 });
 
-export const isSupabaseConfigured = (): boolean => {
-  const url = import.meta.env.VITE_SUPABASE_URL;
-  const key = import.meta.env.VITE_SUPABASE_ANON_KEY;
-  return Boolean(url && key && !url.includes('placeholder') && !key.includes('placeholder'));
-};
-
-
 const AUTH_FUNCTION_URL = `${supabaseUrl}/functions/v1/auth`;
 
 interface AuthResponse {

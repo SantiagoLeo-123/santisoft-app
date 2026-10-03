@@ -6,11 +6,10 @@ import { SplashScreen } from '@/components/SplashScreen';
 import { HomeScreen } from '@/components/HomeScreen';
 import { ProfileScreen } from '@/components/ProfileScreen';
 import { CronogramaScreen } from '@/components/CronogramaScreen';
+import { LoginScreen } from '@/components/LoginScreen';
 import { AdminPanel } from '@/components/AdminPanel';
-import { AuthModal } from '@/components/AuthModal';
-import { AuthProvider, useAuth } from '@/hooks/useAuth';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
-import { useCloudSync } from '@/hooks/useCloudSync';
+import { authApi } from '@/lib/auth';
 import { curriculum } from '@/data/curriculum';
 import type { ProgressMap, ProfileList, UserProfile } from '@/types';
 
@@ -22,8 +21,12 @@ interface Selection {
   lessonId: string;
 }
 
-function AppContent() {
-  const { user, isAdmin, logout, isAuthModalOpen, openAuthModal, closeAuthModal } = useAuth();
+export default function App() {
+  const [authedEmail, setAuthedEmail] = useState<string | null>(() => authApi.getSession());
+  const [isAdmin, setIsAdmin] = useState(() => {
+    const session = authApi.getSession();
+    return session === 'leodoscsgo2018@hotmail.com';
+  });
   const [showAdminPanel, setShowAdminPanel] = useState(false);
   const [view, setView] = useState<AppView>('splash');
   const [profiles, setProfiles] = useLocalStorage<ProfileList>('santisoft:profiles', []);
@@ -41,13 +44,6 @@ function AppContent() {
 
   const progressKey = activeProfileId ? `santisoft:progress:${activeProfileId}` : 'santisoft:progress:_none';
   const [progress, setProgress] = useLocalStorage<ProgressMap>(progressKey, {});
-
-  // Cloud Synchronization Hook (Aulas, Questões, Cronograma e Mentor)
-  const {
-    isSyncing,
-    pushProgressToCloud,
-    pushTaskToCloud,
-  } = useCloudSync(user, progress, setProgress);
 
   const activeProfile = useMemo(
     () => profiles.find((p) => p.id === activeProfileId) ?? null,
@@ -141,14 +137,11 @@ function AppContent() {
 
   const handleToggleComplete = useCallback(() => {
     if (!selection) return;
-    const targetLessonId = selection.lessonId;
-    const newCompleted = !progress[targetLessonId]?.completed;
     setProgress((prev) => ({
       ...prev,
-      [targetLessonId]: { completed: newCompleted },
+      [selection.lessonId]: { completed: !prev[selection.lessonId]?.completed },
     }));
-    pushProgressToCloud(targetLessonId, newCompleted);
-  }, [selection, progress, setProgress, pushProgressToCloud]);
+  }, [selection, setProgress]);
 
   const handlePrev = useCallback(() => {
     if (hasPrev) {
@@ -167,15 +160,25 @@ function AppContent() {
   const isCompleted = selection ? progress[selection.lessonId]?.completed ?? false : false;
 
   const handleToggleCronograma = useCallback((entryId: string) => {
-    const newCompleted = !progress[entryId]?.completed;
     setProgress((prev) => ({
       ...prev,
-      [entryId]: { completed: newCompleted },
+      [entryId]: { completed: !prev[entryId]?.completed },
     }));
-    pushTaskToCloud(entryId, newCompleted);
-  }, [progress, setProgress, pushTaskToCloud]);
+  }, [setProgress]);
 
-  // --- Views ---
+  // --- Render ---
+
+  if (!authedEmail) {
+    return (
+      <LoginScreen
+        onLogin={(email, admin) => {
+          authApi.saveSession(email);
+          setAuthedEmail(email);
+          setIsAdmin(admin);
+        }}
+      />
+    );
+  }
 
   if (view === 'splash') {
     return <SplashScreen onFinish={() => setView('profiles')} />;
@@ -191,7 +194,6 @@ function AppContent() {
           onUpdateProfile={handleUpdateProfile}
           onDeleteProfile={handleDeleteProfile}
         />
-        <AuthModal isOpen={isAuthModalOpen} onClose={closeAuthModal} />
       </div>
     );
   }
@@ -199,26 +201,7 @@ function AppContent() {
   if (view === 'home') {
     return (
       <div className="h-screen flex flex-col bg-ink-950 overflow-hidden">
-        <Header
-          areaName={null}
-          lesson={null}
-          area={null}
-          completedCount={0}
-          totalCount={0}
-          onToggleSidebar={() => setMobileSidebarOpen((v) => !v)}
-          onBackToHome={() => setView('home')}
-          onSwitchProfile={() => setView('profiles')}
-          profile={activeProfile}
-          isCronograma={false}
-          isAdmin={isAdmin}
-          onOpenAdmin={() => setShowAdminPanel(true)}
-          onLogout={logout}
-          user={user}
-          onOpenAuthModal={openAuthModal}
-          isSyncing={isSyncing}
-        />
         <HomeScreen onSelectCourse={() => { setView('lessons'); setShowCronograma(true); }} />
-        <AuthModal isOpen={isAuthModalOpen} onClose={closeAuthModal} />
       </div>
     );
   }
@@ -238,10 +221,7 @@ function AppContent() {
         isCronograma={showCronograma}
         isAdmin={isAdmin}
         onOpenAdmin={() => setShowAdminPanel(true)}
-        onLogout={logout}
-        user={user}
-        onOpenAuthModal={openAuthModal}
-        isSyncing={isSyncing}
+        onLogout={() => { authApi.clearSession(); setAuthedEmail(null); setIsAdmin(false); setView('splash'); }}
       />
 
       <div className="flex flex-1 min-h-0 overflow-hidden">
@@ -255,10 +235,6 @@ function AppContent() {
             isCronogramaActive={showCronograma}
             collapsed={sidebarCollapsed}
             onToggleCollapse={() => setSidebarCollapsed((v) => !v)}
-            user={user}
-            onOpenAuthModal={openAuthModal}
-            onLogout={logout}
-            isSyncing={isSyncing}
           />
         </div>
 
@@ -278,10 +254,6 @@ function AppContent() {
                 isCronogramaActive={showCronograma}
                 collapsed={false}
                 onToggleCollapse={() => setMobileSidebarOpen(false)}
-                user={user}
-                onOpenAuthModal={openAuthModal}
-                onLogout={logout}
-                isSyncing={isSyncing}
               />
             </div>
           </>
@@ -305,23 +277,12 @@ function AppContent() {
         )}
       </div>
 
-      {showAdminPanel && isAdmin && user?.email && (
+      {showAdminPanel && isAdmin && authedEmail && (
         <AdminPanel
-          adminEmail={user.email}
+          adminEmail={authedEmail}
           onClose={() => setShowAdminPanel(false)}
         />
       )}
-
-      {/* Global Auth Modal for Login & Registration */}
-      <AuthModal isOpen={isAuthModalOpen} onClose={closeAuthModal} />
     </div>
-  );
-}
-
-export default function App() {
-  return (
-    <AuthProvider>
-      <AppContent />
-    </AuthProvider>
   );
 }
